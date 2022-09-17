@@ -1,9 +1,25 @@
 import React from 'react'
+import '../sass/Home/home.scss'
+
 
 const Home = () => {
   return (
     <div className='home'>
-        <h1>Home</h1>
+        <div className="container">
+
+          <div className="main-top">
+            
+            <div className="cate-product">
+
+            </div>
+
+            <div className="banners">
+
+            </div>
+
+          </div>
+
+        </div>
     </div>
   )
 }
