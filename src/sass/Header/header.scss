@@ -1,3 +1,4 @@
+@import '../variables.scss';
 header{
     height: 200px;
 
@@ -51,7 +52,7 @@ header{
             .input-group{
                 width: 50%;
                 display: flex;
-                margin-right: 50px;
+                margin-right: 30px;
                 input{
                     background-color: #f3f3f3;
                     flex-grow: 1;
@@ -60,19 +61,123 @@ header{
                     border-radius: 20px;
                 }
                 button{
-
+                    position: absolute;
+                    padding: 5px 10px;
+                    background-color: #367E18;
+                    border-radius: 15px;
+                    transform: translate(570px,4px);
+                    color: white;
+                }
+                .ic-search{
+                    
+                    position: absolute;
+                    transform: translate(15px,9px);
                 }
             }
 
             .top-card{
                 // padding-right: 10px;
+                display: flex;
                 li{
-                    .sign-up{
-                        padding-left: 50px;
+                    &.border-cart{
+                        .cart{
+                            margin-right: 30px;
+                            border: 1px solid $primary-color;
+                            border-radius: 50%;
+                            padding: 10px;
+                            color: $primary-color;
+                            font-size:20px ;
+                            cursor: pointer;
+                        }
+                    }
+                    &.sign{
+                        padding-top: 10px;
+                        .sign-up{
+                            font-size: 15px;
+                            padding-left: 10px;
+                            color: black;
+                        }
+                        .sign-in{
+                            position: relative;
+                            color: black;
+                            font-size: 15px;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                height: 13px ;
+                                border: 1px solid black;
+                                right: 0;
+                                transform: translate(6px,2px);
+                            }
+                        }
                     }
                 }
             }
 
+        }
+    }
+
+    .header-nav{
+        height: 50px;
+        background-color: $primary-color;
+        .container{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            nav{
+                height: 100%;
+                width: 22%;
+                ul{
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    li{
+                        color: white;
+                        .ic-nav{
+                            font-size: 25px;
+                        }
+                        .ic-angle-down{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+            .info-contact{
+                font-size: 14px;
+                display: flex;
+                .hotline{
+                    padding-right: 20px;
+                    position: relative;
+                    color: white;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        height: 15px;
+                        border: 1px solid white;
+                        right: 0;
+                        transform: translate(-10px,-1px);
+                    }
+                    .ic{
+                        padding-right: 5px;
+                    }
+                }
+                .tech-support{
+                    color: white;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    .ic{
+                        padding-right: 5px;
+                    }
+                }
+            }
         }
     }
 

@@ -3,6 +3,7 @@ import '../sass/Header/header.scss'
 import logo from '../assets/images/Home/logo.png'
 import { Link } from 'react-router-dom'
 
+
 const Header = () => {
   return (
     <header>
@@ -33,19 +34,19 @@ const Header = () => {
           </div>
 
           <div className="input-group">
-            <i class="fa-light fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass ic-search"></i>
             <input type="text" placeholder='Tìm tựa sách tác giả' />
             <button>Tìm sách</button>
           </div>
 
           <ul className="top-card">
-            <li>
-            <i class="fa-light fa-cart-plus"></i>
+            <li className='border-cart'>
+            <i class="fa-solid fa-cart-shopping cart"></i>
             </li>
 
-            <li>
+            <li className='sign'>
               <Link>
-                <span>Đăng nhập</span>
+                <span className='sign-in'>Đăng nhập</span>
               </Link>
               <Link>
                 <span className='sign-up'>Đăng ký</span>
@@ -53,6 +54,40 @@ const Header = () => {
             </li>
 
           </ul>
+
+        </div>
+      </div>
+
+      <div className="header-nav">
+        <div className="container">
+        <nav>
+          <ul>
+            <li>
+            <i class="fa-solid fa-bars ic-nav"></i>
+            </li>
+            <li>
+              <span>Danh Mục Sách</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-angle-down ic-angle-down"></i>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="info-contact">
+          <div className="hotline">
+          <i class="fa-solid fa-phone ic"></i>
+            <span>Hotline: 1900 6401</span>
+          </div>
+
+          <div className="tech-support">
+
+            <i class="fa-solid fa-comments ic"></i>
+            <span>Hỗ trợ trực tuyến</span>
+
+          </div>
+
+        </div>
 
         </div>
       </div>
