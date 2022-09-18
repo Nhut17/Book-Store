@@ -1,6 +1,8 @@
 import React from 'react'
 import '../sass/Home/home.scss'
-
+import { list_cate_products } from '../components/data'
+import CategoriesProduct from '../components/Home/CategoriesProduct'
+import ListBanner from '../components/Home/ListBanner'
 
 const Home = () => {
   return (
@@ -9,13 +11,9 @@ const Home = () => {
 
           <div className="main-top">
             
-            <div className="cate-product">
+            <CategoriesProduct list_cate={list_cate_products} />
 
-            </div>
-
-            <div className="banners">
-
-            </div>
+            <ListBanner />
 
           </div>
 
