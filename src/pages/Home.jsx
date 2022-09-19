@@ -6,6 +6,7 @@ import ListBanner from '../components/Home/ListBanner'
 import MainLeft from '../components/Home/MainLeft'
 import MainRight from '../components/Home/MainRight'
 import { list_product } from '../components/data'
+import { list_product_right } from '../components/data'
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
 
             <MainLeft list_product={list_product} />
 
-            <MainRight />
+            <MainRight list_product={list_product_right} />
 
           </div>
 

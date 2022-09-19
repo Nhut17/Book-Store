@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-const BoxBook = ({data,title}) => {
+const BoxBook = ({data,title,nameCate}) => {
   return (
     <div className="box-content-book">
         
             <span className="title">{title}</span>
 
-            <div className='box-book'>
+            <div className={`box-book ${nameCate}`}>
         {
             data.map((book) =>(
                 <div className="item">
@@ -27,8 +27,8 @@ const BoxBook = ({data,title}) => {
                             <span className='price-new'>{book.priceNew.toString()
                                     .replace(/\B(?=(\d{3})+(?!\d))/g, ".")} 
                                     <span className='currency'>&#8363;</span></span>
-                            <button>Mua ngay</button>
                         </div>
+                            <button>Mua ngay</button>
                     </div>
                 
                 </div>

@@ -84,6 +84,18 @@ export const good_book= [
     }
 ]
 
+export const commic_book= [
+    {
+        name:'Combo Lucky Luke - Bộ 4 Tập (Số Ngẫu hiên)',
+        author:'First News',
+        description: 'Nhân vật trung tâm của loạt truyện là Lucky Luke - chàng cao bồi không bao giờ biết sợ, luôn khoác chiếc áo ghi-lê đen, sơ mi vàng và cổ đeo chiếc khăn màu đỏ, làm bạn cùng chú ngựa Jolly Jumper đặc biệt. Đó là người anh hùng hào phóng và dũng cảm, người bắn nhanh hơn cả cái bóng của mình. Các tập truyện luôn kết thúc bằng một hình ảnh đã trở thành bất hủ trong lịch sử truyện tranh: "gã cao bồi nghèo đơn độc" rong ruổi trên con ngựa của mình vào buổi hoàng hôn, sau khi đánh bại những kẻ xấu.',
+        priceOld: 106800,
+        priceNew: 74760,
+        promotion:30,
+        img:'https://www.vinabook.com/images/thumbnails/product/210x/368244_combo-lucky-luke-bo-4-tap-so-ngau-hien.jpg',
+    }
+]
+
 
 export const list_product = [
     {
@@ -145,5 +157,98 @@ export const list_product = [
         priceNew: 293000,
         promotion:15,
         img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+    },
+]
+
+export const list_product_right = [
+    {
+        id:1,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:2,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:3,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:4,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:5,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:6,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:7,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:8,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:9,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
+    },
+    {
+        id:10,
+        name:'Cà Phê Cùng Tony (Tái Bản 11/2017)',
+        author:'Tony Buổi Sáng',
+        priceOld: 90000,
+        priceNew: 72000,
+        promotion:15,
+        img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
     },
 ]
