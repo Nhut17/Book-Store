@@ -45,10 +45,10 @@ const Header = () => {
             </li>
 
             <li className='sign'>
-              <Link>
+              <Link to='/dang-nhap'>
                 <span className='sign-in'>Đăng nhập</span>
               </Link>
-              <Link>
+              <Link to='/dang-ky'>
                 <span className='sign-up'>Đăng ký</span>
               </Link>
             </li>
