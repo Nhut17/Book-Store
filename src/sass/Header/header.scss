@@ -96,9 +96,11 @@ header{
                             font-size: 15px;
                             padding-left: 10px;
                             color: black;
+                            cursor: pointer;
                         }
                         .sign-in{
                             position: relative;
+                            cursor: pointer;
                             color: black;
                             font-size: 15px;
                             &::before{

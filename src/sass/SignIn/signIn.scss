@@ -53,6 +53,7 @@
                 box-shadow: 0 15px 16.83px 0.17px rgb(0 0 0 / 5%);
                 padding: 50px 80px;
                 display: flex;
+                position: relative;
                 .main-form{
                     width: 70%;
                     height: auto;
@@ -113,6 +114,37 @@
                         // position: absolute;
                         // transform: translate(-35%,15%);
                         width: 100%;
+                    }
+                }
+                .login-with{
+                    position: absolute;
+                    bottom: 50px;
+                    display: flex;
+                    align-items: center;
+                    .ic{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 15px;
+                        font-size: 12px;
+                        color: white;
+                        cursor: pointer;
+                        transition: all 0.5s;
+                        &:hover{
+                            transform: scale(1.2);
+                            font-weight: bold;
+                        }
+                        // margin-bottom: 10px;
+                    }
+                    .ic-fb{
+                        // color: blue;
+                        background-color: #3b5998;
+                    }
+                    .ic-gg{
+                        background-color: #e72734;
                     }
                 }
             }

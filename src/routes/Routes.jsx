@@ -1,10 +1,16 @@
 import React from 'react'
 import { Route, Switch } from "react-router-dom";
 
+
 import Home from '../pages/Home.jsx';
+
 import SignIn from '../pages/SignIn.jsx';
 import SignUp from '../pages/SignUp.jsx';
 import BestSelling from '../pages/BestSelling.jsx';
+
+
+import Login from '../pages/Login.jsx';
+
 
 const Routes = () => {
   return (
@@ -12,6 +18,7 @@ const Routes = () => {
 
       {/* HOME */}
       <Route path="/" exact component={Home} />
+
 
       {/* SIGN IN */}
       <Route path="/dang-nhap" exact component={SignIn} />
@@ -22,7 +29,14 @@ const Routes = () => {
       <Route path="/sach-ban-chay" exact component={BestSelling} />
 
 
-    </Switch>
+
+     
+      
+  
+    
+      
+   </Switch>
+
   );
 };
 
