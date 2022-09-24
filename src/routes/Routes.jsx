@@ -1,9 +1,10 @@
 import React from 'react'
 import {  Route, Switch } from "react-router-dom";
 
+
 import Home from '../pages/Home.jsx';
-import SignIn from '../pages/SignIn.jsx';
-import SignUp from '../pages/SignUp.jsx';
+
+import Login from '../pages/Login.jsx';
 
 const Routes = () => {
   return (
@@ -11,12 +12,12 @@ const Routes = () => {
 
       {/* HOME */}
       <Route path="/" exact component={Home} />
-    
-      {/* SIGN IN */}
-      <Route path="/dang-nhap" exact component={SignIn} />
+     
+      
+      {/* <Route path="/dang-nhap" exact component={Login} /> */}
     
       {/* SIGN UP */}
-      <Route path="/dang-ky" exact component={SignUp} />
+      {/* <Route path="/dang-ky" exact component={SignUp} /> */}
     
       
    </Switch>

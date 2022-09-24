@@ -151,3 +151,19 @@ button{
   }
 
 }
+
+
+.login{
+  position: fixed;
+  transform: translate(50%,40%);
+  left: 5%;
+  transition: all 0.4s;
+  z-index: 20;
+  form{
+   
+    
+  }
+}
+.react-responsive-modal-modal{
+  display: none;
+}

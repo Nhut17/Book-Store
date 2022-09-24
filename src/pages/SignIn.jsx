@@ -45,6 +45,12 @@ const SignIn = () => {
                 <div className="img">
                     <img src='https://colorlib.com/etc/regform/colorlib-regform-7/images/signin-image.jpg' alt="" />
                 </div>
+
+                <div className="login-with">
+                    <span>Đăng nhập với: </span>
+                    <div className="ic-fb ic"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div className="ic-gg ic"><i class="fa-brands fa-google"></i></div>
+                </div>
                 
             </form>
         </div> 

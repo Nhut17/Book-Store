@@ -9,8 +9,8 @@ const BoxBook = ({data,title,nameCate}) => {
 
             <div className={`box-book ${nameCate}`}>
         {
-            data.map((book) =>(
-                <div className="item">
+            data.map((book,idx) =>(
+                <div className="item" key={idx}>
                     <div className="image"><img src={book.img} alt="" /></div>
 
                     <div className="content">
