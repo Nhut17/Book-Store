@@ -1,0 +1,14 @@
+.best-selling {
+    .container {
+        display: flex;
+        align-items: center;
+
+        .left {
+            width: 25%;
+        }
+
+        .right {
+            width: 75%;
+        }
+    }
+}
