@@ -252,3 +252,223 @@ export const list_product_right = [
         img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
     },
 ]
+
+const list_cate_dropdown = [
+    {
+        id:1,
+        subList:[],
+        background:'',
+    },
+    {
+        id:2,
+        subList:[],
+        background:'',
+    },
+    {
+        id:3,
+        subList:[],
+        background:'',
+    },
+    {
+        id:4,
+        subList:[
+            {
+                nameCate:'Literature & Fiction',
+                list:[
+                    {
+                        name: 'Romance',
+                    },
+                    {
+                        name: 'Mystery, Thriller & Suspense',
+                    },
+                    {
+                        name: 'Classics',
+                    },
+                    {
+                        name: 'Contemporary',
+                    },
+                    {
+                        name: 'Action & Adventure',
+                    },
+                    {
+                        name: 'Short Stories',
+                    },
+                    {
+                        name: 'Science Fiction & Fantasy',
+                    },
+                    {
+                        name: 'Humor & Satire',
+                    },
+                    {
+                        name: 'History',
+                    },
+                    {
+                        name: 'Poetry',
+                    },
+                    {
+                        name: 'Xem Tất Cả >>',
+                    },
+                ]
+            },
+            {
+                nameCate: 'Travel',
+                list:[
+                    {
+                        name:'Adventure Travel',
+                    },
+                    {
+                        name:'Travel Writing',
+                    },
+                   
+                ]
+            },
+            {
+                nameCate: "Children's Books ",
+                list:[
+                    {
+                        name:"Animals",
+
+                    },
+                    {
+                        name:"Children's Action & Adventure",
+                    },
+                    {
+                        name:"Children's Classics",
+                    },
+                    {
+                        name:"Children's Literature & Fiction",
+                    },
+                    {
+                        name:'Fairy Tales, Folk Tales & Myths',
+                    },
+                    {
+                        name:'Growing Up & Facts Of Life',
+                    },
+                    
+                ]
+            },
+            {
+                nameCate: 'English As A Sencond',
+                list:[
+                    
+                ]
+            },
+            {
+                nameCate: 'Language',
+                list:[
+                    {
+                        name:'TOEIC',
+                    },
+                    {
+                        name:'TOEFL',
+                    },
+                    {
+                        name:'IELTS',
+                    },
+                    {
+                        name:'English Skills',
+                    },
+                    {
+                        name:'Dictionary',
+                    },
+                    {
+                        name:'English For Adults',
+                    },
+                    {
+                        name:'English Specific Purpose',
+                    },
+                ]
+            },
+            {
+                nameCate: 'Nhà Phát Hành Nổi Bật',
+                list:[
+                    {
+                        name:'Oxford University Press',
+                    },
+                    {
+                        name:'Pearson Education',
+                    },
+                    {
+                        name:'Pearson',
+                    },
+                    {
+                        name:'McGraw Hill',
+                    },
+                    {
+                        name:'Macmillan Education',
+                    },
+                    {
+                        name:'Cambridge University Press',
+                    },
+                    {
+                        name:'Prentice Hall',
+                    },
+                    {
+                        name:'National Geographic',
+                    },
+                    {
+                        name:'Heinle Cengage Learning',
+                    },
+                ]
+            },
+        ],
+        background:'https://www.vinabook.com/images/menu/175/ngo___i_v__n___kinh_t____2_crop.png',
+    },
+    {
+        id:5,
+        subList:[
+            
+        ],
+        background:'https://www.vinabook.com/images/menu/175/kinh_te.png',
+    },
+    {
+        id:6,
+        subList:[],
+        background:'',
+    },
+    {
+        id:7,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/van_hoc_trong_nuoc___drop.png',
+    },
+    {
+        id:8,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/van_hoc_nuoc_ngoai___crop.png',
+    },
+    {
+        id:9,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/th_____ng_th___c_cu___c_s___ng___crop.png',
+    },
+    {
+        id:10,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/sach_thieu_nhi___crop.png',
+    },
+    {
+        id:11,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/phat_tri___n_b___n_th__n___crop.png',
+    },
+    {
+        id:12,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/tin_h___c_ngo___i_ng____b__n_ch___y___crop.png',
+    },
+    {
+        id:13,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/sach_chuyen_nganh___crop.png',
+    },
+    {
+        id:14,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/giao_khoa.png',
+    },
+    {
+        id:15,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/tap_chi_2odt-sc.png',
+    },
+]
