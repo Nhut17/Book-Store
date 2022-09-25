@@ -8,7 +8,6 @@ const LoginForm = ({ setShowLogin }) => {
         setShowLogin(false)
     }
     return (
-
         < div >
             <Modal
                 isOpen={setShowLogin}
