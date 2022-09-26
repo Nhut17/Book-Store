@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import './SignUpForm.scss'
 import logo from '../../assets/images/Home/logo.png'
