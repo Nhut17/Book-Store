@@ -2,62 +2,937 @@ export const list_cate_products=[
     {
         id:1,
         name:'Sách Bán Chạy',
+        cate:'',
+        subCate:[
+
+        ],
+        img:'',
     },
     {
         id:2,
         name:'Sách Mới Phát Hành',
+        cate:'',
+        subCate:[
+
+        ],
+        img:'',
     },
     {
         id:3,
         name:'Sách Sắp Phát Hành',
+        cate:'',
+        subCate:[
+
+        ],
+        img:'',
     },
     {
         id:4,
         name:'Sách Ngoại Văn',
+        subCate:[
+            {
+                nameSub: 'Literature & Fiction',
+                cates:[
+                    {
+                        nameCate:'Romance'
+                    },
+                    {
+                        nameCate:'Mystery, Thriller & Suspense'
+                    },
+                    {
+                        nameCate:'Classics'
+                    },
+                    {
+                        nameCate:'Contemporary'
+                    },
+                    {
+                        nameCate:'Action & Adventure'
+                    },
+                    {
+                        nameCate:'Short Stories'
+                    },
+                    {
+                        nameCate:'Science Fiction & Fantasty'
+                    },
+                    {
+                        nameCate:'Humor & Satire'
+                    },
+                    {
+                        nameCate:'History'
+                    },
+                    {
+                        nameCate:'Poetry'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả >>'
+                    },
+                ]
+            },
+            {
+                nameSub: 'Travel',
+                cates:[
+                    {
+                        nameCate:'Adventure Travel'
+                    },
+                    {
+                        nameCate:'Travel Writing'
+                    },
+                ]
+            },
+            {
+                nameSub: "Children's Books",
+                cates:[
+                    {
+                        nameCate:'Animals'
+                    },
+                    {
+                        nameCate:"Children's Action & Adventure"
+                    },
+                    {
+                        nameCate:"Children's Classics"
+                    },
+                    {
+                        nameCate:"Children's Literature & Fiction"
+                    },
+                    {
+                        nameCate:"Fairy Tales, Folk Tales & Myths"
+                    },
+                    {
+                        nameCate:"Growing Up & Facts Of Life"
+                    },
+                    
+                ]
+            },
+            {
+                nameSub: 'English As A Second',
+                cates:[
+                    
+                ]
+            },
+            {
+                nameSub: 'Language',
+                cates:[
+                    {
+                        nameCate:'TOEIC'
+                    },
+                    {
+                        nameCate:'TOEFL'
+                    },
+                    {
+                        nameCate:'IELTS'
+                    },
+                    {
+                        nameCate:'English Skills'
+                    },
+                    {
+                        nameCate:'Dictionary'
+                    },
+                    {
+                        nameCate:'English For Adults'
+                    },
+                    {
+                        nameCate:'English Specific Purposes'
+                    },
+                ]
+            },
+            {
+                nameSub: 'Nhà Phát Hành Nổi Bật',
+                cates:[
+                    {
+                        nameCate:'Oxford University Press'
+                    },
+                    {
+                        nameCate:'Pearson Education'
+                    },
+                    {
+                        nameCate:'Pearson'
+                    },
+                    {
+                        nameCate:'McGraw Hill'
+                    },
+                    {
+                        nameCate:'Macmillan Education'
+                    },
+                    {
+                        nameCate:'Cambridge University Press'
+                    },
+                    {
+                        nameCate:'Prentice Hall'
+                    },
+                    {
+                        nameCate:'National Geographic'
+                    },
+                    {
+                        nameCate:'Heinle Cengage Learning'
+                    },
+                    
+                ]
+            },
+        ],
+        img:'https://www.vinabook.com/images/menu/175/ngo___i_v__n___kinh_t____2_crop.png',
     },
     {
         id:5,
         name:'Sách Blockchain',
+        cate:'',
+        subCate:[
+            {
+                nameSub: '',
+                cates:[
+                    {
+                        nameCate:''
+                    },
+                ]
+            }
+        ],
+        img:'',
     },
     {
         id:6,
         name:'Sách Kinh tế',
+        cate:'',
+        subCate:[
+            {
+                nameSub: 'DANH MỤC',
+                cates:[
+                    {
+                        nameCate:'Marketing - Bán Hàng'
+                    },
+                    {
+                        nameCate:'Ngoại Thương'
+                    },
+                    {
+                        nameCate:'Nhân Sự & Việc Làm'
+                    },
+                    {
+                        nameCate:'Nhân Vật & Bài Học Kinh Doanh'
+                    },
+                    {
+                        nameCate:'Phân Tích & Môi Trường Kinh Tế'
+                    },
+                    {
+                        nameCate:'Quản Trị - Lãnh Đạo'
+                    },
+                    {
+                        nameCate:'Tài Chính - Kế Toán'
+                    },
+                    {
+                        nameCate:'Văn Bản Luật'
+                    },
+                    {
+                        nameCate:'Đầu Tư & Chứng Khoán'
+                    },
+                ]
+            },
+            {
+                nameSub: 'TÁC GIẢ SÁCH KIHH TẾ',
+                cates:[
+                    {
+                        nameCate:'Philip Kotler'
+                    },
+                    {
+                        nameCate:'Robert T.Kiyosaki'
+                    },
+                    {
+                        nameCate:'Brian Tracy'
+                    },
+                    {
+                        nameCate:'Sharon L.Lechter'
+                    },
+                    {
+                        nameCate:'Napoleon Hill'
+                    },
+                    {
+                        nameCate:'Ken Blanchard'
+                    },
+                    {
+                        nameCate:'Adam Khoo'
+                    },
+                    {
+                        nameCate:'Robert C.Guell'
+                    },
+                    {
+                        nameCate:'PGS.TS.Võ Văn Nhị'
+                    },
+                ]
+            },
+            {
+                nameSub: 'NHÀ PHÁT HÀNH',
+                cates:[
+                    {
+                        nameCate:'Alpha Books'
+                    },
+                    {
+                        nameCate:'Kinh Tế'
+                    },
+                    {
+                        nameCate:'Nxb Trẻ'
+                    },
+                    {
+                        nameCate:'Trí Việt'
+                    },
+                    {
+                        nameCate:'Thái Hà'
+                    },
+                    {
+                        nameCate:'Văn Lang'
+                    },
+                    {
+                        nameCate:'Nhân Văn'
+                    },
+                    {
+                        nameCate:'Phương Nam'
+                    },
+                    {
+                        nameCate:'Fahasa'
+                    },
+                    {
+                        nameCate:'Bookshop Loc'
+                    },
+                ]
+            },
+        ],
+        img:'https://www.vinabook.com/images/menu/175/kinh_te.png',
     },
     {
         id:7,
         name:'Sách Văn Học trong nước',
+        cate:'',
+        subCate:[
+            {
+                nameSub: 'DANH MỤC',
+                cates:[
+                    {
+                        nameCate:'Phê Binh Văn Học'
+                    },
+                    {
+                        nameCate:'Phóng Sự, Ký Sự'
+                    },
+                    {
+                        nameCate:'Sách Về Nhân Vật Văn Học'
+                    },
+                    {
+                        nameCate:'Thơ Ca'
+                    },
+                    {
+                        nameCate:'Tiểu Thuyết Lãng Mạn'
+                    },
+                    {
+                        nameCate:'Tiểu Thuyết Lịch Sử'
+                    },
+                    {
+                        nameCate:'Truyện & Thơ Ca Dân Gian'
+                    },
+                    {
+                        nameCate:'Truyện Dài'
+                    },
+                    {
+                        nameCate:'Truyện Giả Tưởng - Thần Bí'
+                    },
+                    {
+                        nameCate:'Truyện Kiếm Hiệp'
+                    },
+                    {
+                        nameCate:'Truyện Ngắn - Tản Văn'
+                    },
+                    {
+                        nameCate:'Truyện Thiếu Nhi'
+                    },
+                    {
+                        nameCate:'Truyện Trinh Thám, Vụ Án'
+                    },
+                    {
+                        nameCate:'Tự Truyện - Hồi Ký'
+                    },
+                ]
+            },
+            {
+                nameSub: 'TÁC GIẢ',
+                cates:[
+                    {
+                        nameCate:'Nguyễn Nhật Ánh'
+                    },
+                    {
+                        nameCate:'Tô Hoài'
+                    },
+                    {
+                        nameCate:'Hồ Biểu Chánh'
+                    },
+                    {
+                        nameCate:'Hồ Anh Thái'
+                    },
+                    {
+                        nameCate:'Vũ Trọng Phụng'
+                    },
+                    {
+                        nameCate:'Nguyễn Ngọc Tư'
+                    },
+                    {
+                        nameCate:'Nguyễn Quang Sáng'
+                    },
+                    {
+                        nameCate:'Dương Thụy'
+                    },
+                    {
+                        nameCate:'Gào'
+                    },
+                    {
+                        nameCate:'Anh Khang'
+                    },
+                    {
+                        nameCate:'Gia Đoàn'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                ]
+            },
+            {
+                nameSub: 'NHÀ PHÁT HÀNH',
+                cates:[
+                    {
+                        nameCate:'Nxb Trẻ'
+                    },
+                    {
+                        nameCate:'Nhã Nam'
+                    },
+                    {
+                        nameCate:'Fasaha'
+                    },
+                    {
+                        nameCate:'Thành Nghĩa'
+                    },
+                    {
+                        nameCate:'Văn Chương'
+                    },
+                    {
+                        nameCate:'Phương Đông'
+                    },
+                    {
+                        nameCate:'NXB Kim Đồng'
+                    },
+                    {
+                        nameCate:'Văn Việt'
+                    },
+                    {
+                        nameCate:'NXB Văn Hóa Văn Nghệ'
+                    },
+                    {
+                        nameCate:'BachvietBooks'
+                    },
+                    {
+                        nameCate:'NXB Phụ Nữ'
+                    },
+                    {
+                        nameCate:'Đông Tây'
+                    },
+                    {
+                        nameCate:'Đinh Tị'
+                    },
+                    {
+                        nameCate:'Đông A DC'
+                    },
+                    {
+                        nameCate:'Quang Minh'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                    
+                ]
+            },
+        ],
+       
+        img:'https://www.vinabook.com/images/menu/175/van_hoc_trong_nuoc___drop.png',
     },
     {
         id:8,
         name:'Sách Văn Học Nước Ngoài',
+        cate:'',
+        subCate:[
+            {
+                nameSub: 'DANH MỤC',
+                cates:[
+                    {
+                        nameCate:'Cổ Tích & Thần Thoại'
+                    },
+                    {
+                        nameCate:'Phê Bình Văn Học'
+                    },
+                    {
+                        nameCate:'Phóng Sự, Ký Sự'
+                    },
+                    {
+                        nameCate:'Sách Về Nhân Vật Văn Học'
+                    },
+                    {
+                        nameCate:'Thơ Ca'
+                    },
+                    {
+                        nameCate:'Tiểu Thuyết Tình Yêu'
+                    },
+                    {
+                        nameCate:'Truyện Kiếm Hiệp - Phiêu Lưu'
+                    },
+                    {
+                        nameCate:'Truyện Lịch Sử'
+                    },
+                    {
+                        nameCate:'Truyện Ngắn'
+                    },
+                    {
+                        nameCate:'Truyện Thiếu Nhi'
+                    },
+                    {
+                        nameCate:'Truyện Trinh Thám, Vụ Án'
+                    },
+                    {
+                        nameCate:'Truyện Viễn Tưởng'
+                    },
+                    {
+                        nameCate:'Tự Truyện - Hồi Ký'
+                    },
+                    {
+                        nameCate:'Tiếu Thuyết Ngôn Tình'
+                    },
+                    {
+                        nameCate:'Tiểu Thuyết Đam Mỹ'
+                    },
+                ]
+            },
+            {
+                nameSub: 'TÁC GIẢ',
+                cates:[
+                    {
+                        nameCate:'Huỳnh Dị'
+                    },
+                    {
+                        nameCate:'Cổ Long'
+                    },
+                    {
+                        nameCate:'Đặng Phi Bằng'
+                    },
+                    {
+                        nameCate:'Bắc Cuồng'
+                    },
+                    {
+                        nameCate:'Đinh Mặc'
+                    },
+                    {
+                        nameCate:'Danielle Steel'
+                    },
+                    {
+                        nameCate:'Alexandre Dumas'
+                    },
+                    {
+                        nameCate:'Rick Riordan'
+                    },
+                    {
+                        nameCate:'Thanh Vân'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                ]
+            },
+            {
+                nameSub: 'NHÀ PHÁT HÀNH',
+                cates:[
+                    {
+                        nameCate:'Nhã Nam'
+                    },
+                    {
+                        nameCate:'Nxb Trẻ'
+                    },
+                    {
+                        nameCate:'BachvietBooks'
+                    },
+                    {
+                        nameCate:'Phương Nam'
+                    },
+                    {
+                        nameCate:'Đinh Tị'
+                    },
+                    {
+                        nameCate:'Fahasa'
+                    },
+                    {
+                        nameCate:'Văn Lang'
+                    },
+                    {
+                        nameCate:'Đông A DC'
+                    },
+                    {
+                        nameCate:'Alpha Books'
+                    },
+                    {
+                        nameCate:'NXB Kim Đồng'
+                    },
+                    {
+                        nameCate:'ChiBooks'
+                    },
+                    {
+                        nameCate:'Huy Hoàng'
+                    },
+                    {
+                        nameCate:'NXB Phụ Nữ'
+                    },
+                    {
+                        nameCate:'Văn Việt'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                ]
+            },
+        ],
+        img:'https://www.vinabook.com/images/menu/175/van_hoc_nuoc_ngoai___crop.png',
     },
     {
         id:9,
         name:'Sách Thường Thức - Đời Sống',
+        cate:'',
+        subCate:[
+            {
+                nameSub: 'DANH MỤC',
+                cates:[
+                    {
+                        nameCate:'Bí Quyết Làm Đẹp'
+                    },
+                    {
+                        nameCate:'Hạnh Phúc Gia Đình'
+                    },
+                    {
+                        nameCate:'Nữ Công Gia Chánh'
+                    },
+                    {
+                        nameCate:'Nuôi Dạy Con'
+                    },
+                    {
+                        nameCate:'Sách Nấu Ăn'
+                    },
+                    {
+                        nameCate:'Cây, Cá Cảnh'
+                    },
+                    {
+                        nameCate:'Vật Nuôi Trong Nhà'
+                    },
+                    {
+                        nameCate:'Cẩm Nang Tuổi Mới Lớn'
+                    },
+                    {
+                        nameCate:'Quan Hệ Giới Tính'
+                    },
+                    {
+                        nameCate:'Sinh Lý Học'
+                    },
+                ]
+            },
+            {
+                nameSub: 'TÁC GIẢ',
+                cates:[
+                    {
+                        nameCate:'Thiên Kim'
+                    },
+                    {
+                        nameCate:'Quỳn Hương'
+                    },
+                    {
+                        nameCate:'Nguyễn Kim Dân'
+                    },
+                    {
+                        nameCate:'Triệu Thị Chơi'
+                    },
+                    {
+                        nameCate:'Quỳnh Chi'
+                    },
+                    {
+                        nameCate:'Nguyễn Thị Phụng'
+                    },
+                    {
+                        nameCate:'Nguyenx Dzoãn Cẩm Vân'
+                    },
+                    {
+                        nameCate:'Cẩm Tuyết'
+                    },
+                    {
+                        nameCate:'Tiểu Quỳnh'
+                    },
+                    {
+                        nameCate:'Kiển Văn'
+                    },
+                    {
+                        nameCate:'Đỗ Kim Trung'
+                    },
+                    {
+                        nameCate:'Việt Chương'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                ]
+            },
+            {
+                nameSub: 'NHÀ PHÁT HÀNH',
+                cates:[
+                    {
+                        nameCate:'Văn Lang'
+                    },
+                    {
+                        nameCate:'NXB Phụ Nữ'
+                    },
+                    {
+                        nameCate:'Trí Việt'
+                    },
+                    {
+                        nameCate:'Nxb Trẻ'
+                    },
+                    {
+                        nameCate:'Quang Minh'
+                    },
+                    {
+                        nameCate:'Thăng Long'
+                    },
+                    {
+                        nameCate:'Phương Nam'
+                    },
+                    {
+                        nameCate:'Huy Hoàng'
+                    },
+                    {
+                        nameCate:'Nhân Văn'
+                    },
+                    {
+                        nameCate:'Thái Hà'
+                    },
+                    {
+                        nameCate:'Minh Long'
+                    },
+                    {
+                        nameCate:'Đinh Tị'
+                    },
+                    {
+                        nameCate:'Alpha Books'
+                    },
+                    {
+                        nameCate:'Fahasa'
+                    },
+                    {
+                        nameCate:'NXB Kim Đồng'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                    
+                ]
+            },
+        ],
+        img:'https://www.vinabook.com/images/menu/175/th_____ng_th___c_cu___c_s___ng___crop.png',
     },
     {
         id:10,
         name:'Sách Thiếu Nhi',
+        cate:'',
+        subCate:[
+            {
+                nameSub: 'DANH MỤC',
+                cates:[
+                    {
+                        nameCate:'Khoa Học Tự Nhiên'
+                    },
+                    {
+                        nameCate:'Khoa Học Xã Hội'
+                    },
+                    {
+                        nameCate:'Mỹ Thuật, Âm Nhạc'
+                    },
+                    {
+                        nameCate:'Sách Ngoại Ngữ'
+                    },
+                    {
+                        nameCate:'Truyện Tranh'
+                    },
+                ]
+            },
+            {
+                nameSub: 'TÁC GIẢ',
+                cates:[
+                    {
+                        nameCate:'Tuệ Văn'
+                    },
+                    {
+                        nameCate:'Ngô Minh Vân'
+                    },
+                    {
+                        nameCate:'Ngọc Linh'
+                    },
+                    {
+                        nameCate:'Aoyama Gosho'
+                    },
+                    {
+                        nameCate:'Fujiko.F.Fujio'
+                    },
+                    {
+                        nameCate:'Thu Hoa - First News'
+                    },
+                    {
+                        nameCate:'Giang Hồng, Hồng Trang'
+                    },
+                    {
+                        nameCate:'Yoshito Usui'
+                    },
+                    {
+                        nameCate:'Morris & Goscinny'
+                    },
+                    {
+                        nameCate:'Hồng Việt'
+                    },
+                    {
+                        nameCate:'Ngô Thừa Ân'
+                    },
+                    {
+                        nameCate:'Kyo Won'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                ]
+            },
+            {
+                nameSub: 'NHÀ PHÁT HÀNH',
+                cates:[
+                    {
+                        nameCate:'NXB Kim Đồng'
+                    },
+                    {
+                        nameCate:'Đông A DC'
+                    },
+                    {
+                        nameCate:'Đinh Tị'
+                    },
+                    {
+                        nameCate:'Nxb Trẻ'
+                    },
+                    {
+                        nameCate:'Trí Việt'
+                    },
+                    {
+                        nameCate:'NXB Phụ Nữ'
+                    },
+                    {
+                        nameCate:'Alpha Books'
+                    },
+                    {
+                        nameCate:'Minh Long'
+                    },
+                    {
+                        nameCate:'Nhân Văn'
+                    },
+                    {
+                        nameCate:'Huy Hoàng'
+                    },
+                    {
+                        nameCate:'Nhã Nam'
+                    },
+                    {
+                        nameCate:'TTTV Hà Nội'
+                    },
+                    {
+                        nameCate:'Phương Nam'
+                    },
+                    {
+                        nameCate:'Văn Lang'
+                    },
+                    {
+                        nameCate:'NXBTH TPHCM'
+                    },
+                    {
+                        nameCate:'Xem Tất Cả'
+                    },
+                ]
+            },
+        ],
+        img:'https://www.vinabook.com/images/menu/175/sach_thieu_nhi___crop.png',
     },
     {
         id:11,
         name:'Sách Phát Triển Bản Thân',
+        cate:'',
+        subCate:[
+            {
+                nameSub: '',
+                cates:[
+                    {
+                        nameCate:''
+                    },
+                ]
+            }
+        ],
+        img:'',
     },
     {
         id:12,
         name:'Sách Tin Học - Ngoại Ngữ',
+        cate:'',
+        subCate:[
+            {
+                nameSub: '',
+                cates:[
+                    {
+                        nameCate:''
+                    },
+                ]
+            }
+        ],
+        img:'',
     },
     {
         id:13,
         name:'Sách Chuyên Nghành',
+        cate:'',
+        subCate:[
+            {
+                nameSub: '',
+                cates:[
+                    {
+                        nameCate:''
+                    },
+                ]
+            }
+        ],
+        img:'',
     },
     {
         id:14,
         name:'Sách Giáo Khoa - Giáo Trình',
+        cate:'',
+        subCate:[
+{
+                nameSub: '',
+                cates:[
+                    {
+                        nameCate:''
+                    },
+                ]
+            }   
+        ],
+        img:'',
     },
     {
         id:15,
         name:'Tạp Chí - Văn Phòng Phẩm',
+        cate:'',
+        subCate:[
+{
+                nameSub: '',
+                cates:[
+                    {
+                        nameCate:''
+                    },
+                ]
+            }
+        ],
+        img:'',
     },
 ]
 
@@ -252,3 +1127,6 @@ export const list_product_right = [
         img:'https://www.vinabook.com/images/thumbnails/product/50x/278742_ca-phe-cung-tony-tai-ban-112017.jpg',
     },
 ]
+
+
+

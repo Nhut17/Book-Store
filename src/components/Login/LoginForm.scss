@@ -32,6 +32,12 @@
         width: 70%;
         height: auto;
 
+        .sign-up{
+            font-size: 24px;
+            padding-bottom: 20px;
+            
+        }
+
         .input-group {
             padding-top: 5px;
             width: 70%;
@@ -39,11 +45,18 @@
             .input-name {
                 border-radius: 5px;
                 border: 1px solid gray;
+                padding: 8px 15px;
+                .ic{
+                    font-size: 15px;
+                    position: relative;
+                    transform: translateX(-10px);
 
+                }
                 input {
                     height: 30px;
+
                     outline: none;
-                    padding: 0 10px;
+                   
                 }
             }
 
@@ -51,11 +64,16 @@
                 border-radius: 5px;
                 border: 1px solid gray;
                 margin-top: 5px;
+                padding: 8px 15px;
+                .ic{
+                    font-size: 15px;
+                    position: relative;
+                    transform: translateX(-10px);
 
+                }
                 input {
                     height: 30px;
                     outline: none;
-                    padding: 0 10px;
                 }
             }
 

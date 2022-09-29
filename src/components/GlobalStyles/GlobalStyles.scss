@@ -187,3 +187,11 @@ button {
 
   form {}
 }
+
+.react-responsive-modal-modal
+{
+  position: fixed;
+  transform: translate(50%,50%);
+  bottom: 50%;
+  right: 50%;
+}
