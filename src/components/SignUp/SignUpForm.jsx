@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 import './SignUpForm.scss'
 import logo from '../../assets/images/Home/logo.png'
 const SignUpForm = ({ setShowSignUp }) => {
-    console.log('wbweubfweub')
+  
     const toggle = () => {
         console.log('checkk signup')
         setShowSignUp(false)
     }
     return (
-        <div>
+        <div className='modal-sign-up'>
             <Modal
                 open={setShowSignUp}
                 onClose={toggle}

@@ -178,20 +178,39 @@ button {
 }
 
 
-.login {
-  position: fixed;
-  transform: translate(50%, 40%);
-  left: 5%;
-  transition: all 0.4s;
-  z-index: 20;
+// .login {
+//   position: fixed;
+//   transform: translate(50%, 40%);
+//   left: 5%;
+//   transition: all 0.4s;
+//   z-index: 20;
 
-  form {}
-}
+//   form {}
+// }
 
-.react-responsive-modal-modal
-{
-  position: fixed;
-  transform: translate(50%,50%);
-  bottom: 50%;
-  right: 50%;
+// .customModal{
+//   top: 30%;
+//   right: 30%;
+// }
+
+.breadcrumb{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .parent{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 3px;
+      border: 3px solid black;
+      border-color: black black transparent transparent;
+      right: -10px;
+      bottom: 50%;
+      transform: translate(10px,50%) rotate(45deg); 
+    }
+  }
+  .child{
+    padding-left: 40px;
+  }
 }

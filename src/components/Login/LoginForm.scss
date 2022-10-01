@@ -13,8 +13,6 @@
     box-shadow: 0 12px 15px 0 rgb(0 0 0 / 25%);
     margin: 1.2rem;
     padding: 1.2rem;
-    position: relative;
-    overflow-y: auto;
 }
 
 .customModal {
@@ -23,6 +21,8 @@
     justify-content: center;
     align-items: center;
     // align-items: center !important;
+    // transform: translate(50%,50%);
+  
     position: absolute !important;
     width: 100%;
     height: auto;

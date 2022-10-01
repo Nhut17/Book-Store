@@ -11,7 +11,7 @@ const LoginForm = ({ setShowLogin }) => {
         setShowLogin(false)
     }
     return (
-        <div >
+        <div className='modal-login' >
             <Modal
                 open={setShowLogin}
                 onClose={toggle}

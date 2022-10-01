@@ -9,7 +9,7 @@ const CategoriesProduct = ({list_cate}) => {
         <ul>
             {
                 list_cate.map(category => (
-                    <Link key={category.id} to='/'>
+                    <Link key={category.id} to={category.linkTo}>
                     <li >
                         <span>{category.name}</span>
                         <i class="fa-solid fa-angle-right ic"></i>

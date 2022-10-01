@@ -7,6 +7,7 @@ export const list_cate_products=[
 
         ],
         img:'',
+        linkTo:'/sach-ban-chay'
     },
     {
         id:2,
@@ -16,6 +17,7 @@ export const list_cate_products=[
 
         ],
         img:'',
+        linkTo:'/'
     },
     {
         id:3,
@@ -25,6 +27,7 @@ export const list_cate_products=[
 
         ],
         img:'',
+        linkTo:'/'
     },
     {
         id:4,
@@ -170,6 +173,7 @@ export const list_cate_products=[
             },
         ],
         img:'https://www.vinabook.com/images/menu/175/ngo___i_v__n___kinh_t____2_crop.png',
+        linkTo:'/'
     },
     {
         id:5,
@@ -186,6 +190,7 @@ export const list_cate_products=[
             }
         ],
         img:'',
+        linkTo:'/'
     },
     {
         id:6,
@@ -293,6 +298,7 @@ export const list_cate_products=[
             },
         ],
         img:'https://www.vinabook.com/images/menu/175/kinh_te.png',
+        linkTo:'/'
     },
     {
         id:7,
@@ -442,8 +448,8 @@ export const list_cate_products=[
                 ]
             },
         ],
-       
         img:'https://www.vinabook.com/images/menu/175/van_hoc_trong_nuoc___drop.png',
+        linkTo:'/',
     },
     {
         id:8,
@@ -587,6 +593,7 @@ export const list_cate_products=[
             },
         ],
         img:'https://www.vinabook.com/images/menu/175/van_hoc_nuoc_ngoai___crop.png',
+        linkTo:'/'
     },
     {
         id:9,
@@ -728,6 +735,7 @@ export const list_cate_products=[
             },
         ],
         img:'https://www.vinabook.com/images/menu/175/th_____ng_th___c_cu___c_s___ng___crop.png',
+        linkTo:'/'
     },
     {
         id:10,
@@ -853,6 +861,7 @@ export const list_cate_products=[
             },
         ],
         img:'https://www.vinabook.com/images/menu/175/sach_thieu_nhi___crop.png',
+        linkTo:'/'
     },
     {
         id:11,
@@ -869,6 +878,7 @@ export const list_cate_products=[
             }
         ],
         img:'',
+        linkTo:'/'
     },
     {
         id:12,
@@ -885,6 +895,7 @@ export const list_cate_products=[
             }
         ],
         img:'',
+        linkTo:'/'
     },
     {
         id:13,
@@ -901,6 +912,7 @@ export const list_cate_products=[
             }
         ],
         img:'',
+        linkTo:'/'
     },
     {
         id:14,
@@ -917,6 +929,7 @@ export const list_cate_products=[
             }   
         ],
         img:'',
+        linkTo:'/'
     },
     {
         id:15,
@@ -933,6 +946,7 @@ export const list_cate_products=[
             }
         ],
         img:'',
+        linkTo:'/'
     },
 ]
 
@@ -1129,4 +1143,73 @@ export const list_product_right = [
 ]
 
 
+export const list_cate_star_top = [
+    {
+        title: 'Kho Sách Giảm Giá',
+        linkTo:'/kho-sach-giam-gia',
+    },
+    {
+        title: 'Sách Bán Chạy',
+        linkTo:'/sach-ban-chay',
+    },
+    {
+        title: 'Sách Mới Phát Hành',
+        linkTo:'/sach-moi-phat-hanh',
+    },
+    {
+        title: 'Sách Sắp Phát Hành',
+        linkTo:'/sach-sap-phat-hanh',
+    },
+    {
+        title: 'Combo Ưu Đãi',
+        linkTo:'/combo-uu-dai',
+    },
+]
 
+export const list_cate_sub = [
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+    {
+        content:'PaulVigna',
+        linkTo:'/',
+        quantity: 2
+    },
+]
