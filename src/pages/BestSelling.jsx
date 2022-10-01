@@ -9,8 +9,13 @@ const BestSelling = () => {
                     wef
                 </div>
                 <div className="right">
-                    <div className="title">Sách bán chạy</div>
+                    <div className="title"> SÁCH BÁN CHẠY</div>
                     <hr />
+                    <div className='sub-title'>
+                        Sách bán chạy
+                        <i class="fa-solid fa-greater-than"></i>
+                        <span>Week [19/09/2022 - 25/09/2022]</span>
+                    </div>
 
                 </div>
             </div>
