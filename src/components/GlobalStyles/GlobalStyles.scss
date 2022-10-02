@@ -1,42 +1,55 @@
 @import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import '../../sass/variables.scss';
-*{
-  margin:0;
-  padding:0;
+
+* {
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
- 
-}//loai bo padding margin mac dinh, bat buoc co
 
-button,input, select,textarea{
+}
+
+//loai bo padding margin mac dinh, bat buoc co
+
+button,
+input,
+select,
+textarea {
   text-decoration: none;
   border: none;
   outline: none;
-  background: none;
+  // background: none;
 
 }
-i{
+
+i {
   list-style: none;
 }
 
-ol,ul,li,a{
+ol,
+ul,
+li,
+a {
   text-decoration: none;
   list-style: none;
 
 }
-a{
+
+a {
   color: black;
 }
-button{
+
+button {
   cursor: pointer;
-  
+
 }
 
-.container{
+.container {
   max-width: 1300px;
   margin: 0 auto;
 }
+
 
 // .flex{
 //   display: flex;
@@ -61,50 +74,83 @@ button{
 //   cursor: pointer;
 // }
 
-.product{ 
+.flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+.product {
   width: 300px;
   height: 220px;
   border: 1px solid rgba($color: #000000, $alpha: 0.1);
   background-color: white;
   padding: 15px 15px 15px 10px;
-  .info-book{
+
+  .info-book {
     display: flex;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       width: 105%;
       border: 1px dashed rgba($color: #000000, $alpha: 0.4);
       bottom: 5px;
-      
+
     }
-    .img{
+
+    .img {
       width: 90px;
       height: 150px;
       position: relative;
       transform: translateY(-30px);
-      img{
+
+      img {
         width: 100%;
         height: 100%;
       }
     }
-    .content{
+
+    .content {
       padding-left: 15px;
-      .name{
+
+      .name {
         width: 150px;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
         font-weight: bold;
         font-size: 15px;
-       
+
       }
-      .author{
+
+      .author {
         padding-top: 10px;
         font-size: 12px;
         opacity: 0.8;
         position: relative;
-        &::before{
+
+        &::before {
           position: absolute;
           content: '';
           width: 100%;
@@ -112,55 +158,69 @@ button{
           bottom: -10px;
         }
       }
-      .description{
-          padding-top: 20px;
-          font-size: 13px;
-        
-          width: 150px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          flex-wrap: wrap;
-          display:  -webkit-box;
-          -webkit-line-clamp: 4;
-          -webkit-box-orient: vertical;
- 
+
+      .description {
+        padding-top: 20px;
+        font-size: 13px;
+
+        width: 150px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex-wrap: wrap;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+
       }
     }
 
   }
 
-  .box-buy{
+  .box-buy {
     padding-top: 15px;
-    .promotion{
+
+    .promotion {
       padding: 5px 15px;
       background-color: $btn-color;
       border-radius: 5px;
       color: white;
       font-size: 14px;
     }
-    .price-old{
+
+    .price-old {
       margin-left: 70px;
       font-size: 14px;
       opacity: 0.6;
       text-decoration: line-through;
     }
-    .price-new{
-        margin-left: 10px;
-        color: $price-color;
+
+    .price-new {
+      margin-left: 10px;
+      color: $price-color;
     }
   }
 
 }
 
 
-.login{
-  position: fixed;
-  transform: translate(50%,40%);
-  left: 5%;
-  transition: all 0.4s;
-  z-index: 20;
-  form{
-   
-    
+.breadcrumb{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .parent{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 3px;
+      border: 3px solid black;
+      border-color: black black transparent transparent;
+      right: -10px;
+      bottom: 50%;
+      transform: translate(10px,50%) rotate(45deg); 
+    }
+  }
+  .child{
+    padding-left: 40px;
   }
 }
