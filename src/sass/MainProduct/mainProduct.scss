@@ -47,6 +47,29 @@
                 color: $price-color;
             }
         }
+
+    
+    .see-more{
+        position: relative;
+        left: 90%;
+        font-size: 13px;
+        &:hover{
+            span{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+        .ic{
+            opacity: 0.3;
+            
+        }
+        span{
+            color: $see-more-color;
+            padding-left: 10px;
+        }
+
+        
+    }
     
    
 }

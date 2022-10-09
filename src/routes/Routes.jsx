@@ -8,8 +8,7 @@ import SignIn from '../pages/SignIn.jsx';
 import SignUp from '../pages/SignUp.jsx';
 import BestSelling from '../pages/BestSelling.jsx';
 
-
-import Login from '../pages/Login.jsx';
+import ProductDetail from '../components/ProductDetail/ProductDetail.jsx';
 
 
 const Routes = () => {
@@ -27,6 +26,8 @@ const Routes = () => {
       <Route path="/dang-ky" exact component={SignUp} />
 
       <Route path="/sach-ban-chay" exact component={BestSelling} />
+
+      <Route path="/product-detail" exact component={ProductDetail} />
 
 
 

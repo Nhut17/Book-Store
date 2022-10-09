@@ -992,10 +992,12 @@ export const list_product = [
         name:'Sapiens - Lược Sử Loài Người Bằng Tranh - Tập 2: Những Trụ Cột Của Nền Văn Minh',
         author:'Yuval Noah Harari',
         description: 'TẬP 2 của loạt truyện tranh chuyển thể từ tác phẩm "Sapiens - Lược sử loài người" của tác giả Yuval Noah Harari được chính thức phát hành trên toàn cầu.',
+        publisher:'NXB Dân Trí',
+        producer:'Alpha book',
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:2,
@@ -1005,7 +1007,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:3,
@@ -1015,7 +1017,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:4,
@@ -1025,7 +1027,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:5,
@@ -1035,7 +1037,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:6,
@@ -1045,7 +1047,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
 ]
 
