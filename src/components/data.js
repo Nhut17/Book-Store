@@ -997,6 +997,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
+        content:'TẬP 2 của loạt truyện tranh chuyển thể từ tác phẩm "Sapiens - Lược sử loài người" của tác giả Yuval Noah Harari được chính thức phát hành trên toàn cầu.Omega+ cũng vui mừng thông báo đến với các độc giả tại Việt Nam, phiên bản tiếng Việt của tập truyện này cũng sẽ được phát hành toàn quốc gần như ĐỒNG THỜI với các phiên bản khác trên thế giới vào tháng 11/2021. Tập 1 đã được chúng tôi xuất bản vào tháng 5/2021.Harari đã hợp tác với các nghệ sĩ truyện tranh nổi tiếng David Vandermeulen (đồng sáng tác) và Daniel Casanave (họa sĩ minh họa), để tạo ra một loạt tập truyện đồ họa nhằm thu hút những độc giả không thường xuyên của mảng khoa học và lịch sử. Tập sách bao gồm nhiều hình ảnh minh họa đầy đủ màu sắc và văn bản dễ hiểu sẽ làm nội dung của tác phẩm trở nên hấp dẫn hơn dành cho độc giả mọi lứa tuổi. Dự kiến sẽ có 4 tập dựa trên 4 phần chính của tác phẩm gốc.ĐẶC BIỆT CỦA TẬP 2: là bộ bookmark hình nhân vật bao gồm 4 nhân vật chính dẫn dắt xuyên suốt các tập truyện và 1 nhân vật đại diện cho tập 2. Đó là:. Tác giả Yuval Noah Harari . Giáo sư đáng kính Saraswati. Tiến sĩ Hư cấu mang hình dánh siêu nhân. Thám tử siêu ngầu Lopez. Nhân vật hư cấu cây lúa mì',
         img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
