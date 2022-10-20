@@ -1,37 +1,37 @@
 .best-selling {
-    .container {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
+    // .container {
+    //     display: flex;
+    //     align-items: center;
+    //     margin-top: 20px;
 
-        .left {
-            width: 25%;
-        }
+    //     .left {
+    //         width: 25%;
+    //     }
 
-        .right {
-            width: 75%;
+    //     .right {
+    //         width: 75%;
 
-            .title {
-                font-size: 18px;
-                color: #008340;
-                margin-bottom: 10px;
-                margin-top: 10px;
-            }
+    //         .title {
+    //             font-size: 18px;
+    //             color: #008340;
+    //             margin-bottom: 10px;
+    //             margin-top: 10px;
+    //         }
 
-            .sub-title {
-                display: flex;
-                align-items: flex-start;
-                font-size: 13px;
-                margin-top: 5px;
-                font-family: "Roboto", sans-serif;
-                color: #2f3030;
-                line-height: 1.2;
-                text-align: left;
-                float: left;
-                width: 100%;
-                padding-bottom: 15px;
-                border-bottom: 1px dashed #c7c7c7;
-            }
-        }
-    }
+    //         .sub-title {
+    //             display: flex;
+    //             align-items: flex-start;
+    //             font-size: 13px;
+    //             margin-top: 5px;
+    //             font-family: "Roboto", sans-serif;
+    //             color: #2f3030;
+    //             line-height: 1.2;
+    //             text-align: left;
+    //             float: left;
+    //             width: 100%;
+    //             padding-bottom: 15px;
+    //             border-bottom: 1px dashed #c7c7c7;
+    //         }
+    //     }
+    // }
 }

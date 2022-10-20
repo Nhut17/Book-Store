@@ -1,148 +1,395 @@
+// @import '../../sass/variables.scss';
+
+
+
+// .customOverlay {
+//     background: rgba(120, 213, 181, 0.7);
+// }
+
+// // .react-responsive-modal-modal {
+// //     max-width: 800px;
+// //     display: flex;
+// //     text-align: left;
+// //     vertical-align: middle;
+// //     background: #ffffff;
+// //     box-shadow: 0 12px 15px 0 rgb(0 0 0 / 25%);
+// //     margin: 1.2rem;
+// //     padding: 1.2rem;
+// //     overflow-y: auto;
+// // }
+
+// .customModal {
+//     display: flex !important;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     // align-items: center !important;
+//     position: absolute !important;
+//     width: 100%;
+//     height: auto;
+//     border-radius: 30px;
+//     top: 20%;
+//     right: 20%;
+
+//     // left:20%
+//     // transform: translate(50%, 50%);
+//     // bottom: 50%;
+//     // left: 50%;
+//     // right: 50%;
+//     .main-form {
+//         width: 70%;
+//         height: auto;
+
+//         .sign-up{
+//             font-weight: 600;
+//             color: $primary-color;
+//         }
+//         .input-group {
+//             padding-top: 5px;
+//             // width: 70%;
+
+//             .input-name {
+//                 border-radius: 5px;
+//                 border: 1px solid gray;
+
+//                 input {
+//                     height: 30px;
+//                     outline: none;
+//                     padding: 0 10px;
+//                 }
+//             }
+
+//             .input-password {
+//                 border-radius: 5px;
+//                 border: 1px solid gray;
+//                 margin-top: 5px;
+
+//                 input {
+//                     height: 30px;
+//                     outline: none;
+//                     padding: 0 10px;
+//                 }
+
+//                 .react-responsive-modal-modal {
+//                     max-width: 800px;
+//                     display: flex;
+//                     text-align: left;
+//                     vertical-align: middle;
+//                     background: #ffffff;
+//                     box-shadow: 0 12px 15px 0 rgb(0 0 0 / 25%);
+//                     margin: 1.2rem;
+//                     padding: 1.2rem;
+//                 }
+
+//                 .customModal {
+//                     display: flex !important;
+//                     flex-direction: row;
+//                     justify-content: center;
+//                     align-items: center;
+//                     // align-items: center !important;
+//                     // transform: translate(50%,50%);
+
+//                     position: absolute !important;
+//                     width: 100%;
+//                     height: auto;
+//                     border-radius: 30px;
+
+//                     .main-form {
+//                         width: 70%;
+//                         height: auto;
+
+//                         .sign-up {
+//                             font-size: 24px;
+//                             padding-bottom: 20px;
+
+//                         }
+
+//                         .input-group {
+//                             padding-top: 5px;
+//                             width: 70%;
+
+//                             .input-name {
+//                                 border-radius: 5px;
+//                                 border: 1px solid gray;
+//                                 padding: 8px 15px;
+
+//                                 .ic {
+//                                     font-size: 15px;
+//                                     position: relative;
+//                                     transform: translateX(-10px);
+
+//                                 }
+
+//                                 input {
+//                                     height: 30px;
+
+//                                     outline: none;
+
+//                                 }
+//                             }
+
+//                             .input-password {
+//                                 border-radius: 5px;
+//                                 border: 1px solid gray;
+//                                 margin-top: 5px;
+//                                 padding: 8px 15px;
+
+//                                 .ic {
+//                                     font-size: 15px;
+//                                     position: relative;
+//                                     transform: translateX(-10px);
+
+//                                 }
+
+//                                 input {
+//                                     height: 30px;
+//                                     outline: none;
+
+//                                 }
+
+//                                 .ic {
+//                                     padding-left: 10px;
+//                                     font-size: 12px;
+//                                     // transform: translate(0px,10px);
+//                                     // left: 5px;
+//                                 }
+
+
+//                             }
+
+
+//                             .btn-sign-in {
+//                                 margin-top: 10px;
+//                                 padding: 15px 50px;
+//                                 background-color: #7FB77E;
+//                                 color: white;
+//                                 border-radius: 10px;
+//                                 transition: all 0.4s;
+//                                 font-size: 17px;
+
+//                                 &:hover {
+//                                     background-color: $primary-color;
+//                                 }
+//                             }
+
+//                             .login-with {
+//                                 position: absolute;
+//                                 margin-top: 10px;
+
+//                                 // bottom: 50px;
+//                                 display: flex;
+//                                 align-items: center;
+
+//                                 .ic {
+//                                     width: 30px;
+//                                     height: 30px;
+//                                     border-radius: 5px;
+//                                     display: flex;
+//                                     justify-content: center;
+//                                     align-items: center;
+//                                     margin-left: 15px;
+//                                     font-size: 12px;
+//                                     color: white;
+//                                     cursor: pointer;
+//                                     transition: all 0.5s;
+
+//                                     &:hover {
+//                                         transform: scale(1.2);
+//                                         font-weight: bold;
+//                                     }
+
+//                                     // margin-bottom: 10px;
+//                                 }
+
+//                                 .ic-fb {
+//                                     // color: blue;
+//                                     background-color: #3b5998;
+//                                 }
+
+//                                 .ic-gg {
+//                                     background-color: #e72734;
+//                                 }
+//                             }
+//                         }
+
+                        
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     .img {
+//         width: 30%;
+
+//         img {
+//             // position: absolute;
+//             // transform: translate(-35%,15%);
+//             width: 100%;
+//         }
+//     }
+// }
+
+
+
+// // .modal-overlay.active {
+// //     display: table;
+// // }
 @import '../../sass/variables.scss';
 
+.customOverlay {
+    background: rgba(120, 213, 181, 0.7);
+}
 
-    .customOverlay {
-        background: rgba(120, 213, 181, 0.7);
-    }
-    
-    // .react-responsive-modal-modal {
-    //     max-width: 800px;
-    //     display: flex;
-    //     text-align: left;
-    //     vertical-align: middle;
-    //     background: #ffffff;
-    //     box-shadow: 0 12px 15px 0 rgb(0 0 0 / 25%);
-    //     margin: 1.2rem;
-    //     padding: 1.2rem;
-    //     overflow-y: auto;
-    // }
-    
-    .customModal {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        // align-items: center !important;
-        position: absolute !important;
-        width: 100%;
+.react-responsive-modal-modal {
+    max-width: 800px;
+    display: flex;
+    text-align: left;
+    vertical-align: middle;
+    background: #ffffff;
+    box-shadow: 0 12px 15px 0 rgb(0 0 0 / 25%);
+    margin: 1.2rem;
+    padding: 1.2rem;
+}
+
+.customModal {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // align-items: center !important;
+    // transform: translate(50%,50%);
+  
+    top: 30%;
+    right: 30%;
+    position: absolute !important;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+
+    .main-form {
+        width: 70%;
         height: auto;
-        border-radius: 30px;
-        top: 20%;
-        right: 20%;
-    
-        // left:20%
-        // transform: translate(50%, 50%);
-        // bottom: 50%;
-        // left: 50%;
-        // right: 50%;
-        .main-form {
+
+        .sign-up{
+            font-size: 24px;
+            padding-bottom: 20px;
+            
+        }
+
+        .input-group {
+            padding-top: 5px;
             width: 70%;
-            height: auto;
-    
-            .input-group {
-                padding-top: 5px;
-                // width: 70%;
-    
-                .input-name {
-                    border-radius: 5px;
-                    border: 1px solid gray;
-    
-                    input {
-                        height: 30px;
-                        outline: none;
-                        padding: 0 10px;
-                    }
+
+            .input-name {
+                border-radius: 5px;
+                border: 1px solid gray;
+                padding: 8px 15px;
+                .ic{
+                    font-size: 15px;
+                    position: relative;
+                    transform: translateX(-10px);
+
                 }
-    
-                .input-password {
-                    border-radius: 5px;
-                    border: 1px solid gray;
-                    margin-top: 5px;
-    
-                    input {
-                        height: 30px;
-                        outline: none;
-                        padding: 0 10px;
-                    }
-                }
-    
-                .ic {
-                    padding-left: 10px;
-                    font-size: 12px;
-                    // transform: translate(0px,10px);
-                    // left: 5px;
-                }
-    
-    
-            }
-    
-    
-            .btn-sign-in {
-                margin-top: 10px;
-                padding: 15px 50px;
-                background-color: #7FB77E;
-                color: white;
-                border-radius: 10px;
-                transition: all 0.4s;
-                font-size: 17px;
-    
-                &:hover {
-                    background-color: $primary-color;
-                }
-            }
-    
-            .login-with {
-                position: absolute;
-                margin-top: 10px;
-    
-                // bottom: 50px;
-                display: flex;
-                align-items: center;
-    
-                .ic {
-                    width: 30px;
+                input {
                     height: 30px;
-                    border-radius: 5px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-left: 15px;
-                    font-size: 12px;
-                    color: white;
-                    cursor: pointer;
-                    transition: all 0.5s;
-    
-                    &:hover {
-                        transform: scale(1.2);
-                        font-weight: bold;
-                    }
-    
-                    // margin-bottom: 10px;
+
+                    outline: none;
+                   
                 }
-    
-                .ic-fb {
-                    // color: blue;
-                    background-color: #3b5998;
+            }
+
+            .input-password {
+                border-radius: 5px;
+                border: 1px solid gray;
+                margin-top: 5px;
+                padding: 8px 15px;
+                .ic{
+                    font-size: 15px;
+                    position: relative;
+                    transform: translateX(-10px);
+
                 }
-    
-                .ic-gg {
-                    background-color: #e72734;
+                input {
+                    height: 30px;
+                    outline: none;
                 }
+            }
+
+            .ic {
+                padding-left: 10px;
+                font-size: 12px;
+                // transform: translate(0px,10px);
+                // left: 5px;
+            }
+
+
+        }
+
+
+        .btn-sign-in {
+            margin-top: 10px;
+            padding: 15px 50px;
+            background-color: #7FB77E;
+            color: white;
+            border-radius: 10px;
+            transition: all 0.4s;
+            font-size: 17px;
+
+            &:hover {
+                background-color: $primary-color;
             }
         }
-    
-        .img {
-            width: 30%;
-    
-            img {
-                // position: absolute;
-                // transform: translate(-35%,15%);
-                width: 100%;
+
+        .login-with {
+            position: absolute;
+            margin-top: 10px;
+
+            // bottom: 50px;
+            display: flex;
+            align-items: center;
+
+            .ic {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 15px;
+                font-size: 12px;
+                color: white;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.2);
+                    font-weight: bold;
+                }
+
+                // margin-bottom: 10px;
+            }
+
+            .ic-fb {
+                // color: blue;
+                background-color: #3b5998;
+            }
+
+            .ic-gg {
+                background-color: #e72734;
             }
         }
     }
 
+    .img {
+        width: 30%;
 
+        img {
+            // position: absolute;
+            // transform: translate(-35%,15%);
+            width: 100%;
+        }
+    }
+}
 
 // .modal-overlay.active {
 //     display: table;

@@ -9,7 +9,7 @@ import SignUp from "../pages/SignUp";
 
 import { LoginContext } from '../context/loginContext'
 import 'react-responsive-modal/styles.css';
-import { Modal } from 'react-responsive-modal';
+
 
 const Layout = () => {
   const [showLogin, setShowLogin] = useState(false)

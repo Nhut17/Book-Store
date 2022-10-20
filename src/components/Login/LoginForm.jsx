@@ -5,13 +5,14 @@ import { React, useState } from 'react';
 import './LoginForm.scss';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import { ModalHeader } from 'react-bootstrap';
 
 const LoginForm = ({ setShowLogin }) => {
     const toggle = () => {
         setShowLogin(false)
     }
     return (
-        <div >
+        <div className='modal-login' >
             <Modal
                 open={setShowLogin}
                 onClose={toggle}
