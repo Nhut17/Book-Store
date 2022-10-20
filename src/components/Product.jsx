@@ -33,6 +33,8 @@ const Product = ({data}) => {
                                     </span>
         </div>
 
+        
+
     </div>
   )
 }

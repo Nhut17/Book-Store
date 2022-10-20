@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import "./assets/font/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css";
 import GlobalStyles from "./components/GlobalStyles/index.js";
 import Layout from './components/Layout';
+import './index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

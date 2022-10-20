@@ -992,10 +992,13 @@ export const list_product = [
         name:'Sapiens - Lược Sử Loài Người Bằng Tranh - Tập 2: Những Trụ Cột Của Nền Văn Minh',
         author:'Yuval Noah Harari',
         description: 'TẬP 2 của loạt truyện tranh chuyển thể từ tác phẩm "Sapiens - Lược sử loài người" của tác giả Yuval Noah Harari được chính thức phát hành trên toàn cầu.',
+        publisher:'NXB Dân Trí',
+        producer:'Alpha book',
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        content:'TẬP 2 của loạt truyện tranh chuyển thể từ tác phẩm "Sapiens - Lược sử loài người" của tác giả Yuval Noah Harari được chính thức phát hành trên toàn cầu.Omega+ cũng vui mừng thông báo đến với các độc giả tại Việt Nam, phiên bản tiếng Việt của tập truyện này cũng sẽ được phát hành toàn quốc gần như ĐỒNG THỜI với các phiên bản khác trên thế giới vào tháng 11/2021. Tập 1 đã được chúng tôi xuất bản vào tháng 5/2021.Harari đã hợp tác với các nghệ sĩ truyện tranh nổi tiếng David Vandermeulen (đồng sáng tác) và Daniel Casanave (họa sĩ minh họa), để tạo ra một loạt tập truyện đồ họa nhằm thu hút những độc giả không thường xuyên của mảng khoa học và lịch sử. Tập sách bao gồm nhiều hình ảnh minh họa đầy đủ màu sắc và văn bản dễ hiểu sẽ làm nội dung của tác phẩm trở nên hấp dẫn hơn dành cho độc giả mọi lứa tuổi. Dự kiến sẽ có 4 tập dựa trên 4 phần chính của tác phẩm gốc.ĐẶC BIỆT CỦA TẬP 2: là bộ bookmark hình nhân vật bao gồm 4 nhân vật chính dẫn dắt xuyên suốt các tập truyện và 1 nhân vật đại diện cho tập 2. Đó là:. Tác giả Yuval Noah Harari . Giáo sư đáng kính Saraswati. Tiến sĩ Hư cấu mang hình dánh siêu nhân. Thám tử siêu ngầu Lopez. Nhân vật hư cấu cây lúa mì',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:2,
@@ -1005,7 +1008,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:3,
@@ -1015,7 +1018,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:4,
@@ -1025,7 +1028,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:5,
@@ -1035,7 +1038,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
     {
         id:6,
@@ -1045,7 +1048,7 @@ export const list_product = [
         priceOld: 345000,
         priceNew: 293000,
         promotion:15,
-        img:'https://www.vinabook.com/images/thumbnails/product/115x/372171_sapiens-luoc-su-loai-nguoi-bang-tranh-tap-2-nhung-tru-cot-cua-nen-van-minh.jpg',
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg',
     },
 ]
 
@@ -1143,6 +1146,226 @@ export const list_product_right = [
 ]
 
 
+const list_cate_dropdown = [
+    {
+        id:1,
+        subList:[],
+        background:'',
+    },
+    {
+        id:2,
+        subList:[],
+        background:'',
+    },
+    {
+        id:3,
+        subList:[],
+        background:'',
+    },
+    {
+        id:4,
+        subList:[
+            {
+                nameCate:'Literature & Fiction',
+                list:[
+                    {
+                        name: 'Romance',
+                    },
+                    {
+                        name: 'Mystery, Thriller & Suspense',
+                    },
+                    {
+                        name: 'Classics',
+                    },
+                    {
+                        name: 'Contemporary',
+                    },
+                    {
+                        name: 'Action & Adventure',
+                    },
+                    {
+                        name: 'Short Stories',
+                    },
+                    {
+                        name: 'Science Fiction & Fantasy',
+                    },
+                    {
+                        name: 'Humor & Satire',
+                    },
+                    {
+                        name: 'History',
+                    },
+                    {
+                        name: 'Poetry',
+                    },
+                    {
+                        name: 'Xem Tất Cả >>',
+                    },
+                ]
+            },
+            {
+                nameCate: 'Travel',
+                list:[
+                    {
+                        name:'Adventure Travel',
+                    },
+                    {
+                        name:'Travel Writing',
+                    },
+                   
+                ]
+            },
+            {
+                nameCate: "Children's Books ",
+                list:[
+                    {
+                        name:"Animals",
+
+                    },
+                    {
+                        name:"Children's Action & Adventure",
+                    },
+                    {
+                        name:"Children's Classics",
+                    },
+                    {
+                        name:"Children's Literature & Fiction",
+                    },
+                    {
+                        name:'Fairy Tales, Folk Tales & Myths',
+                    },
+                    {
+                        name:'Growing Up & Facts Of Life',
+                    },
+                    
+                ]
+            },
+            {
+                nameCate: 'English As A Sencond',
+                list:[
+                    
+                ]
+            },
+            {
+                nameCate: 'Language',
+                list:[
+                    {
+                        name:'TOEIC',
+                    },
+                    {
+                        name:'TOEFL',
+                    },
+                    {
+                        name:'IELTS',
+                    },
+                    {
+                        name:'English Skills',
+                    },
+                    {
+                        name:'Dictionary',
+                    },
+                    {
+                        name:'English For Adults',
+                    },
+                    {
+                        name:'English Specific Purpose',
+                    },
+                ]
+            },
+            {
+                nameCate: 'Nhà Phát Hành Nổi Bật',
+                list:[
+                    {
+                        name:'Oxford University Press',
+                    },
+                    {
+                        name:'Pearson Education',
+                    },
+                    {
+                        name:'Pearson',
+                    },
+                    {
+                        name:'McGraw Hill',
+                    },
+                    {
+                        name:'Macmillan Education',
+                    },
+                    {
+                        name:'Cambridge University Press',
+                    },
+                    {
+                        name:'Prentice Hall',
+                    },
+                    {
+                        name:'National Geographic',
+                    },
+                    {
+                        name:'Heinle Cengage Learning',
+                    },
+                ]
+            },
+        ],
+        background:'https://www.vinabook.com/images/menu/175/ngo___i_v__n___kinh_t____2_crop.png',
+    },
+    {
+        id:5,
+        subList:[
+            
+        ],
+        background:'https://www.vinabook.com/images/menu/175/kinh_te.png',
+    },
+    {
+        id:6,
+        subList:[],
+        background:'',
+    },
+    {
+        id:7,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/van_hoc_trong_nuoc___drop.png',
+    },
+    {
+        id:8,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/van_hoc_nuoc_ngoai___crop.png',
+    },
+    {
+        id:9,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/th_____ng_th___c_cu___c_s___ng___crop.png',
+    },
+    {
+        id:10,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/sach_thieu_nhi___crop.png',
+    },
+    {
+        id:11,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/phat_tri___n_b___n_th__n___crop.png',
+    },
+    {
+        id:12,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/tin_h___c_ngo___i_ng____b__n_ch___y___crop.png',
+    },
+    {
+        id:13,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/sach_chuyen_nganh___crop.png',
+    },
+    {
+        id:14,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/giao_khoa.png',
+    },
+    {
+        id:15,
+        subList:[],
+        background:'https://www.vinabook.com/images/menu/175/tap_chi_2odt-sc.png',
+    },
+]
+
 export const list_cate_star_top = [
     {
         title: 'Kho Sách Giảm Giá',
@@ -1211,5 +1434,53 @@ export const list_cate_sub = [
         content:'PaulVigna',
         linkTo:'/',
         quantity: 2
+    },
+]
+
+export const list_main_product = [
+    {
+        id:1,
+        name:'Đến Thế Giới Mới Với Smartphone - Tập 4',
+        author:'Patora Fuyuhara',
+        oldPrice:98000,
+        newPrice:78000,
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/351275_p90329mdenthegioimoivoismartphone4coverfilein1.jpg',
+
+    },
+    {
+        id:2,
+        name:'Đến Thế Giới Mới Với Smartphone - Tập 4',
+        author:'Patora Fuyuhara',
+        oldPrice:98000,
+        newPrice:78000,
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/351275_p90329mdenthegioimoivoismartphone4coverfilein1.jpg',
+
+    },
+    {
+        id:3,
+        name:'Đến Thế Giới Mới Với Smartphone - Tập 4',
+        author:'Patora Fuyuhara',
+        oldPrice:98000,
+        newPrice:78000,
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/351275_p90329mdenthegioimoivoismartphone4coverfilein1.jpg',
+
+    },
+    {
+        id:4,
+        name:'Đến Thế Giới Mới Với Smartphone - Tập 4',
+        author:'Patora Fuyuhara',
+        oldPrice:98000,
+        newPrice:78000,
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/351275_p90329mdenthegioimoivoismartphone4coverfilein1.jpg',
+
+    },
+    {
+        id:5,
+        name:'Đến Thế Giới Mới Với Smartphone - Tập 4',
+        author:'Patora Fuyuhara',
+        oldPrice:98000,
+        newPrice:78000,
+        img:'https://www.vinabook.com/images/thumbnails/product/240x/351275_p90329mdenthegioimoivoismartphone4coverfilein1.jpg',
+
     },
 ]

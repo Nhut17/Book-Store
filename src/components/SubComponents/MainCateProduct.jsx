@@ -1,6 +1,6 @@
 import React from 'react'
-import Breadcrumb from './Breadcrumb'
-import PageMainCategories from './PageMainCategories'
+import Breadcrumb from '../MainProduct/Breadcrumb'
+import PageMainCategories from '../MainProduct/PageMainCategories'
 import '../../sass/MainCateProduct/mainCateProduct.scss'
 
 const MainCateProduct = () => {

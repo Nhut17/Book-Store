@@ -7,8 +7,8 @@ const CategoryStartTop = () => {
     <div className='category-star-top'>
         <ul>
         {
-            list_cate_star_top.map(val => (
-                <Link to={val.linkTo}>
+            list_cate_star_top.map((val,index) => (
+                <Link to={val.linkTo} key={index} >
                     <li>{val.title}</li>
                 </Link>   
             ))
