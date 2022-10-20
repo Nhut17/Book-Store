@@ -316,7 +316,7 @@
                             width: 100%;
                             content: '';
                             border: 1px solid $primary-color;
-                            bottom: -3px;
+                            bottom: 0px;
                             left: 0;
                         }
                     }
@@ -436,7 +436,7 @@
                             padding-left: 30px;
                             span{
                                 display: block;
-                                padding: 2px 0;
+                                padding: 5px 0;
                                 .ic{
                                     color: $yellow;
                                 }
