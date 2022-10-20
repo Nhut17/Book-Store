@@ -33,7 +33,7 @@ const HeaderMain = () => {
           <button>Tìm sách</button>
         </div>
 
-        <ul className="top-card">
+        <ul className="top-cart">
           <li className='border-cart'>
             <i class="fa-solid fa-cart-shopping cart"></i>
           </li>

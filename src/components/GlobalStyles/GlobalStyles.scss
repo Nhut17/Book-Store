@@ -100,11 +100,19 @@ button {
 
 
 .product {
-  width: 300px;
+  width: 350px;
   height: 220px;
   border: 1px solid rgba($color: #000000, $alpha: 0.1);
   background-color: white;
   padding: 15px 15px 15px 10px;
+
+  &:hover{
+    .info-book{
+      .img{
+        transform: translateY(-40px);
+      }
+    }
+  }
 
   .info-book {
     display: flex;
@@ -115,7 +123,8 @@ button {
       position: absolute;
       width: 105%;
       border: 1px dashed rgba($color: #000000, $alpha: 0.4);
-      bottom: 5px;
+      bottom: -4px;
+      left: 0;
 
     }
 
@@ -124,6 +133,7 @@ button {
       height: 150px;
       position: relative;
       transform: translateY(-30px);
+      transition: all 0.3s;
 
       img {
         width: 100%;
@@ -135,7 +145,7 @@ button {
       padding-left: 15px;
 
       .name {
-        width: 150px;
+        width: 220px;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -188,7 +198,7 @@ button {
     }
 
     .price-old {
-      margin-left: 70px;
+      margin-left: 120px;
       font-size: 14px;
       opacity: 0.6;
       text-decoration: line-through;
