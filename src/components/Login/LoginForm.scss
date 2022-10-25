@@ -3,8 +3,23 @@
 
 
 
+// .customModal {
+//     display: flex !important;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     // align-items: center !important;
+//     // transform: translate(50%,50%);
+//     top: 20%;
+//     right: 20%;
+//     position: absolute !important;
+//     width: 100%;
+//     height: auto;
+//     border-radius: 30px;
+
+
     .customOverlay {
-        background: rgba(120, 213, 181, 0.7);
+        background: rgba(152, 235, 206, 0.7);
     }
     .customModal_login {
         display: flex !important;
@@ -144,7 +159,7 @@
         }
     }
 
-
+// }
 
 // .modal-overlay.active {
 //     display: table;

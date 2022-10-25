@@ -100,12 +100,11 @@ button {
 
 
 .product {
-  width: 350px;
+  width: 300px;
   height: 220px;
   border: 1px solid rgba($color: #000000, $alpha: 0.1);
   background-color: white;
   padding: 15px 15px 15px 10px;
-
   &:hover{
     .info-book{
       .img{
@@ -113,7 +112,6 @@ button {
       }
     }
   }
-
   .info-book {
     display: flex;
     position: relative;
@@ -123,8 +121,7 @@ button {
       position: absolute;
       width: 105%;
       border: 1px dashed rgba($color: #000000, $alpha: 0.4);
-      bottom: -4px;
-      left: 0;
+      bottom: 5px;
 
     }
 
@@ -134,7 +131,6 @@ button {
       position: relative;
       transform: translateY(-30px);
       transition: all 0.3s;
-
       img {
         width: 100%;
         height: 100%;
@@ -145,7 +141,7 @@ button {
       padding-left: 15px;
 
       .name {
-        width: 220px;
+        width: 150px;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -198,7 +194,7 @@ button {
     }
 
     .price-old {
-      margin-left: 120px;
+      margin-left: 70px;
       font-size: 14px;
       opacity: 0.6;
       text-decoration: line-through;
@@ -210,6 +206,44 @@ button {
     }
   }
 
+}
+
+
+// .login {
+//   position: fixed;
+//   transform: translate(50%, 40%);
+//   left: 5%;
+//   transition: all 0.4s;
+//   z-index: 20;
+
+//   form {}
+// }
+
+// .customModal{
+//   top: 30%;
+//   right: 30%;
+// }
+
+.breadcrumb{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .parent{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 3px;
+      border: 3px solid black;
+      border-color: black black transparent transparent;
+      right: -10px;
+      bottom: 50%;
+      transform: translate(10px,50%) rotate(45deg); 
+    }
+  }
+  .child{
+    padding-left: 40px;
+  }
 }
 
 
