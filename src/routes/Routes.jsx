@@ -9,8 +9,8 @@ import SignUp from '../pages/SignUp.jsx';
 import BestSelling from '../pages/BestSelling.jsx';
 
 import ProductDetail from '../components/ProductDetail/ProductDetail.jsx';
-
-
+import CheckOut from '../pages/CheckOut.jsx';
+// import  CheckOut from 
 const Routes = () => {
   return (
     <Switch>
@@ -29,14 +29,15 @@ const Routes = () => {
 
       <Route path="/product-detail" exact component={ProductDetail} />
 
+      <Route path="/check-out" exact component={CheckOut} />
 
 
-     
-      
-  
-    
-      
-   </Switch>
+
+
+
+
+
+    </Switch>
 
   );
 };

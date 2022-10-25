@@ -5,7 +5,6 @@ const MainProduct = ({data}) => {
   return (
     <div className='main-product' key={data.id}>
         <div className="img"><img src={data.img} alt="" /></div>
-
         <div className="content">
             <p className="name">{data.name}</p>
             <p className="author">{data.author}</p>
