@@ -9,7 +9,7 @@ const initialState = {
 
 const apiProduct = 'http://localhost:8083/product/getAll/0/1'
 
-export const getProducts = createAsyncThunk('api/getAll', async (data,thunkAPI) => {
+export const getProducts = createAsyncThunk('api/getAll', async (data) => {
     try{
         const res = await axios.get(apiProduct)
         console.log(res.data)
@@ -17,7 +17,7 @@ export const getProducts = createAsyncThunk('api/getAll', async (data,thunkAPI) 
     }
     catch(e)
     {
-        return thunkAPI.rejectWithValue('error get api')
+        return e.message
     }
 
 })

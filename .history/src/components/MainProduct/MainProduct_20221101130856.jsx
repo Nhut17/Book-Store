@@ -12,7 +12,7 @@ const MainProduct = ({data}) => {
                                     .replace(/\B(?=(\d{3})+(?!\d))/g, ".")} 
                                     <span className='currency'>&#8363;</span></p>
             {/* <p className="price-new">{data.newPrice.toString() */}
-                                    {/* // .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}  */}
+                                    // .replace(/\B(?=(\d{3})+(?!\d))/g, ".")} 
                                     {/* <span className='currency'>&#8363;</span> */}
                                     {/* </p> */}
         </div>

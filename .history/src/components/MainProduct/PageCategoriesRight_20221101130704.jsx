@@ -17,10 +17,11 @@ const PageCategoriesRight = () => {
 
   },[])
  
+  console.log('listProduct: ' + state.listProduct)
 
   return (
     <div className='page-main-right'>
-        <MainBoxProduct list_product={state} />
+        <MainBoxProduct list_product={list_main_product} />
 
     </div>
   )

@@ -7,7 +7,7 @@ import {  getProducts } from '../../redux/apiSlice'
 
 const PageCategoriesRight = () => {
 
-  const state = useSelector(state => state.getApiProduct.listProduct)
+  const state = useSelector(state => state.getApiProduct)
   const dispatch = useDispatch()
 
 
@@ -17,10 +17,11 @@ const PageCategoriesRight = () => {
 
   },[])
  
+  console.log('listProduct: ' + state.lisProduct)
 
   return (
     <div className='page-main-right'>
-        <MainBoxProduct list_product={state} />
+        <MainBoxProduct list_product={list_main_product} />
 
     </div>
   )
