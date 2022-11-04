@@ -19,10 +19,12 @@ const SignUpForm = ({ setShowSignUp }) => {
                 modal: 'customModal_signup',
             }}>
             <div className="main-form">
-                <Link to='/' className='header'>
-                    <img src={logo} alt="" />
-                </Link>
-                <span className="sign-up">Đăng Ký</span>
+                <div className='up-modal'>
+                    <Link to='/' className='header'>
+                        <img src={logo} alt="" />
+                    </Link>
+                    <span className="sign-up">Đăng Ký</span>
+                </div>
                 <div className="input-group">
                     <div className="input-username">
                         <i class="fa-solid fa-user ic"></i>
