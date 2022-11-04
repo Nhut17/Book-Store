@@ -31,7 +31,7 @@
         position: fixed;
         // position: absolute !important;
         width: 100%;
-        height: auto;
+        height: 60%;
         border-radius: 30px;
     
         .main-form {
@@ -41,17 +41,18 @@
             .sign-in{
                 font-size: 24px;
                 padding-bottom: 20px;
-                
+                display: block;
             }
     
             .input-group {
                 padding-top: 5px;
                 width: 70%;
-    
                 .input-name {
                     border-radius: 5px;
                     border: 1px solid gray;
                     padding: 8px 15px;
+                margin-bottom: 20px;
+                    
                     .ic{
                         font-size: 15px;
                         position: relative;
@@ -71,6 +72,8 @@
                     border: 1px solid gray;
                     margin-top: 5px;
                     padding: 8px 15px;
+                margin-bottom: 20px;
+
                     .ic{
                         font-size: 15px;
                         position: relative;
