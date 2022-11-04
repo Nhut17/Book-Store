@@ -6,12 +6,16 @@
     background-color: white;
     z-index: 10;
     position: absolute;
-    top:0;
+    bottom:0;
     left: 0;
+    padding-bottom: 40px;
     .receipt-container{
         width: 100%;
         display: flex;
         justify-content: center;
+        a{
+            margin-top: 30px;
+        }
     }
     .main-box-product{
         .main-box-title{
@@ -167,3 +171,6 @@
         }
     }
 }
+
+
+
