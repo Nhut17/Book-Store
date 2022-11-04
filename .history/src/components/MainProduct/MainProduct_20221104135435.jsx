@@ -12,11 +12,11 @@ const MainProduct = ({data}) => {
             <p className="name">{data.proName}</p>
             <p className="author">{data.author}</p>
             {
-              data.proSale > 0 &&  <p className="price-old">{data.proPrice.toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ".")} 
-                <span className='currency'>&#8363;</span></p>
+              
             }
-           
+            <p className="price-old">{data.proPrice.toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ".")} 
+                                    <span className='currency'>&#8363;</span></p>
             <p className="price-new">{priceDeal.toString()
                                       .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}  
                                      <span className='currency'>&#8363;</span> 
