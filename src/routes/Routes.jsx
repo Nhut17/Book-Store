@@ -10,6 +10,9 @@ import BestSelling from '../pages/BestSelling.jsx';
 
 import ProductDetail from '../components/ProductDetail/ProductDetail.jsx';
 import CheckOut from '../pages/CheckOut.jsx';
+
+import PayForOrder from '../pages/PayForOrder.jsx';
+
 import InfoProfile from '../pages/InfoProfile.jsx';
 // import  CheckOut from 
 const Routes = () => {
@@ -31,6 +34,7 @@ const Routes = () => {
       <Route path="/product-detail" exact component={ProductDetail} />
 
       <Route path="/check-out" exact component={CheckOut} />
+      <Route path="/pay-for-order" exact component={PayForOrder} />
 
       <Route path="/profile" exact component={InfoProfile} />
 

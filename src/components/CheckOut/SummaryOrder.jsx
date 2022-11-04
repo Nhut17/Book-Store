@@ -20,10 +20,18 @@ const SummaryOrder = ({ count }) => {
                             <td width="40%" align='right'>638.000</td>
                         </tr>
                         <tr>
-                            <td colSpan='2' ><span className='more-infor'>(Đã bao gồm Thuế VAT và Phí đóng gói cơ bản).</span></td>
+                            <td colSpan='2' ><div className='more-infor'><br></br>(Đã bao gồm Thuế VAT và Phí đóng gói cơ bản).</div></td>
                         </tr>
                     </tbody>
                 </table>
+                <div className='overall'>
+                    <hr></hr>
+                    <div className='result'>
+                        <div className='overall-title'>Tổng cộng</div>
+                        <div className='overall-price'>657.000</div>
+                    </div>
+
+                </div>
             </div>
         </div>
     )

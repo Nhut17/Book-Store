@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import MainBoxProduct from './MainBoxProduct'
 import { list_main_product } from '../data'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
 import {  getProducts } from '../../redux/apiSlice'
 
 const PageCategoriesRight = () => {

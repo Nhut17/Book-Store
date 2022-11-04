@@ -151,6 +151,20 @@
                     .more-infor{
                         font-style: italic;
                     }
+                    .overall{
+                        margin-top: 15px;
+                        .result{
+                            justify-content: space-between;
+                            display: flex;
+                            margin-top: 5px;
+                            .overall-title{
+
+                                text-transform: uppercase;
+                                // font-size: ;
+                            }
+                        }
+
+                    }
                 }
             }
 

@@ -4,7 +4,6 @@ import ReceiptItem from './ReceiptItem';
 import SummaryOrder from './SummaryOrder'
 const TableBooks = ({ list_product }) => {
     console.log('check list product', list_product)
-    let quantity = 1;
     return (
         <div className='list-main-product' >
             <div className='content-checkout'>
