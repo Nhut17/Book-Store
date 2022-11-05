@@ -14,8 +14,6 @@ export const loginUser = createAsyncThunk('user/login', async(data,thunkAPI) => 
     try{
         const res = await axios.post(loginAPI,data)
 
-        const { token } = res.data;
-        localStorage.setItem('token: ',token)  
         return res.data
     }
     catch(e)
@@ -44,6 +42,7 @@ const userSlice = createSlice({
         },
         [loginUser.fulfilled]: (state,action) => {
             state.loading = false;
+            console.log('posted: ' + action.payload);
             state.completed = true;
             state.user = action.payload;
         },
