@@ -120,22 +120,7 @@
         }
 
         .container{
-            .button-group{
-                text-align: center;
-                button{
-                    margin: 20px;
-                    padding: 12px 70px;
-                    border-radius: 8px;
-                    transition: all 0.4s;
-                }
-                .next{
-                    background-color: $yellow;
-                    &:hover{
-                        background-color: rgba($color: $yellow, $alpha: 0.7);
-                    }
-                }
 
-            }
             .address-and-services{
                 // width: 70%;
                 // display: flex;
@@ -661,6 +646,173 @@
     background-color: #0a6f3c;
     // border-color: #1890ff;
 }
-.MuiCheckbox-colorSecondary.Mui-checked {
-    color: #0a6f3c !important;
+
+// .step-container{
+//     display: flex;
+//     width: 100%;
+//     height: 100px;
+//     justify-content: center;
+//     align-items: center;
+//     .stepWrapper{
+//         display: flex;
+//         margin-bottom: 20px;
+//         width: 100%;
+//         align-items: center;
+//         justify-content: space-between;
+//         .stepBlock{
+//             width: 33%;
+//         }
+//         .stepBlock {
+//             .circleWrapper{
+//                 padding: 0px 200px;
+//                 position: relative;
+//             }
+//         }
+//         .selected {
+//             .circle{
+//                 color: black;
+//                 background-color: white;
+//                 border-color: #0a6f3c;
+//                 z-index: 2;
+//             }
+            
+//         }
+        
+       
+//         .circle{
+//             width: 50px;
+//             height: 50px;
+//             line-height: 45px;
+//             background-color: #0a6f3c;
+//             color: white;
+//             border-radius: 50%;
+//             border: 2px solid transparent;
+//             text-align: center;
+//             z-index: 2;
+//         }
+//         .circle-title{
+//             padding-left: 48%;
+//         }
+//     }
+// }
+// // .stepBlock   {
+// //     .circleWrapper .selected::after{
+// //         content:'';
+// //         width:100%;
+// //         height: 2px;
+// //         position: absolute;
+// //         top: 0px;
+// //         bottom: 0px;
+// //         background-color: #0f8040;
+// //         margin: auto;
+// //         z-index: 1;
+// //         margin-left: 50px;
+// //     }
+// // }
+// // .stepBlock .circleWrapper::after{
+// //     content:'';
+// //     width:100%;
+// //     height: 2px;
+// //     position: absolute;
+// //     top: 0px;
+// //     bottom: 0px;
+// //     background-color: #1c2520;
+// //     margin: auto;
+// //     z-index: 1;
+// //     margin-left: 50px;
+// // }
+
+// .stepBlock:not(:last-child) > .circleWrapper::after {
+//     content:'';
+//     width:90%;
+//     height: 2px;
+//     position: absolute;
+//     top: 0px;
+//     bottom: 0px;
+//     background-color: #656c68;
+//     margin: auto;
+//     z-index: 1;
+//     margin-left: 50px;
+// }
+// // .stepBlock:not(:last-child) > .circleWrapper::after{
+// //     height: 4px;
+// // }
+// .stepBlock:not(:last-child).selected >.circleWrapper::after , .stepBlock:not(:last-child).selected ::after {
+//     background-color: #1b633a;
+// }
+
+
+
+
+
+
+
+
+
+.step-container{
+    width: 100%;
+    .container{
+        width: 100%;
+        .progress-bar{
+            counter-reset:step;
+            li{
+                float: left;
+                width: 33.33%;
+                position: relative;
+                text-align: center;
+            }
+            li::before{
+                content: counter(step);
+                counter-increment: step;
+                width: 50px;
+                height: 50px;
+                border: #66645c 1px solid;
+                border-radius: 50%;
+                display: block;
+                text-align: center;
+                margin: 0px auto 10px auto;
+                line-height: 45px;
+                font-family: "FontAwesome"
+            }
+            li:not(:first-child):after{
+                content: '';
+                position: absolute;
+                width: 88%;
+                height: 1px;
+                background-color: #ddd;
+                top: 25px;
+                left: -44%;
+                z-index: 1;
+            }
+            li.active::before {
+                color: white;
+                content: "\f00c";
+                background-color: #0a6f3c;
+            }
+            li.active +li::after {
+                background-color: #0a6f3c;
+                height: 2px;
+            }
+            // li:(:first-child::after)
+            // {
+            //     content: none;
+            // }
+        }
+    }
+    .button-group{
+        text-align: center;
+        button{
+            margin: 20px;
+            padding: 12px 70px;
+            border-radius: 8px;
+            transition: all 0.4s;
+        }
+        .next{
+            background-color: $yellow;
+            &:hover{
+                background-color: rgba($color: $yellow, $alpha: 0.7);
+            }
+        }
+
+    }
 }

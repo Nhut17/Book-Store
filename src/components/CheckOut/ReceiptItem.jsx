@@ -19,7 +19,7 @@ const ReceiptItem = ({ data }) => {
                         <button >+</button>
                     </div>
                     <div className='delete'>
-                        <i class="fas fa-trash"></i>
+                        <i className="fas fa-trash"></i>
                     </div>
                 </div>
 

@@ -27,23 +27,23 @@ const SignUpForm = ({ setShowSignUp }) => {
                 </div>
                 <div className="input-group">
                     <div className="input-username">
-                        <i class="fa-solid fa-user ic"></i>
+                        <i className="fa-solid fa-user ic"></i>
                         <input type="text" placeholder='Tên Người Dùng' />
                     </div>
                     <div className="input-phone">
-                        <i class="fa-solid fa-phone ic"></i>
+                        <i className="fa-solid fa-phone ic"></i>
                         <input type="text" placeholder='Số Điện Thoại' />
                     </div>
                     <div className="input-email">
-                        <i class="fa-solid fa-envelope ic"></i>
+                        <i className="fa-solid fa-envelope ic"></i>
                         <input type="email" placeholder='Email' />
                     </div>
                     <div className="input-password">
-                        <i class="fa-solid fa-lock ic"></i>
+                        <i className="fa-solid fa-lock ic"></i>
                         <input type="text" placeholder='Mật Khẩu' />
                     </div>
                     <div className="input-repeat-password">
-                        <i class="fa-solid fa-lock ic ic-repeat-pass"></i>
+                        <i className="fa-solid fa-lock ic ic-repeat-pass"></i>
                         <input type="text" placeholder='Nhập Lại Mật Khẩu' />
                     </div>
                 </div>
@@ -56,8 +56,8 @@ const SignUpForm = ({ setShowSignUp }) => {
                 <button className='btn-sign-up'>ĐĂNG KÝ</button>
                 <div className="login-with">
                     <span>Đăng nhập với: </span>
-                    <div className="ic-fb ic"><i class="fa-brands fa-facebook-f"></i></div>
-                    <div className="ic-gg ic"><i class="fa-brands fa-google"></i></div>
+                    <div className="ic-fb ic"><i className="fa-brands fa-facebook-f"></i></div>
+                    <div className="ic-gg ic"><i className="fa-brands fa-google"></i></div>
                 </div>
             </div>
             <div className="img">
@@ -77,23 +77,23 @@ export default SignUpForm;
                             <span className="sign-up">Đăng Ký</span>
                             <div className="input-group">
                                 <div className="input-username">
-                                    <i class="fa-solid fa-user ic"></i>
+                                    <i className="fa-solid fa-user ic"></i>
                                     <input type="text" placeholder='Tên Người Dùng' />
                                 </div>
                                 <div className="input-phone">
-                                    <i class="fa-solid fa-phone ic"></i>
+                                    <i className="fa-solid fa-phone ic"></i>
                                     <input type="text" placeholder='Số Điện Thoại' />
                                 </div>
                                 <div className="input-email">
-                                    <i class="fa-solid fa-envelope ic"></i>
+                                    <i className="fa-solid fa-envelope ic"></i>
                                     <input type="email" placeholder='Email' />
                                 </div>
                                 <div className="input-password">
-                                    <i class="fa-solid fa-lock ic"></i>
+                                    <i className="fa-solid fa-lock ic"></i>
                                     <input type="text" placeholder='Mật Khẩu' />
                                 </div>
                                 <div className="input-repeat-password">
-                                    <i class="fa-solid fa-lock ic ic-repeat-pass"></i>
+                                    <i className="fa-solid fa-lock ic ic-repeat-pass"></i>
                                     <input type="text" placeholder='Nhập Lại Mật Khẩu' />
                                 </div>
                             </div>
@@ -106,8 +106,8 @@ export default SignUpForm;
                             <button className='btn-sign-up'>ĐĂNG KÝ</button>
                             <div className="login-with">
                                 <span>Đăng nhập với: </span>
-                                <div className="ic-fb ic"><i class="fa-brands fa-facebook-f"></i></div>
-                                <div className="ic-gg ic"><i class="fa-brands fa-google"></i></div>
+                                <div className="ic-fb ic"><i className="fa-brands fa-facebook-f"></i></div>
+                                <div className="ic-gg ic"><i className="fa-brands fa-google"></i></div>
                             </div>
                         </div>
                         <div className="img">

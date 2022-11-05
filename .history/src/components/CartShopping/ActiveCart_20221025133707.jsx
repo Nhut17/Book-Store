@@ -4,7 +4,7 @@ import '../../sass/CartShopping/activeCart.scss'
 
 const ActiveCart = () => {
 
-    const [quantity,setQuantity] = useState(10000)
+  const [quantity, setQuantity] = useState(10000)
 
   return (
     <div className='active-cart'>
@@ -17,7 +17,7 @@ const ActiveCart = () => {
                                     .replace(/\B(?=(\d{3})+(?!\d))/g, ".")} <span className='currency'>&#8363;</span></span></span></span>
                    
                 </div>
-                <i class="fa-solid fa-trash ic-delete"></i>
+                <i className="fa-solid fa-trash ic-delete"></i>
                 
             </li>
         </ul>
@@ -25,7 +25,7 @@ const ActiveCart = () => {
                 <span className="total">Tổng cộng: </span>
                 <button>XEM GIỎ HÀNG</button>
         </div>
-    </div>
+    </div >
   )
 }
 

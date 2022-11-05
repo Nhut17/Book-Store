@@ -8,7 +8,7 @@ const ComfirmedBooks = ({ listbook }) => {
                 <div className='content-title'>
                     <span className='tilte-products'>sản phẩm</span>
                     <span className='change-address'>
-                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen-to-square"></i>
                         Sửa
                     </span>
                 </div>

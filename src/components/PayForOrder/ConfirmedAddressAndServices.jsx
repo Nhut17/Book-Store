@@ -6,7 +6,7 @@ const ConfirmedAddressAndServices = () => {
                 <div className='title'>
                     <span className='tilte-address'>Địa chỉ giao hàng</span>
                     <span className='change-address'>
-                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen-to-square"></i>
                         Sửa
                     </span>
                 </div>
@@ -23,7 +23,7 @@ const ConfirmedAddressAndServices = () => {
                 <div className='title'>
                     <span className='tilte-address'>Hình thức thanh toán</span>
                     <span className='change-address'>
-                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen-to-square"></i>
                         Sửa
                     </span>
                 </div>
@@ -33,7 +33,7 @@ const ConfirmedAddressAndServices = () => {
                 <div className='title'>
                     <span className='tilte-address'>Dịch vụ bọc sách</span>
                     <span className='change-address'>
-                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen-to-square"></i>
                         Sửa
                     </span>
                 </div>

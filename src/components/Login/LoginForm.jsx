@@ -21,19 +21,19 @@ const LoginForm = ({ setShowLogin }) => {
                     <span className="sign-in">Đăng Nhập</span>
                     <div className="input-group">
                         <div className="input-name">
-                            <i class="fa-solid fa-envelope ic"></i>
+                            <i className="fa-solid fa-envelope ic"></i>
                             <input type="text" placeholder='Tên của bạn' />
                         </div>
                         <div className="input-password">
-                            <i class="fa-solid fa-lock ic"></i>
+                            <i className="fa-solid fa-lock ic"></i>
                             <input type="text" placeholder='Mật Khẩu' />
                         </div>
                     </div>
                     <button className='btn-sign-in'>ĐĂNG NHẬP</button>
                     <div className="login-with">
                         <span>Đăng nhập với: </span>
-                        <div className="ic-fb ic"><i class="fa-brands fa-facebook-f"></i></div>
-                        <div className="ic-gg ic"><i class="fa-brands fa-google"></i></div>
+                        <div className="ic-fb ic"><i className="fa-brands fa-facebook-f"></i></div>
+                        <div className="ic-gg ic"><i className="fa-brands fa-google"></i></div>
                     </div>
                 </div>
                 <div className="img">
@@ -48,18 +48,18 @@ const LoginForm = ({ setShowLogin }) => {
 export default LoginForm
 
         // <form action="">
-        //     <div className="btn-close" onClick={onCloseModal}><i class="ic fa-solid fa-xmark"></i></div>
+        //     <div className="btn-close" onClick={onCloseModal}><i className="ic fa-solid fa-xmark"></i></div>
         //     <div className="main-form">
         //         <span className="sign-up">Đăng Nhập</span>
 
 
         //         <div className="input-group">
         //             <div className="input-name">
-        //                 <i class="fa-solid fa-envelope ic"></i>
+        //                 <i className="fa-solid fa-envelope ic"></i>
         //                 <input type="text" placeholder='Tên của bạn' />
         //             </div>
         //             <div className="input-password">
-        //                 <i class="fa-solid fa-lock ic"></i>
+        //                 <i className="fa-solid fa-lock ic"></i>
         //                 <input type="text" placeholder='Mật Khẩu' />
         //             </div>
         //         </div>
@@ -76,8 +76,8 @@ export default LoginForm
 
         //     <div className="login-with">
         //         <span>Đăng nhập với: </span>
-        //         <div className="ic-fb ic"><i class="fa-brands fa-facebook-f"></i></div>
-        //         <div className="ic-gg ic"><i class="fa-brands fa-google"></i></div>
+        //         <div className="ic-fb ic"><i className="fa-brands fa-facebook-f"></i></div>
+        //         <div className="ic-gg ic"><i className="fa-brands fa-google"></i></div>
         //     </div>
 
         // </form>

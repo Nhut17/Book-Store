@@ -9,7 +9,7 @@ import { useEffect } from 'react'
 
 const HeaderMain = () => {
 
-  const [showCart,setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState(false)
 
 
   const [showLogin, setShowLogin, setLayoutModal, setShowSignUp] = useContext(LoginContext)
@@ -26,8 +26,8 @@ const HeaderMain = () => {
   useEffect(() => {
 
 
-    document.addEventListener('mousedown',handleMouseDown)
-  },[])
+    document.addEventListener('mousedown', handleMouseDown)
+  }, [])
 
   const handleShowCart = (e) => {
     console.log(e.target.id)
@@ -35,9 +35,9 @@ const HeaderMain = () => {
 
   }
 
-  
 
- 
+
+
 
 
   return (
@@ -50,22 +50,22 @@ const HeaderMain = () => {
         </div>
 
         <div className="input-group">
-          <i class="fa-solid fa-magnifying-glass ic-search"></i>
+          <i className="fa-solid fa-magnifying-glass ic-search"></i>
           <input type="text" placeholder='Tìm tựa sách tác giả' />
           <button>Tìm sách</button>
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i class="fa-solid fa-cart-shopping cart" 
-            id='cart'
-            onClick={handleShowCart}>
+            <i className="fa-solid fa-cart-shopping cart"
+              id='cart'
+              onClick={handleShowCart}>
             </i>
             {
               showCart &&
-            <CartShopping />
+              <CartShopping />
             }
-           
+
           </li>
 
           <li className='sign'>

@@ -10,7 +10,7 @@ import { useCallback, useRef } from 'react'
 
 const HeaderMain = () => {
 
-  const [showCart,setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState(false)
 
   const cartRef = useRef()
 
@@ -33,8 +33,8 @@ const HeaderMain = () => {
       // }
     }
 
-    document.addEventListener('mousedown',handleMouseDown)
-  },[])
+    document.addEventListener('mousedown', handleMouseDown)
+  }, [])
 
   const handleShowCart = (e) => {
     // console.log(e.target.id)
@@ -42,9 +42,9 @@ const HeaderMain = () => {
 
   }
 
-  
-console.log(cartRef.current)
- 
+
+  console.log(cartRef.current)
+
 
 
   return (
@@ -57,22 +57,22 @@ console.log(cartRef.current)
         </div>
 
         <div className="input-group">
-          <i class="fa-solid fa-magnifying-glass ic-search"></i>
+          <i className="fa-solid fa-magnifying-glass ic-search"></i>
           <input type="text" placeholder='Tìm tựa sách tác giả' />
           <button>Tìm sách</button>
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i class="fa-solid fa-cart-shopping cart" 
-            id='cart'
-            onClick={handleShowCart}>
+            <i className="fa-solid fa-cart-shopping cart"
+              id='cart'
+              onClick={handleShowCart}>
             </i>
             {
               showCart &&
-            <CartShopping ref={cartRef} />
+              <CartShopping ref={cartRef} />
             }
-           
+
           </li>
 
           <li className='sign'>

@@ -10,9 +10,9 @@ import { useCallback, useRef } from 'react'
 
 const HeaderMain = () => {
 
-  const [showCart,setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState(false)
 
-  const 
+  const
 
   const [showLogin, setShowLogin, setLayoutModal, setShowSignUp] = useContext(LoginContext)
 
@@ -28,13 +28,13 @@ const HeaderMain = () => {
   useEffect(() => {
     const handleMouseDown = (e) => {
       console.log(e.target.id)
-      if(e.target.id !== 'cart'){
+      if (e.target.id !== 'cart') {
         setShowCart(false)
       }
     }
 
-    document.addEventListener('mousedown',handleMouseDown)
-  },[])
+    document.addEventListener('mousedown', handleMouseDown)
+  }, [])
 
   const handleShowCart = (e) => {
     // console.log(e.target.id)
@@ -42,9 +42,9 @@ const HeaderMain = () => {
 
   }
 
-  
 
- 
+
+
 
 
   return (
@@ -57,22 +57,22 @@ const HeaderMain = () => {
         </div>
 
         <div className="input-group">
-          <i class="fa-solid fa-magnifying-glass ic-search"></i>
+          <i className="fa-solid fa-magnifying-glass ic-search"></i>
           <input type="text" placeholder='Tìm tựa sách tác giả' />
           <button>Tìm sách</button>
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i class="fa-solid fa-cart-shopping cart" 
-            id='cart'
-            onClick={handleShowCart}>
+            <i className="fa-solid fa-cart-shopping cart"
+              id='cart'
+              onClick={handleShowCart}>
             </i>
             {
               showCart &&
-            <CartShopping />
+              <CartShopping />
             }
-           
+
           </li>
 
           <li className='sign'>
