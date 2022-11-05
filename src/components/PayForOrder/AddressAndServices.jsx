@@ -1,6 +1,4 @@
 import React from 'react'
-import StepToPay from './StepToPay'
-import { Link } from 'react-router-dom'
 import Address from './Address'
 import RelativeService from './RelativeService'
 const AddressAndServices = ({ data }) => {

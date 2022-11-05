@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom'
 import CartShopping from '../CartShopping/CartShopping'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { useCallback, useRef } from 'react'
+
+
+import { useCallback,useRef } from 'react'
+import { useSelector } from 'react-redux'
+
 
 
 const HeaderMain = () => {
@@ -17,10 +21,16 @@ const HeaderMain = () => {
 
   const [showLogin, setShowLogin, setLayoutModal, setShowSignUp] = useContext(LoginContext)
 
+  const state = useSelector(state => state.user)
+
   const handleLogin = useCallback((e) => {
     setShowLogin(true)
     setLayoutModal(true)
   })
+
+ 
+
+  
   const handleSignUp = () => {
     setShowSignUp(true)
     setLayoutModal(true)
@@ -28,7 +38,9 @@ const HeaderMain = () => {
 
   useEffect(() => {
     const handleMouseDown = (e) => {
-      if (!cartRef.current.contains(e.target) && !icRef.current.contains(e.target)) {
+
+      if(!cartRef.current?.contains(e.target) && !icRef.current.contains(e.target))
+      {
         setShowCart(false)
       }
     }
@@ -77,8 +89,23 @@ const HeaderMain = () => {
           </li>
 
           <li className='sign'>
-            <span className='sign-in' onClick={handleLogin} >Đăng nhập</span>
-            <span className='sign-up' onClick={handleSignUp}>Đăng ký</span>
+            {
+              state.completed ? (
+                <Link to='/profile'>
+                  <span className='sign-in' >{state.user.name}</span>
+                </Link>
+              ) : (
+                <span className='sign-in' onClick={handleLogin} >Đăng nhập</span>
+              )
+            }
+            {
+              state.completed ? (
+                <span className='sign-up' >Đăng xuất</span>
+
+              ) : (
+                <span className='sign-up' onClick={handleSignUp}>Đăng ký</span>
+              )
+            }
 
           </li>
 

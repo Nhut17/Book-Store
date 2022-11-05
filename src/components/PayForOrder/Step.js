@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import StepNavigation from './StepNavigation';
 import AddressAndServices from './AddressAndServices'
 import Payment from './Payment'
 import ConfirmOrder from './ConfirmOrder'
@@ -30,7 +29,7 @@ function Step() {
             setStep(0)
         }
         if (step === 2) {
-            setPage('confirm')
+            setPage('payment')
             setStep(1)
         }
     }

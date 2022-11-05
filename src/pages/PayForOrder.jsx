@@ -1,12 +1,7 @@
 import React from 'react'
 import Receipt from '../components/CheckOut/Receipt'
-import AddressAndServices from '../components/PayForOrder/AddressAndServices'
-import StepToPay from '../components/PayForOrder/StepToPay.jsx'
-import Payment from '../components/PayForOrder/Payment'
-import ConfirmOrder from '../components/PayForOrder/ConfirmOrder'
 import '../sass/PayForOrder/PayForOrder.scss'
 import { useState } from 'react'
-import { list_main_product } from '../components/data'
 import Step from '../components/PayForOrder/Step'
 const PayForOrder = () => {
 
@@ -38,7 +33,6 @@ const PayForOrder = () => {
             <div className="container">
                 <Receipt />
                 <Step />
-                {/* <StepToPay step={step} /> */}
 
                 <div className="button-group">
                     <button className='back'
