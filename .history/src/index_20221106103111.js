@@ -5,17 +5,17 @@ import "./assets/font/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/
 import GlobalStyles from "./components/GlobalStyles/index.js";
 import Layout from './components/Layout';
 import { Provider } from 'react-redux';
-import store from '../src/redux/store';
+import store from '../store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <GlobalStyles> */}
+    <GlobalStyles>
       <Provider store={store}>
         <Layout />
       </Provider>
-    {/* </GlobalStyles> */}
+    </GlobalStyles>
 </React.StrictMode>
 );
 

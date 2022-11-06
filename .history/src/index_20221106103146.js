@@ -11,11 +11,11 @@ import store from '../src/redux/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <GlobalStyles> */}
+    <GlobalStyles>
       <Provider store={store}>
         <Layout />
       </Provider>
-    {/* </GlobalStyles> */}
+    </GlobalStyles>
 </React.StrictMode>
 );
 

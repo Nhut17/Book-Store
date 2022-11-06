@@ -15,7 +15,7 @@ root.render(
       <Provider store={store}>
         <Layout />
       </Provider>
-    {/* </GlobalStyles> */}
+    </GlobalStyles>
 </React.StrictMode>
 );
 

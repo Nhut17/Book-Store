@@ -1,7 +1,7 @@
 import React , {useEffect} from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser } from '../../redux/reducer/userSlice'
+import { loginUser } from '../../redux/userSlice'
 
 
 
@@ -9,6 +9,7 @@ const InfoLoginForm = ({setShowLogin}) => {
 
     const state = useSelector(state => state.user)
     const dispatch = useDispatch()
+    // const navigator = 
 
     const {
         register,

@@ -28,8 +28,7 @@ const Layout = () => {
               showSignUp && <SignUp setShowSignUp={setShowSignUp} />
             }
 
-            <LoginContext.Provider 
-                        value={[showLogin, setShowLogin, setLayoutModal, setShowSignUp]}>
+            <LoginContext.Provider value={[showLogin, setShowLogin, setLayoutModal, setShowSignUp]}>
               <Header />
             </LoginContext.Provider>
 

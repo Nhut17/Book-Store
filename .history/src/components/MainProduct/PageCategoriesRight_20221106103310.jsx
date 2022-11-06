@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import MainBoxProduct from './MainBoxProduct'
 import { useDispatch, useSelector } from 'react-redux'
-import {  getProducts } from '../../redux/reducer/productSlice'
+import {  getProducts } from '../../redux/productSlice'
 
 const PageCategoriesRight = () => {
 

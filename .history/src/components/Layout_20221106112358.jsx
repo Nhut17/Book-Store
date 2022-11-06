@@ -19,7 +19,8 @@ const Layout = () => {
 
     <BrowserRouter>
 
-      <Route render={(props) => (
+      <Route
+        render={(props) => (
           <div className="layout">
             {
               showLogin && <Login setShowLogin={setShowLogin} />
@@ -28,8 +29,7 @@ const Layout = () => {
               showSignUp && <SignUp setShowSignUp={setShowSignUp} />
             }
 
-            <LoginContext.Provider 
-                        value={[showLogin, setShowLogin, setLayoutModal, setShowSignUp]}>
+            <LoginContext.Provider value={[showLogin, setShowLogin, setLayoutModal, setShowSignUp]}>
               <Header />
             </LoginContext.Provider>
 

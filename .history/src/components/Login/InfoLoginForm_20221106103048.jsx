@@ -9,6 +9,7 @@ const InfoLoginForm = ({setShowLogin}) => {
 
     const state = useSelector(state => state.user)
     const dispatch = useDispatch()
+    // const navigator = 
 
     const {
         register,
