@@ -1,0 +1,14 @@
+@import '../'
+
+.modal-loading{
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #333;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
