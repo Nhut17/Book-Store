@@ -34,12 +34,12 @@ const PayForOrder = () => {
                 <Receipt />
                 <Step />
 
-                <div className="button-group">
+                {/* <div className="button-group">
                     <button className='back'
                         onClick={handleOnClickBack}>Back</button>
                     <button className='next'
                         onClick={handleOnClickNext}>Next</button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

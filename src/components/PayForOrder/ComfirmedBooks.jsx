@@ -2,6 +2,7 @@ import React from 'react'
 import SelectedBooks from './SelectedBooks'
 const ComfirmedBooks = ({ listbook }) => {
     console.log(listbook)
+    
     return (
         <div className='comfirmed-books'>
             <div className='container-confirmed'>

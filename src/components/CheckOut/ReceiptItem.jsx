@@ -1,13 +1,14 @@
 import { faMinus } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
-const ReceiptItem = ({ data }) => {
+const ReceiptItem = ({ index, data }) => {
+    console.log('data', data)
     return (
-        <div className='main-product' key={data.id}>
-            <div className="img"><img src={data.img} alt="" /></div>
+        <div className='main-product' key={index}>
+            <div className="img"><img src={data.proImage} alt="" /></div>
             <div className="content">
                 <div className="up">
-                    <span>{data.name}</span>
-                    <span>{data.oldPrice}x1</span>
+                    <span>{data.proName}</span>
+                    <span>{data.price}x{data.quantity}</span>
                     {/* <div className='name'>{data.name}</div>
                     <div className='price'>{data.oldPrice}x1</div> */}
 
