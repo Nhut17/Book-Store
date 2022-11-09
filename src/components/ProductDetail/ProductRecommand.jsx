@@ -12,7 +12,6 @@ const ProductRecommand = () => {
         // setChecked(id)
     }
 
-    console.log(checked)
 
     return (
         <div className='product-recommand'>

@@ -1,15 +1,14 @@
 import React , {useEffect} from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser } from '../../redux/userSlice'
-
-
+import { loginUser } from '../../redux/reducer/userSlice'
+import { Link , useNavigate} from 'react-router-dom'
 
 const InfoLoginForm = ({setShowLogin}) => {
 
     const state = useSelector(state => state.user)
     const dispatch = useDispatch()
-    // const navigator = 
+    const navigate = useNavigate()
 
     const {
         register,
@@ -19,17 +18,17 @@ const InfoLoginForm = ({setShowLogin}) => {
      
      useEffect(() => {
 
-        if(state.completed)
+        if(state.success)
         {
-            setShowLogin(state.loading)
-            console.log('state loading' + state.loading)
+            setShowLogin(false)
         }
 
-     },[state.user])
+     },[state.success])
 
      const handleOnSubmit = (data) => {
-            console.log('Form data: '+ JSON.stringify(data))
             dispatch(loginUser(data))
+                .unwrap()
+                .then(() =>  navigate('/'))
      }
 
   return (
@@ -45,10 +44,6 @@ const InfoLoginForm = ({setShowLogin}) => {
                     placeholder='Username của bạn'
                     {...register('username',{
                         required: true,
-                        // pattern: {
-                        //     message: 'Email bạn nhập sai. Xin mời nhập lại!',
-                        //     value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                        // }
                     })} 
                     />
                     {
@@ -69,9 +64,9 @@ const InfoLoginForm = ({setShowLogin}) => {
                     {
                         errors.password?.type === 'required' && <span className='err-msg'>Mời bạn nhập mật khẩu</span>
                     }
-                    {
+                    {/* {
                         state.message === 'failed' && <span className='err-msg'>Sai tài khoản hoặc mật khẩu</span>
-                    }
+                    } */}
             </div>
         </div>
         <button className='btn-sign-in' >ĐĂNG NHẬP</button>

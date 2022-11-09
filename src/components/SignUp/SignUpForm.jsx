@@ -6,7 +6,6 @@ import './SignUpForm.scss'
 import InfoSignUpForm from './InfoSignUpForm';
 const SignUpForm = ({ setShowSignUp }) => {
     const toggle = () => {
-        console.log('checkk signup')
         setShowSignUp(false)
     }
     return (
@@ -18,10 +17,7 @@ const SignUpForm = ({ setShowSignUp }) => {
                 overlay: 'customOverlay',
                 modal: 'customModal_signup',
             }}>
-
-
-            <InfoSignUpForm />
-
+            <InfoSignUpForm setShowSignUp={setShowSignUp} />
             <div className="img">
                 <img src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg" alt="" />
             </div>

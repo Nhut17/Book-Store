@@ -30,8 +30,10 @@ export const list_cate_products = [
         linkTo: '/'
     },
     {
+
         id: 4,
         name: 'Sách Ngoại Văn',
+        linkTo: '/sach-ngoai-van',
         subCate: [
             {
                 nameSub: 'Literature & Fiction',

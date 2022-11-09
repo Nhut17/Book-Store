@@ -25,7 +25,6 @@ const LoginForm = ({ setShowLogin }) => {
 
                     
                 <InfoLoginForm setShowLogin={setShowLogin} />
-
                 <div className="img">
                     <img src='https://colorlib.com/etc/regform/colorlib-regform-7/images/signin-image.jpg' alt="" />
                 </div>
