@@ -1,12 +1,11 @@
 @import '../variables.scss';
 .info-profile{
     .container{
-
         .main-profile{
             margin-bottom: 30px;
             width:100%;
             height:600px;
-            background:white;
+            background:#fff;
             border: 1px solid #cdcdcd;
             border-radius: 3px;
             position: relative;
@@ -30,53 +29,44 @@
             .hello{
                 display:block;
                 padding-top:40px;
-                padding-bottom: 40px;
+                // padding-bottom: 40px;
             }
-
-            form{
-                .input-group{
-                    .require{
-
-                    }
-                    .mg{
-                        margin: 20px 0;
-                    }
-                    .inpt{
-                        border: 1px solid black;
-                        padding: 8px 20px;
-                        width: 30%;
-                    }
-                    .name{
-                        input{
-                            margin-left: 100px;
-                        }
-                    }
-                    .mail{
-                        input{
-                            margin-left: 130px;
-                        }
-                    }
-                    .password{
-                        input{
-                            margin-left: 103px;
-                        }
-
-                    }
-                    .re-password{
-                        input{
-                            margin-left: 41px;
-                        }
-                    }
-                    .birthday{
-                        input{
-                            margin-left: 99px;
+            .group-infor{
+                width: 100%;
+                display: flex;
+                form{
+                    width: 60%;
+                    .input-group{
+                        padding-top: 5px;
+                        display: block;
+                        text-align: center;
+                        margin-right: 7px;
+                        .input-common {
+                            width: 100%;
+                            margin: 6px 0 10px 0;
+                            line-height: 26px;
+                            label{
+                                width: 200px;
+                                min-width: 100px;
+                                padding-right: 20px !important;
+                                float: left;
+                                text-align: left;
+                            }
+                            input {
+                                border: 1px solid gray;
+                                border-radius: 5px;
+                                outline: none;
+                                padding: 10px 15px;
+                                width: 260px;
+                                // margin-top:5px ;
+                            }
                         }
                     }
                     .gender{
                         display: flex;
                         align-items: center;
                         .radio-group{
-                            margin-left: 113px;
+                            margin-left : 300px;
                            display: flex;
                            input{
                             margin-right: 3px;
@@ -87,8 +77,57 @@
                             
                         }
                     }
+                    .register-to-receive-annoucement{
+                        display: inline-block;
+                        width: 100%;
+                        h2{
+                            margin: 15px;
+                        }
+                        .register-group{
+                            display: flex;
+                            input{
+                                width: 10%;
+                            }
+                        }
+                    }
+                }
+                .profile-image{
+                    width: 40%;
+                    text-align: center;
+                    padding-left: 150px;
+                    // justify-items: center;
+                    // padding: 50px;
+                        .preview-img-container {
+                            display: flex;
+                            flex-direction: column;
+                            
+
+                            .label-image {
+                                padding: 5px;
+                                border-radius: 3px;
+                                background: #ddd;
+                                width: 50%;
+
+                                cursor: pointer;
+                                &:hover {
+                                    opacity: 0.7;
+                                }
+                            }
+                        
+                            .preview-image {
+                                height: 200px;
+                                width: 50%;
+                                border: 1px solid #ddd;
+                                border-radius: 10px;
+                                background: center center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                    
                 }
             }
+
             .save{
                 padding: 12px 70px;
                 background-color: rgb(43, 200, 4);

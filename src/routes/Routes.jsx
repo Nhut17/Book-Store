@@ -14,6 +14,7 @@ import CheckOut from '../pages/CheckOut.jsx';
 import PayForOrder from '../pages/PayForOrder.jsx';
 
 import InfoProfile from '../pages/InfoProfile.jsx';
+import OrderList from '../pages/OrderList.jsx';
 // import  CheckOut from 
 const Routes = () => {
   return (
@@ -38,7 +39,7 @@ const Routes = () => {
 
       <Route path="/profile" exact component={InfoProfile} />
 
-
+      <Route  path="/order" exact component={OrderList}/>
 
 
 
