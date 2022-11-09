@@ -863,7 +863,74 @@ export const list_cate_products = [
             },
         ],
         img: 'https://www.vinabook.com/images/menu/175/sach_thieu_nhi___crop.png',
-        linkTo: '/'
+        linkTo: '/',
+        id:2,
+        name:'Sách Bán Chạy',
+        cate:'', 
+        img:'',
+        linkTo:'/sach-ban-chay'
+    },
+    {
+        id:21,
+        name:'Sách Mới Phát Hành',
+        cate:'',
+        img:'',
+        linkTo:'/'
+    },
+    {
+        id:33,
+        name:'Sách Sắp Phát Hành',
+        cate:'',
+        img:'',
+        linkTo:'/'
+    },
+    {
+        id:3,
+        name:'Sách Ngoại Văn',
+        linkTo:'/sach-ngoai-van',
+        img:'https://www.vinabook.com/images/menu/175/ngo___i_v__n___kinh_t____2_crop.png',
+    },
+    {
+        id:6,
+        name:'Sách Blockchain',
+        cate:'',
+        img:'',
+        linkTo:'/sach-blockchain'
+    },
+    {
+        id:66,
+        name:'Sách Kinh tế',
+        cate:'',
+        img:'https://www.vinabook.com/images/menu/175/kinh_te.png',
+        linkTo:'/'
+    },
+    {
+        id:5,
+        name:'Sách Văn Học trong nước',
+        cate:'',
+        img:'https://www.vinabook.com/images/menu/175/van_hoc_trong_nuoc___drop.png',
+        linkTo:'/sach-van-hoc-trong-nuoc',
+    },
+    {
+        id:8,
+        name:'Sách Văn Học Nước Ngoài',
+        cate:'',
+        img:'https://www.vinabook.com/images/menu/175/van_hoc_nuoc_ngoai___crop.png',
+        linkTo:'/'
+    },
+    {
+        id:9,
+        name:'Sách Thường Thức - Đời Sống',
+        cate:'',
+        img:'https://www.vinabook.com/images/menu/175/th_____ng_th___c_cu___c_s___ng___crop.png',
+        linkTo:'/'
+    },
+    {
+        id:4,
+        name:'Sách Thiếu Nhi',
+        cate:'',
+        img:'https://www.vinabook.com/images/menu/175/sach_thieu_nhi___crop.png',
+        linkTo:'/sach-thieu-nhi'
     },
     {
         id: 11,

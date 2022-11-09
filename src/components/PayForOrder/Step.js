@@ -7,7 +7,7 @@ import { list_main_product } from '../data'
 function Step() {
     // const [currentStep, updateCurentStep] = useState(1);
     const [step, setStep] = useState(0)
-    const [page, setPage] = useState('confirm')
+    const [page, setPage] = useState('address')
     // function updateStep(step) {
     //     updateCurentStep(step)
     // }

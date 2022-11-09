@@ -9,7 +9,10 @@ import CheckOut from '../pages/CheckOut.jsx';
 import PayForOrder from '../pages/PayForOrder.jsx';
 import InfoProfile from '../pages/InfoProfile.jsx';
 import ForeignLiterature from '../pages/ForeignLiterature.jsx';
+
 import OrderList from '../pages/OrderList.jsx';
+import ChildrenBook from '../pages/ChildrenBook.jsx';
+import BlockChainBook from '../pages/BlockChainBook.jsx';
 // import  CheckOut from 
 const Router = () => {
   return (
@@ -18,10 +21,12 @@ const Router = () => {
       {/* HOME */}
       <Route path="/"  element={<Home />} />
 
-      <Route path="/sach-ban-chay"  element={<BestSelling />} />
+      <Route path="/sach-ban-chay/:id"  element={<BestSelling />} />
       <Route path="/sach-ngoai-van/:id"  element={<ForeignLiterature />} />
+      <Route path="/sach-thieu-nhi/:id"  element={<ChildrenBook />} />
+      <Route path="/sach-blockchain/:id"  element={<BlockChainBook />} />
 
-      <Route path="/product-detail/:id"  element={<ProductDetail />} />
+      <Route path="/product-detail/:id"  element={<ProductDetail  />} />
 
       <Route path="/check-out"  element={<CheckOut />} />
       <Route path="/pay-for-order"  element={<PayForOrder />} />
