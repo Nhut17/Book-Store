@@ -21,7 +21,7 @@ const CartShopping = ({cartRef}) => {
   return (
     <div className='drop-down'ref={cartRef} >
       {
-        cart.length > 0 ? (
+        cart.len > 0 ? (
           <ActiveCart listCart={cart} />
         ) : (
             <EmptyCart />

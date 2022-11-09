@@ -21,14 +21,10 @@ const CartShopping = ({cartRef}) => {
   return (
     <div className='drop-down'ref={cartRef} >
       {
-        cart.length > 0 ? (
-          <ActiveCart listCart={cart} />
-        ) : (
-            <EmptyCart />
-        )
+        cart.lenght > 0 ? ()
       }
-       
-        
+        {/* <ActiveCart /> */}
+        <EmptyCart />
     </div>
   )
 }

@@ -1,23 +1,17 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { list_product } from '../data'
 
 const ActiveCart = ({listCart}) => {
 
     const [quantity,setQuantity] = useState(10000)
 
-    const totalPrice = (price,quantity) => {
-        // const total = 
-    }
-
-
   return (
     <div className='active-cart'  >
         <ul style={listCart.length > 6 ? {overflowY: 'scroll'} : {}}>
             {
                 listCart.map(data => (
-                    <Link to={`/product-detail/${data.id}`}>
+                    <Link
                     <li key={data.id}>
                     <div className="img"><img src={data.proImage} alt="" /></div>
                     <div className="info-pro">
@@ -28,9 +22,7 @@ const ActiveCart = ({listCart}) => {
                     </div>
                     <i class="fa-solid fa-trash ic-delete"></i>
                     
-                    </li>
-                </Link>
-
+                </li>
                 ))
             }
            

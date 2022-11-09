@@ -1,36 +1,27 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { list_product } from '../data'
 
-const ActiveCart = ({listCart}) => {
+const ActiveCart = ({lis}) => {
 
     const [quantity,setQuantity] = useState(10000)
 
-    const totalPrice = (price,quantity) => {
-        // const total = 
-    }
-
-
   return (
     <div className='active-cart'  >
-        <ul style={listCart.length > 6 ? {overflowY: 'scroll'} : {}}>
+        <ul style={list_product.length > 6 ? {overflowY: 'scroll'} : {}}>
             {
-                listCart.map(data => (
-                    <Link to={`/product-detail/${data.id}`}>
-                    <li key={data.id}>
-                    <div className="img"><img src={data.proImage} alt="" /></div>
+                list_product.map(data => (
+                    <li>
+                    <div className="img"><img src="https://www.vinabook.com/images/thumbnails/product/240x/372171_p96095m371518p96095msapienstruyentranhbia1tap2.jpg" alt="" /></div>
                     <div className="info-pro">
-                        <p className='name'>{data.proName}</p>
-                        <span className='quantity-price'>{data.quantity} x <span className='price'>{data.price.toString()
+                        <p className='name'>Tuyết</p>
+                        <span className='quantity-price'>1 x <span className='price'>{quantity.toString()
                                         .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}<span className='currency'>&#8363;</span></span></span>
                        
                     </div>
                     <i class="fa-solid fa-trash ic-delete"></i>
                     
-                    </li>
-                </Link>
-
+                </li>
                 ))
             }
            

@@ -3,13 +3,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { list_product } from '../data'
 
-const ActiveCart = ({listCart}) => {
-
+const ActiveCart = ({listCart}) => 
+    const [totalPrice,setTotalPrice] = useState()
     const [quantity,setQuantity] = useState(10000)
-
-    const totalPrice = (price,quantity) => {
-        // const total = 
-    }
 
 
   return (

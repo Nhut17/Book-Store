@@ -3,34 +3,21 @@ import ActiveCart from './ActiveCart'
 import EmptyCart from './EmptyCart'
 import '../../sass/CartShopping/cartShopping.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCart } from '../../redux/reducer/cartSlice'
-const CartShopping = ({cartRef}) => {
+const CartShopping = ({props,cartRef}) => {
 
   const dispatch = useDispatch()
   const cart = useSelector(state => state.cart.cart)
 
   useEffect(() => {
-    const token = localStorage.getItem('token')
-    if(token)
-    {
-      dispatch(getCart())
-      console.log('cart: ' + cart)
-    }
+    dispatch(getC)
   },[])
 
   return (
     <div className='drop-down'ref={cartRef} >
-      {
-        cart.length > 0 ? (
-          <ActiveCart listCart={cart} />
-        ) : (
-            <EmptyCart />
-        )
-      }
-       
-        
+        {/* <ActiveCart /> */}
+        <EmptyCart />
     </div>
   )
 }
 
-export default CartShopping
+export default forwardRef(CartShopping) 

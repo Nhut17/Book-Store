@@ -7,9 +7,7 @@ const ActiveCart = ({listCart}) => {
 
     const [quantity,setQuantity] = useState(10000)
 
-    const totalPrice = (price,quantity) => {
-        // const total = 
-    }
+    const totalPrice
 
 
   return (

@@ -60,8 +60,7 @@ const cartSlice = createSlice({
 
         },
         [getCart.fulfilled] : (state,action) =>{
-            state.cart = action.payload
-            state.succes = true
+            state.cart = 
         },
         [getCart.rejected] : (state,action) =>{
 

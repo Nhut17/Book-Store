@@ -7,17 +7,12 @@ const ActiveCart = ({listCart}) => {
 
     const [quantity,setQuantity] = useState(10000)
 
-    const totalPrice = (price,quantity) => {
-        // const total = 
-    }
-
-
   return (
     <div className='active-cart'  >
         <ul style={listCart.length > 6 ? {overflowY: 'scroll'} : {}}>
             {
                 listCart.map(data => (
-                    <Link to={`/product-detail/${data.id}`}>
+                    <Link to=``>
                     <li key={data.id}>
                     <div className="img"><img src={data.proImage} alt="" /></div>
                     <div className="info-pro">

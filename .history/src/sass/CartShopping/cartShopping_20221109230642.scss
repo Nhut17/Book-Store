@@ -14,7 +14,6 @@
         ul{
                 height: 400px;
                 li{
-                        cursor: pointer;
                         display: flex;
                         justify-content: space-between;
                         padding: 10px 20px;
@@ -46,7 +45,7 @@
                                 }
                                 .name{
                                         width: 100px;
-                                        height: 15px;
+                                        height: 10px;
                                         text-overflow: ellipsis;
                                         overflow: hidden ;
                                 }
