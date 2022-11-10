@@ -17,11 +17,8 @@ const InfoSignUpForm = ({setShowSignUp}) => {
     const state = useSelector(state => state.user)
 
     useEffect(() => {
-        if(state.successRegister)
-        {
-            setShowSignUp(false)
-        }
-    },[state.successRegister])
+        
+    },[])
 
     // Post api register
     const handleOnSubmit = (formData) => {
