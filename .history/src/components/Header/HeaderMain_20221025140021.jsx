@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 import ActiveCart from '../CartShopping/ActiveCart'
 import EmptyCart from '../CartShopping/EmptyCart'
 import { useState } from 'react'
-import { useRef,useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 
 
 const HeaderMain = () => {
 
-  const [showCart,setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState(false)
   const cartRef = useRef()
 
   const [showLogin, setShowLogin, setLayoutModal, setShowSignUp] = useContext(LoginContext)
@@ -24,13 +24,12 @@ const HeaderMain = () => {
     setLayoutModal(true)
   }
 
-  const handleShowCart = (e) => 
-  {
+  const handleShowCart = (e) => {
     setShowCart(!showCart)
 
   }
 
-  
+
 
   console.log(cartRef.current)
 
@@ -45,20 +44,20 @@ const HeaderMain = () => {
         </div>
 
         <div className="input-group">
-          <i class="fa-solid fa-magnifying-glass ic-search"></i>
+          <i className="fa-solid fa-magnifying-glass ic-search"></i>
           <input type="text" placeholder='Tìm tựa sách tác giả' />
           <button>Tìm sách</button>
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i class="fa-solid fa-cart-shopping cart" onClick={handleShowCart}>
+            <i className="fa-solid fa-cart-shopping cart" onClick={handleShowCart}>
             </i>
             {
               showCart &&
-            <ActiveCart ref={cartRef} />
+              <ActiveCart ref={cartRef} />
             }
-           
+
           </li>
 
           <li className='sign'>

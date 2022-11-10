@@ -5,7 +5,7 @@ const Address = () => {
             <div className='title'>
                 <span className='tilte-address'>Địa chỉ giao hàng</span>
                 <span className='change-address'>
-                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i className="fa-solid fa-pen-to-square"></i>
                     Sửa
                 </span>
             </div>
@@ -67,19 +67,19 @@ const Address = () => {
                         <input type="text" placeholder='Tên Người Dùng' />
                     </div>
                     <div className="input-phone">
-                        <i class="fa-solid fa-phone ic"></i>
+                        <i className="fa-solid fa-phone ic"></i>
                         <input type="text" placeholder='Số Điện Thoại' />
                     </div>
                     <div className="input-email">
-                        <i class="fa-solid fa-envelope ic"></i>
+                        <i className="fa-solid fa-envelope ic"></i>
                         <input type="email" placeholder='Email' />
                     </div>
                     <div className="input-password">
-                        <i class="fa-solid fa-lock ic"></i>
+                        <i className="fa-solid fa-lock ic"></i>
                         <input type="text" placeholder='Mật Khẩu' />
                     </div>
                     <div className="input-repeat-password">
-                        <i class="fa-solid fa-lock ic ic-repeat-pass"></i>
+                        <i className="fa-solid fa-lock ic ic-repeat-pass"></i>
                         <input type="text" placeholder='Nhập Lại Mật Khẩu' />
                     </div> */}
             </div>

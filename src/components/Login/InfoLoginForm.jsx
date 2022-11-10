@@ -29,7 +29,7 @@ const InfoLoginForm = ({setShowLogin}) => {
             dispatch(loginUser(data))
                 .unwrap()
                 .then(() =>  navigate('/'))
-             
+
      }
 
   return (

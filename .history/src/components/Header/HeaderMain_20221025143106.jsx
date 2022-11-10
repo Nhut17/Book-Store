@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 import CartShopping from '../CartShopping/CartShopping'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { useCallback,useRef } from 'react'
+import { useCallback, useRef } from 'react'
 
 
 const HeaderMain = () => {
 
-  const [showCart,setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState(false)
 
   const cartRef = useRef()
 
@@ -27,16 +27,16 @@ const HeaderMain = () => {
 
   useEffect(() => {
     const handleMouseDown = (e) => {
-      if(cartRef.current.contains(e.target))
-      console.log(cartRef.current)
+      if (cartRef.current.contains(e.target))
+        console.log(cartRef.current)
     }
 
-    document.addEventListener('mousedown',handleMouseDown)
+    document.addEventListener('mousedown', handleMouseDown)
 
     return () => {
-      document.removeEventListener('mousedown',handleMouseDown)
+      document.removeEventListener('mousedown', handleMouseDown)
     }
-  },[])
+  }, [])
 
   const handleShowCart = (e) => {
     // console.log(e.target.id)
@@ -44,9 +44,9 @@ const HeaderMain = () => {
 
   }
 
-  
- 
- 
+
+
+
 
 
   return (
@@ -59,22 +59,22 @@ const HeaderMain = () => {
         </div>
 
         <div className="input-group">
-          <i class="fa-solid fa-magnifying-glass ic-search"></i>
+          <i className="fa-solid fa-magnifying-glass ic-search"></i>
           <input type="text" placeholder='Tìm tựa sách tác giả' />
           <button>Tìm sách</button>
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i class="fa-solid fa-cart-shopping cart" 
-            
-            onClick={handleShowCart}>
+            <i className="fa-solid fa-cart-shopping cart"
+
+              onClick={handleShowCart}>
             </i>
             {
               showCart &&
-            <CartShopping cartRef={cartRef} />
+              <CartShopping cartRef={cartRef} />
             }
-           
+
           </li>
 
           <li className='sign'>

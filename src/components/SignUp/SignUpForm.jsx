@@ -17,9 +17,7 @@ const SignUpForm = ({ setShowSignUp }) => {
                 overlay: 'customOverlay',
                 modal: 'customModal_signup',
             }}>
-           
             <InfoSignUpForm setShowSignUp={setShowSignUp} />
-
             <div className="img">
                 <img src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signup-image.jpg" alt="" />
             </div>

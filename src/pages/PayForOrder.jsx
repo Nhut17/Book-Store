@@ -1,13 +1,8 @@
 import React from 'react'
 import Receipt from '../components/CheckOut/Receipt'
-import AddressAndServices from '../components/PayForOrder/AddressAndServices'
-import StepToPay from '../components/PayForOrder/StepToPay.jsx'
-import Payment from '../components/PayForOrder/Payment'
-import ConfirmOrder from '../components/PayForOrder/ConfirmOrder'
 import '../sass/PayForOrder/PayForOrder.scss'
 import { useState } from 'react'
-import { list_main_product } from '../components/data'
-
+import Step from '../components/PayForOrder/Step'
 const PayForOrder = () => {
 
     const [step, setStep] = useState(2)
@@ -37,22 +32,14 @@ const PayForOrder = () => {
         <div className='pay-for-order'>
             <div className="container">
                 <Receipt />
-                <StepToPay step={step} />
-                {
-                    page === 'address' && <AddressAndServices data={list_main_product} />
-                }
-                {
-                    page === 'payment' && <Payment />
-                }
-                {
-                    page === 'confirm' && <ConfirmOrder />
-                }
-                <div className="button-group">
+                <Step />
+
+                {/* <div className="button-group">
                     <button className='back'
                         onClick={handleOnClickBack}>Back</button>
                     <button className='next'
                         onClick={handleOnClickNext}>Next</button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

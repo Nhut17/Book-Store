@@ -1,8 +1,5 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-
-
-
 const InfoUser = () => {
     const {
         register,
@@ -14,45 +11,54 @@ const InfoUser = () => {
 
     }
 
-  return (
-    <form  onSubmit={handleSubmit(handleOnSubmit)}>
-    <div className="input-group">
-        <div className="name mg">
-            <span className='require'>Họ và Tên</span>
-            <input type="text" className='inpt'/>
-        </div>
-        <div className="mail mg">
-            <span>Email</span>
-            <input type="text" className='inpt'/>
-        </div>
-        <div className="password mg">
-            <span>Mật khẩu</span>
-            <input type="text" className='inpt'/>
-        </div>
-        <div className="re-password mg">
-            <span>Nhập lại mật khẩu</span>
-            <input type="text" className='inpt'/>
-        </div>
-        <div className="birthday mg">
-            <span>Ngày sinh</span>
-            <input type="date" className='inpt'/>
-        </div>
-        <div className="gender mg">
-            <span>Giới tính</span>
-            <div className="radio-group">
-                <div className="male">
-            <input type="radio" />
-            <label >Nam</label>
+    return (
+        <form onSubmit={handleSubmit(handleOnSubmit)}>
+            <div className="input-group">
+                <div className=' input-common input-name'>
+                    <label>Họ và tên</label>
+                    <input type="text" placeholder='Họ và tên'></input>
                 </div>
-                <div className="female">
-            <input type="radio" />
-            <label >Nữ</label>
+                <div className='input-common input-email'>
+                    <label>Email</label>
+                    <input type="text" placeholder='Email'></input>
+                </div>
+                <div className='input-common input-password'>
+                    <label>Mật khẩu</label>
+                    <input type="text" placeholder='Mật khẩu'></input>
+                </div>
+                <div className='input-common input-re-password'>
+                    <label>Nhập lại mật khẩu</label>
+                    <input type="text" placeholder='Nhập lại mật khẩu'></input>
+                </div>
+                <div className="input-common input-dob">
+                    <label>Ngày sinh</label>
+                    <input type="date" className='inpt' />
                 </div>
             </div>
-        </div>
-    </div>
-</form>
-  )
+            <div className="gender mg">
+                <label>Giới tính</label>
+                <div className="radio-group">
+                    <div className="male">
+                        <input type="radio" />
+                        <label >Nam</label>
+                    </div>
+                    <div className="female">
+                        <input type="radio" />
+                        <label >Nữ</label>
+                    </div>
+                </div>
+            </div>
+            <div className='register-to-receive-annoucement'>
+                <h2>Đăng ký nhận bản tin</h2>
+                <div className='register-group'>
+                    <input type="checkbox"></input>
+
+                    <p>Đăng ký nhận bản tin theo các danh mục dưới đây</p>
+                </div>
+
+            </div>
+        </form>
+    )
 }
 
 export default InfoUser

@@ -14,6 +14,7 @@ import CheckOut from '../pages/CheckOut.jsx';
 import PayForOrder from '../pages/PayForOrder.jsx';
 
 import InfoProfile from '../pages/InfoProfile.jsx';
+import OrderList from '../pages/OrderList.jsx';
 // import  CheckOut from 
 const Routes = () => {
   return (
@@ -38,6 +39,15 @@ const Routes = () => {
 
       <Route path="/profile" exact component={InfoProfile} />
 
+<<<<<<< HEAD:src/routes/Routes.jsx
+      <Route  path="/order" exact component={OrderList}/>
+
+
+
+
+
+=======
+>>>>>>> 6030a2b08bfbbef3839b6dd82beb2b3e90026eec:.history/src/routes/Routes_20221106113930.jsx
     </Switch>
 
   );

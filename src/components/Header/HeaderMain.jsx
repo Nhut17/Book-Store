@@ -5,12 +5,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import CartShopping from '../CartShopping/CartShopping'
 import { useState } from 'react'
 import { useEffect } from 'react'
+
+
 import { useCallback,useRef } from 'react'
 import { useSelector } from 'react-redux'
 
 
 const HeaderMain = () => {
-
   const [showCart,setShowCart] = useState(false)
   const cartRef = useRef()
   const icRef = useRef()
@@ -43,18 +44,19 @@ const HeaderMain = () => {
   //Click shopping cart 
   useEffect(() => {
     const handleMouseDown = (e) => {
+
       if(!cartRef.current?.contains(e.target) && !icRef.current.contains(e.target))
       {
         setShowCart(false)
       }
     }
 
-    document.addEventListener('mousedown',handleMouseDown)
+    document.addEventListener('mousedown', handleMouseDown)
 
     return () => {
-      document.removeEventListener('mousedown',handleMouseDown)
+      document.removeEventListener('mousedown', handleMouseDown)
     }
-  },[])
+  }, [])
 
   // hanlde Show cart
   const handleShowCart = (e) => {
@@ -72,22 +74,22 @@ const HeaderMain = () => {
         </div>
 
         <div className="input-group">
-          <i class="fa-solid fa-magnifying-glass ic-search"></i>
+          <i className="fa-solid fa-magnifying-glass ic-search"></i>
           <input type="text" placeholder='Tìm tựa sách tác giả' />
           <button>Tìm sách</button>
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i class="fa-solid fa-cart-shopping cart" 
-            ref={icRef}
-            onClick={handleShowCart}>
+            <i className="fa-solid fa-cart-shopping cart"
+              ref={icRef}
+              onClick={handleShowCart}>
             </i>
             {
               showCart &&
-            <CartShopping cartRef={cartRef} />
+              <CartShopping cartRef={cartRef} />
             }
-           
+
           </li>
 
           <li className='sign'>

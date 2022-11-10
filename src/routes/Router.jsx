@@ -9,6 +9,8 @@ import CheckOut from '../pages/CheckOut.jsx';
 import PayForOrder from '../pages/PayForOrder.jsx';
 import InfoProfile from '../pages/InfoProfile.jsx';
 import ForeignLiterature from '../pages/ForeignLiterature.jsx';
+
+import OrderList from '../pages/OrderList.jsx';
 import ChildrenBook from '../pages/ChildrenBook.jsx';
 import BlockChainBook from '../pages/BlockChainBook.jsx';
 // import  CheckOut from 
@@ -30,6 +32,8 @@ const Router = () => {
       <Route path="/pay-for-order"  element={<PayForOrder />} />
 
       <Route path="/profile"  element={<InfoProfile />} />
+      <Route path="/order"  element={<OrderList />} />
+
 
     </Routes>
 

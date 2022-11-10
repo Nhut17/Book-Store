@@ -31,17 +31,17 @@ const HeaderMain = () => {
         </div>
 
         <div className="input-group">
-          <i class="fa-solid fa-magnifying-glass ic-search"></i>
+          <i className="fa-solid fa-magnifying-glass ic-search"></i>
           <input type="text" placeholder='Tìm tựa sách tác giả' />
           <button>Tìm sách</button>
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i class="fa-solid fa-cart-shopping cart" onCli>
+            <i className="fa-solid fa-cart-shopping cart" onCli>
             </i>
             <ActiveCart />
-           
+
           </li>
 
           <li className='sign'>

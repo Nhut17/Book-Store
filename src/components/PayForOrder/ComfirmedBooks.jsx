@@ -2,13 +2,14 @@ import React from 'react'
 import SelectedBooks from './SelectedBooks'
 const ComfirmedBooks = ({ listbook }) => {
     console.log(listbook)
+    
     return (
         <div className='comfirmed-books'>
             <div className='container-confirmed'>
                 <div className='content-title'>
                     <span className='tilte-products'>sản phẩm</span>
                     <span className='change-address'>
-                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen-to-square"></i>
                         Sửa
                     </span>
                 </div>

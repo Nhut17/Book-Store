@@ -1,14 +1,16 @@
-import React from 'react'
-const ConfirmedSummaryOrder = () => {
+import React, { useState } from 'react'
+
+const ConfirmedSummaryOrder = ({totalPrice}) => {
+
     return (
         <div className='confirmed-summary-order'>
             <div className='summary-tittle'>TÓM TẮT ĐƠN HÀNG</div>
             <div className='summary-pay'>
                 <table width="100%">
                     <tbody>
-                    <tr>
+                        <tr>
                             <td width="60%" align='left'>Tổng tiền hàng</td>
-                            <td width="40%" align='right'>638.000 ₫</td>
+                            <td width="40%" align='right'>{totalPrice} ₫</td>
                         </tr>
                         <tr>
                             <td width="60%" align='left'>Phí giao hàng </td>
@@ -28,7 +30,7 @@ const ConfirmedSummaryOrder = () => {
                         </tr>
                         <tr>
                             <td width="60%" align='left'>Tạm tính</td>
-                            <td width="40%" align='right'>657.000 ₫</td>
+                            <td width="40%" align='right'>{totalPrice} ₫</td>
                         </tr>
                         <tr>
                             <td colSpan='2' ><div className='more-infor'><br></br>(Đã bao gồm Thuế VAT và Phí đóng gói cơ bản).</div></td>

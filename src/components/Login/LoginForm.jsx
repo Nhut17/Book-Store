@@ -22,9 +22,9 @@ const LoginForm = ({ setShowLogin }) => {
                     overlay: 'customOverlay',
                     modal: 'customModal_login',
                 }}>
+
                     
                 <InfoLoginForm setShowLogin={setShowLogin} />
-
                 <div className="img">
                     <img src='https://colorlib.com/etc/regform/colorlib-regform-7/images/signin-image.jpg' alt="" />
                 </div>
@@ -36,4 +36,3 @@ const LoginForm = ({ setShowLogin }) => {
 
 export default LoginForm
 
-        
