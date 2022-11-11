@@ -1618,4 +1618,30 @@ export const orderList = [
     }
 ]
 
+export const userAddresses=[
+    {
+        name:'Nguyễn Trần Đăng Khoa',
+        address:'37/22 C1 Cộng Hoà, Phường 13, Quận Tân Bình, Hồ Chí Minh Việt Nam',
+        contact:'0948433713',
+        deliveryTime:'Giờ hành chính',
+        defaultAdd:true
+    },
+    {
+        name:'Nguyễn Trần Đăng Khoa',
+        address:'105 Nguyễn Trọng Kỷ,Lợi Thịnh, Phường Cam Lợi, Thành phố Cam Ranh, Khánh Hòa Việt Nam',
+        contact:'0948433713',
+        deliveryTime:'Ngày thường',
+        defaultAdd:false
+
+    },
+    {
+        name:'Nguyễn Trần Đăng Khoa',
+        address:'Ký Túc Xá Khu B ĐHQG, Phường Đông Hòa, Thị xã Dĩ An, Bình Dương Việt Nam',
+        contact:'0948433713',
+        deliveryTime:'Cuối tuần',
+        defaultAdd:false
+
+    }
+
+]
 

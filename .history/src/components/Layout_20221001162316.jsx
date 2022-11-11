@@ -23,7 +23,6 @@ const Layout = () => {
       <Route
         render={(props) => (
           <div className="layout">
-
             {
               showLogin && <Login setShowLogin={setShowLogin} />
             }
