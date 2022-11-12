@@ -1,10 +1,16 @@
-import React from 'react'
-const AddressItem = ({ data, index }) => {
-    const handleChangeDeliveryAddress = () => {
+import { React, useState } from 'react';
+import ModalUpdateAddress from './ModalUpdateAddress';
 
+const AddressItem = ({ data, selected, setSelected }) => {
+    const handleChangeDeliveryAddress = () => {
+        setSelected(data.id)
+    }
+    const [showUpdateAddressModal, setShowUpdateAddressModal] = useState(false)
+    const handleOpenUpdateAddressModal = () => {
+        setShowUpdateAddressModal(true)
     }
     return (
-        <div className={data.defaultAdd === true ? 'Address-Item defaut-address' : 'Address-Item'} key={index}>
+        <div className={data.id === selected ? 'Address-Item defaut-address' : 'Address-Item'}>
             <div className='up'>
                 <span className='name'>{data.name}</span>
                 <span className='default'>{data.defaultAdd === true ? 'Địa chỉ mặc định' : ''}</span>
@@ -14,11 +20,12 @@ const AddressItem = ({ data, index }) => {
             <p>Lưu ý: {data.deliveryTime}</p>
             <div className='btn-group'>
                 <button
-                    onClick={handleChangeDeliveryAddress} className={data.defaultAdd === true ? 'active-btn' : ''}>Giao đến địa chỉ này</button>
-                <button>Sửa</button>
-                {data.defaultAdd === true ? <button>Xóa</button> : ''}
-
+                    onClick={handleChangeDeliveryAddress} className={data.id === selected ? 'active-btn' : ''}>Giao đến địa chỉ này</button>
+                <button onClick={handleOpenUpdateAddressModal}>Sửa</button>
+                {data.defaultAdd === false ? <button>Xóa</button> : ''}
             </div>
+            {showUpdateAddressModal === true ? <ModalUpdateAddress data={data} showUpdateAddressModal={showUpdateAddressModal} setShowUpdateAddressModal={setShowUpdateAddressModal} /> : ''}
+            {/* <ModalUpdateAddress showUpdateAddressModal={showUpdateAddressModal} setShowUpdateAddressModal={setShowUpdateAddressModal} /> */}
         </div>
     )
 }

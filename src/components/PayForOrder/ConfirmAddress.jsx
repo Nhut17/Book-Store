@@ -5,11 +5,9 @@ const ConfirmAddress = ({ selectedAddress }) => {
 
     const [showModal, setShowModal] = useState(true)
 
-    console.log('1,check showModal', showModal, ' check setShowModal', setShowModal)
+
     const handleOpenModal = () => {
-        console.log('2,check showModal', showModal, ' check setShowModal', setShowModal)
         setShowModal(true)
-        console.log('3,check showModal', showModal, ' check setShowModal', setShowModal)
     }
     return (
         <div className='Confirm-Address'>
@@ -35,7 +33,7 @@ const ConfirmAddress = ({ selectedAddress }) => {
                     <textarea></textarea>
                 </div>
             </div>
-            <ModalOtherAddresses showModal={showModal} setShowModal={setShowModal} />
+            <ModalOtherAddresses  showModal={showModal} setShowModal={setShowModal} />
         </div>
     )
 }
