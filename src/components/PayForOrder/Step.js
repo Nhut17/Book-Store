@@ -42,15 +42,18 @@ function Step() {
                     <li className={step === 2 ? 'active' : ''}> Step 3</li>
                 </ul>
             </div>
-            {
-                page === 'address' && <AddressAndServices data={list_main_product} />
-            }
-            {
-                page === 'payment' && <Payment />
-            }
-            {
-                page === 'confirm' && <ConfirmOrder />
-            }
+            <div className='main-contain'>
+                {
+                    page === 'address' && <AddressAndServices data={list_main_product} />
+                }
+                {
+                    page === 'payment' && <Payment />
+                }
+                {
+                    page === 'confirm' && <ConfirmOrder />
+                }
+            </div>
+
             <div className="button-group">
                 <button className='back'
                     onClick={handleOnClickBack}>Back</button>

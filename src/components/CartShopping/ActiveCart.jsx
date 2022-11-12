@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { deleteCart } from '../../redux/reducer/cartSlice'
 
 const ActiveCart = ({ listCart }) => {
-    
+
     const totalPrice = useSelector(state => state.cart.totalPrice)
     const dispatch = useDispatch()
 
@@ -23,7 +23,7 @@ const ActiveCart = ({ listCart }) => {
                             <div className="img"><img src={data.proImage} alt="" /></div>
                             <div className="info-pro">
                                 <p className='name'>{data.proName}</p>
-                                <span className='quantity-price'>{data.quantity} x <span className='price'>{data.price.toString()
+                                <span className='quantity-price'>{data.quantity} x <span className='price'>{data.price?.toString()
                                     .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}<span className='currency'>&#8363;</span></span></span>
 
                             </div>
@@ -38,7 +38,7 @@ const ActiveCart = ({ listCart }) => {
 
             </ul>
             <div className="total-price">
-                <span className="total">Tổng cộng:<span className='price'>{totalPrice.toString()
+                <span className="total">Tổng cộng:<span className='price'>{totalPrice?.toString()
                     .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}<span className='currency'>&#8363;</span></span></span>
                 <button  ><Link to='/check-out' reloadDocument>XEM GIỎ HÀNG</Link></button>
             </div>

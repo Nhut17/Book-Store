@@ -1,6 +1,7 @@
 import React from 'react'
-const Address = () => {
+const Address = ({ userAddresses }) => {
     return (
+        // {userAddresses && userAddresses.length>0}
         <div className='pfo-address'>
             <div className='title'>
                 <span className='tilte-address'>Địa chỉ giao hàng</span>
