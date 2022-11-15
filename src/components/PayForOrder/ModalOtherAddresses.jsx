@@ -6,23 +6,27 @@ import { userAddresses } from '../data'
 import AddressItem from './AddressItem';
 import ModalAddNewAddress from './ModalAddNewAddress';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllAddresses } from '../../redux/reducer/addressSlice';
+import { getAllAddresses, setDefaultAddress } from '../../redux/reducer/addressSlice';
 
 
 const ModalOtherAddresses = ({ showModal, setShowModal }) => {
-
     const [showAddNewAddress, setShowAddNewAddress] = useState(false)
     const listAddress = useSelector(state => state.address.listAddress)
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getAllAddresses())
-    },[])
+    }, [])
 
     const handleAddNewAddress = () => {
         setShowAddNewAddress(true)
     }
     const toggle = () => {
         setShowModal(false)
+    }
+    const handleSetDefaultAddress = () => {
+        dispatch(setDefaultAddress(selected))
+        toggle()
+
     }
     const [selected, setSelected] = useState()
     return (
@@ -38,7 +42,7 @@ const ModalOtherAddresses = ({ showModal, setShowModal }) => {
                 <div>
                     <span className='delivery-address'>Địa chỉ giao hàng</span>
                     <div className='list-addresses'>
-                        {listAddress.map(item => (
+                        {listAddress?.map(item => (
                             <div className={item.id === selected ? 'each-address selected' : 'each-address'} key={item.id}>
                                 <input className='radio-input' type="radio"
                                     checked={selected === item.id}
@@ -47,10 +51,13 @@ const ModalOtherAddresses = ({ showModal, setShowModal }) => {
                             </div>
                         ))}
                     </div>
-                    <button className='btn-add-new-address' onClick={handleAddNewAddress}><i class="fa-light fa-plus" ></i>Thêm địa chỉ mới</button>
                     <ModalAddNewAddress showAddNewAddress={showAddNewAddress} setShowAddNewAddress={setShowAddNewAddress} />
                 </div>
-                <button>XÁC NHẬN</button>
+                <div className='modal-other-addresses-btn-confirm'>
+                    <button className='btn-confirm-address' onClick={handleSetDefaultAddress}>Xác nhận</button>
+                    <button className='btn-add-new-address' onClick={handleAddNewAddress}><i class="fa-light fa-plus" ></i>Thêm địa chỉ mới</button>
+
+                </div>
             </Modal>
         </div>
     )

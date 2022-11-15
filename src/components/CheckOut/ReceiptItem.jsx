@@ -7,9 +7,7 @@ const ReceiptItem = ({ index, data }) => {
 
     // Handle decrease item cart
     const handleDecrease = () => {
-        
-        if(data.quantity > 0)
-        {
+        if (data.quantity > 0) {
             dispatch(decreaseCart(data.productId))
         }
     }
@@ -32,13 +30,18 @@ const ReceiptItem = ({ index, data }) => {
             <div className="content">
                 <div className="up">
                     <span>{data.proName}</span>
-                    <span className='price'>{data.price}<span className='quantity'>x {data.quantity}</span></span>
+                    <span className='price'>
+                        {data.price?.toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                        <span className='currency'>&#8363;</span>
+                        <span className='quantity'>
+                            x {data.quantity}</span></span>
 
                 </div>
                 <div className='down'>
                     <div className="quantity">
                         <button onClick={handleDecrease}>-</button>
-                        <input value={data.quantity}  />
+                        <input value={data.quantity} />
                         <button onClick={handleIncrease}>+</button>
                     </div>
                     <div className='delete'>

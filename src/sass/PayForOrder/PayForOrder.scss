@@ -42,50 +42,82 @@
                     .aas-content{
                         display: flex;
                         width: 90%;
-                        .pfo-relativeservice{
+                        // .pfo-relativeservice{
+                        //     width: 50%;
+                        //     margin-left: 20px;
+                        //     margin-top: 20px;
+                        //     .pfo-rs-title{
+                        //         text-transform: uppercase;
+                        //         font-size:16px;
+                        //         font-weight: 400;
+                        //         color: $primary-color;
+                        //     }
+                        //     textarea{
+                        //         width: 100%;
+                        //         height: 100px;
+                        //         box-sizing: border-box;
+                        //         background: #fff;
+                        //         border: 1px solid #e9e9e9;
+                        //         border-radius: 4px;
+                        //         box-shadow: none;
+                        //         text-align: left;
+                        //         font-family: "Montserrat-Light" !important;
+                        //     }
+                        //     .pfo-rs-cb-group{
+                        //         input{
+                        //             border-radius: 100%;
+                        //         }
+                        //         .boc-sach{
+                        //             margin-left: 30px;
+                        //         }
+                        //         span{
+                        //             &:hover{
+                        //                 cursor: pointer;
+                        //                 text-decoration: underline;
+                        //                 color: #0a6f3c;
+                        //             }
+                        //         }
+                        //         .select-all{
+                        //             &:hover{
+                        //                 color: #0a6f3c;
+                        //             }
+                        //         }
+                        //         .unselect-all{
+                        //             &:hover{
+                        //                 color: #e9ec30;
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                        .content-payment-infor{
                             width: 50%;
-                            margin-left: 20px;
-                            margin-top: 20px;
-                            .pfo-rs-title{
+                           padding-left: 20px;
+                            border-left: 1px solid #ddd;
+                            .title{
+                                text-align: left;
                                 text-transform: uppercase;
-                                font-size:16px;
                                 font-weight: 400;
                                 color: $primary-color;
+                                padding: 15px 0px 10px 0px;
+                                font-size: 14px;
                             }
-                            textarea{
-                                width: 100%;
-                                height: 100px;
-                                box-sizing: border-box;
-                                background: #fff;
-                                border: 1px solid #e9e9e9;
-                                border-radius: 4px;
-                                box-shadow: none;
-                                text-align: left;
-                                font-family: "Montserrat-Light" !important;
-                            }
-                            .pfo-rs-cb-group{
-                                input{
-                                    border-radius: 100%;
+                            .detailed-infor{
+                                div{
+                                    padding: 0 0 0 25px;
+                                    color: #66645c;
+                                    display: block;
+                                    font-size: 12px;
+                                    font-style: bold;
                                 }
-                                .boc-sach{
-                                    margin-left: 30px;
+                                .header{
+                                    color: #828282 !important;
                                 }
-                                span{
-                                    &:hover{
-                                        cursor: pointer;
-                                        text-decoration: underline;
-                                        color: #0a6f3c;
-                                    }
+                                img{
+                                    width: 80%;
                                 }
-                                .select-all{
-                                    &:hover{
-                                        color: #0a6f3c;
-                                    }
-                                }
-                                .unselect-all{
-                                    &:hover{
-                                        color: #e9ec30;
-                                    }
+                                .warning{
+                                    font-size: 15px;
+                                    // color:
                                 }
                             }
                         }
@@ -190,6 +222,8 @@
 
                         }
                         .Confirm-Address{
+                            width: 50%;
+                            margin-right: 5px;
                             .title{
                                 padding: 15px 0 10px 0px;
 
@@ -524,6 +558,8 @@
                         }
                         .overall{
                             margin-top: 15px;
+                            font-size: 20px;
+                            color: #0a6f3c;
                             .result{
                                 justify-content: space-between;
                                 display: flex;
@@ -552,7 +588,7 @@
             counter-reset:step;
             li{
                 float: left;
-                width: 33.33%;
+                width: 50%;
                 position: relative;
                 text-align: center;
             }
@@ -631,6 +667,8 @@
     // width: 250px;
         display: block;
         width: 100%;
+        padding-left: 20px;
+        padding-top: 5px;
     .up{
         display: flex;
         width: 100%;
@@ -655,7 +693,7 @@
     .btn-group{
         width: 100%;
         button{
-            width: 200px;
+            width: 150px;
             height: 50px;
             padding: 10px 20px;
             margin-right: 15px;
@@ -664,6 +702,10 @@
         }
         .active-btn{
             background-color: #0a6f3c;
+        }
+        .giaodendiachinay{
+            width: 200px !important;
+
         }
     }
 
@@ -702,14 +744,15 @@
         margin-bottom: 10px;
         border-radius: 5px;
         margin-right: 20px;
-        width: 800px;
+        width: 750px;
         height: 200px;
         border: 1px solid white;
         background-color: #ece7e7;
         padding: 10px 20px;
         .radio-input{
-            width: 5%;
-            display: block;
+            width: 25px;
+            display: flex;
+            justify-content: center;
         }
     }
     .selected{
@@ -786,7 +829,6 @@
         height: 50px;
         margin: 20px;
         border-radius: 4px;
-
     }
     .confirm{
         &:hover{
@@ -879,3 +921,67 @@
         }
     }
 
+.modal-other-addresses-btn-confirm{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    // display: flex;
+    // justify-content: center;
+    text-align: center;
+    // button{
+    //     width: 100px;
+    //     height: 40px;
+    //     margin-top: 20px;
+    //     border: none;
+    //     border-radius: 5px;
+    //     &:hover{
+    //         background-color: #0a6f3c;
+    //     }
+    // }
+    .btn-confirm-address{
+        width: 200px;
+        height: 60px;
+        border: none;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.997);
+        border: 1px solid white;
+        box-shadow: 0 1px 1px rgb(0 0 0 / 3%);
+        margin-right: 0px;
+        font-size: 24px;
+        background-color: #ccc;
+        border-radius: 4px;
+        line-height: 1.5rem;
+        &:hover{
+            background-color: #0a6f3c;
+        }
+    }
+    .btn-add-new-address{
+        color: rgba(0, 0, 0, 0.997);
+        border: 1px solid white;
+        box-shadow: 0 1px 1px rgb(0 0 0 / 3%);
+        height: 60px;
+        width: 250px;
+        margin-right: 0px;
+        font-size: 24px;
+        background-color: #ccc;
+        border-radius: 4px;
+        line-height: 1.5rem;
+        &:hover{
+            cursor: pointer;
+            background-color: #0a6f3c;
+        }
+        i{
+            width: 20px;
+        font-size: 24px;
+    
+        }   
+    }
+
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: #0a6f3c !important;
+}
+.react-responsive-modal-modal {
+    overflow-y: auto !important;
+}

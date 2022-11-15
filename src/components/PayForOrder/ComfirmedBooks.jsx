@@ -8,10 +8,6 @@ const ComfirmedBooks = ({ listbook }) => {
             <div className='container-confirmed'>
                 <div className='content-title'>
                     <span className='tilte-products'>sản phẩm</span>
-                    <span className='change-address'>
-                        <i className="fa-solid fa-pen-to-square"></i>
-                        Sửa
-                    </span>
                 </div>
                 <div className='content-down'>
                     {listbook.map(item => (

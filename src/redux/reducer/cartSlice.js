@@ -8,6 +8,7 @@ const initialState = {
     loading: false,
     success: false,
     quantityCart: 0,
+    totalProduct: 0,
 }
 
 const cartAPI = 'http://localhost:8083/user/cart'
@@ -122,6 +123,10 @@ const cartSlice = createSlice({
                 return acc + (val.quantity * val.price)
             },0)
             state.quantityCart = state.cart.length
+            state.totalProduct = state.cart.reduce((acc,val) => {
+                    return acc + val.quantity
+            },0 )
+            console.log('totalProduct: ' + state.totalProduct)
         },
         [getCart.rejected] : (state,action) =>{
 

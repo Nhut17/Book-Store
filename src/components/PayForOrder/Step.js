@@ -12,15 +12,12 @@ function Step() {
     //     updateCurentStep(step)
     // }
     // console.log('step Step', currentStep)
+    const [payment, setPayment] = useState();
 
     const handleOnClickNext = () => {
         if (step === 0) {
-            setPage('payment')
-            setStep(1)
-        }
-        if (step === 1) {
             setPage('confirm')
-            setStep(2)
+            setStep(1)
         }
     }
     const handleOnClickBack = () => {
@@ -28,37 +25,41 @@ function Step() {
             setPage('address')
             setStep(0)
         }
-        if (step === 2) {
-            setPage('payment')
-            setStep(1)
-        }
     }
     return (
         <div className='step-container'>
             <div className='container'>
-                <ul className='progress-bar'>
-                    <li className={step === 0 || step === 1 || step == 2 ? 'active' : ''}> Step 1</li>
-                    <li className={step === 1 || step === 2 ? 'active' : ''}> Step 2</li>
-                    <li className={step === 2 ? 'active' : ''}> Step 3</li>
-                </ul>
+                <div>                <ul className='progress-bar'>
+                    <li className={step === 0 || step === 1 ? 'active' : ''}>Địa chỉ và Thanh Toán</li>
+                    <li className={step === 1 ? 'active' : ''}>Xác nhận đơn hàng</li>
+                </ul></div>
+
             </div>
             <div className='main-contain'>
                 {
-                    page === 'address' && <AddressAndServices data={list_main_product} />
+                    page === 'address' && <AddressAndServices payment={payment} setPayment={setPayment} />
                 }
                 {
-                    page === 'payment' && <Payment />
-                }
-                {
-                    page === 'confirm' && <ConfirmOrder />
+                    page === 'confirm' && <ConfirmOrder payment={payment} />
                 }
             </div>
 
             <div className="button-group">
-                <button className='back'
-                    onClick={handleOnClickBack}>Back</button>
-                <button className='next'
-                    onClick={handleOnClickNext}>Next</button>
+                {step !== 2 ?
+                    <>                    <button className='back'
+                        onClick={handleOnClickBack}>Trở về</button>
+                        <button className='next'
+                            onClick={handleOnClickNext}>Tiếp tục</button></>
+
+                    :
+                    <>
+                        <button className='back'
+                            onClick={handleOnClickBack}>Trở về</button>
+                        <button className='next'
+                            onClick={handleOnClickNext}>Xác nhận
+                        </button></>
+
+                }
             </div>
         </div>
     )
