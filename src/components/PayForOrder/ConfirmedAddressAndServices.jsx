@@ -8,9 +8,10 @@ const ConfirmedAddressAndServices = ({ defaultAddress, payment }) => {
                 <div className='title'>
                     <span className='tilte-address'>Địa chỉ giao hàng</span>
                 </div>
-                <p className='customer-name'>{defaultAddress.name}</p>
-                <p>{defaultAddress.address}</p>
-                <p className='customer-phone'>{defaultAddress.phoneNumber}</p>
+                
+                <p className='customer-name'>Họ tên: <span className='bold'> {defaultAddress.name}</span></p>
+                <p>Địa chỉ: {defaultAddress.address}</p>
+                <p className='customer-phone'>Số điên thoại: <span className='bold'> {defaultAddress.phoneNumber}</span></p>
             </div>
             <div className='delivery-note'>
                 <span>GHI CHÚ GIAO HÀNG</span>

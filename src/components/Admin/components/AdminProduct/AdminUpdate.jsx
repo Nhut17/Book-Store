@@ -11,7 +11,7 @@ function AdminUpdate(props) {
   
   const onSubmit = async (data) => {
   
-    navigate("/admin/product")
+    navigate("/admin/product");
   };
 
 

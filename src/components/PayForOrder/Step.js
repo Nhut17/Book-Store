@@ -3,15 +3,18 @@ import AddressAndServices from './AddressAndServices'
 import Payment from './Payment'
 import ConfirmOrder from './ConfirmOrder'
 import { list_main_product } from '../data'
+import { useDispatch, useSelector } from 'react-redux'
+import { createOrder } from '../../redux/reducer/orderSlice'
 
 function Step() {
-    // const [currentStep, updateCurentStep] = useState(1);
     const [step, setStep] = useState(0)
     const [page, setPage] = useState('address')
-    // function updateStep(step) {
-    //     updateCurentStep(step)
-    // }
-    // console.log('step Step', currentStep)
+
+    const currentCart = useSelector(state => state.cart.cart)
+    const addressOrder = useSelector(state => state.address.listAddress)
+
+    const dispatch = useDispatch()
+
     const [payment, setPayment] = useState();
 
     const handleOnClickNext = () => {
@@ -20,21 +23,49 @@ function Step() {
             setStep(1)
         }
     }
+
+
     const handleOnClickBack = () => {
         if (step === 1) {
             setPage('address')
             setStep(0)
         }
     }
-    const handleConfirmOrder = () => {
-        // dispatch(createOrder({
-        //     {[]}
-        //     ,
-        //     payment,
 
-        // }))
-        
+
+    const handleConfirmOrder = () => {
+        const listCart = currentCart.map(val => {
+            return {
+                quantity: val.quantity,
+                unit_price: val.price * val.quantity,
+                product_id: val.productId
+            }
+        })
+
+        const data = [
+            [{
+                quantity: "2",
+                unit_price: "94000",
+                product_id: "4"
+            },
+            {
+                quantity: "1",
+                unit_price: "110000",
+                product_id: "3"
+            }],
+            {
+                note: 'Giao vào thứ 7',
+                payment: "payment",
+                shipping_fee: "30000"
+            }
+        ]
+        console.log(data)
+        dispatch(createOrder(data))
+        // console.log(listCart)
+        // console.log(payment)
+        // console.log('address', JSON.stringify(addressOrder))
     }
+
     return (
         <div className='step-container'>
             <div className='container'>
@@ -54,19 +85,21 @@ function Step() {
             </div>
 
             <div className="button-group">
-                {step !== 1 ?
-                    <>                    <button className='back'
-                        onClick={handleOnClickBack}>Trở về</button>
+                {step === 1 ?
+                    <>
+                        <button className='back' onClick={handleOnClickBack}>Trở về</button>
                         <button className='next'
-                            onClick={handleOnClickNext}>Tiếp tục</button></>
+                            onClick={handleConfirmOrder}>Xác nhận
+                        </button>
+                    </>
 
                     :
                     <>
                         <button className='back'
                             onClick={handleOnClickBack}>Trở về</button>
                         <button className='next'
-                            onClick={handleConfirmOrder}>Xác nhận
-                        </button></>
+
+                            onClick={handleOnClickNext}>Tiếp tục</button></>
 
                 }
             </div>
