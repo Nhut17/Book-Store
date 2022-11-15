@@ -3,9 +3,7 @@ import { React, useState } from 'react';
 import ModalOtherAddresses from './ModalOtherAddresses'
 const ConfirmAddress = ({ selectedAddress }) => {
 
-    const [showModal, setShowModal] = useState(true)
-
-
+    const [showModal, setShowModal] = useState(false)
     const handleOpenModal = () => {
         setShowModal(true)
     }
@@ -18,10 +16,9 @@ const ConfirmAddress = ({ selectedAddress }) => {
                     Sửa
                 </span>
             </div>
-
             <p>{selectedAddress.name}</p>
             <p>{selectedAddress.address}</p>
-            <p>{selectedAddress.contact}</p>
+            <p>{selectedAddress.phoneNumber}</p>
             <p>{selectedAddress.deliveryTime}</p>
             <div className='down-content'>
                 <span>Phí vận chuyển: miễn phí</span>

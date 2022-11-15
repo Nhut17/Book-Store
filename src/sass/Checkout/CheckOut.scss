@@ -181,7 +181,11 @@
                         .result{
                             justify-content: space-between;
                             display: flex;
-                            margin-top: 5px;
+                            // margin-top: 5px;
+                            padding-top: 15px;
+                            font-size: 20px;
+                            color: #117c47;
+                            font-weight: 600;
                             .overall-title{
 
                                 text-transform: uppercase;

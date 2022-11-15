@@ -9,8 +9,9 @@ import { Loading } from "../../HOCs/Loading";
 const TableBooks = ({ listCart, loading }) => {
     
     const totalPrice = useSelector(state => state.cart.totalPrice)
-    console.log(totalPrice)
+    const totalProduct = useSelector(state => state.cart.totalProduct)
 
+    console.log(totalProduct)
    
 
     return (
@@ -32,7 +33,7 @@ const TableBooks = ({ listCart, loading }) => {
                 </div>
 
                 <div className='summary-content'>
-                    <SummaryOrder count={listCart.length} totalPrice={totalPrice} />
+                    <SummaryOrder count={totalProduct} totalPrice={totalPrice} />
                 </div>
 
             </div>

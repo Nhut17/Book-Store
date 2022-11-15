@@ -5,35 +5,19 @@ import CircleCheckedFilled from '@material-ui/icons/CheckCircle';
 import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import { useState } from 'react';
 import { array } from 'yup/lib/locale';
-const PaymentInfor = () => {
+const PaymentInfor = ({ payment, setPayment }) => {
     const arr = [
         {
             id: 1,
             name: 'Thanh toán bằng tiền mặt khi nhận hàng',
-            checked: false
+
         },
         {
             id: 2,
             name: 'Thanh toán bằng quét mã VNPay',
-            checked: false
-
         }
     ]
-    const [checked, setChecked] = useState()
-    // const handleOnChangeSelectPayment = (id) => {
-    //     setChecked(prev => {
-    //         const isChecked = checked.includes(id)
-    //         if (isChecked) {
-    //             // checked[id].checked = false;
-    //             return checked.filter(item => item !== id)
-    //         }
-    //         else {
-    //             // reCheckArr(id)
-    //             // checked[id-1].checked = true;
-    //             return [...prev, id]
-    //         }
-    //     })
-    // }
+    const [checked, setChecked] = useState(1)
     return (
         <div className='content-payment-infor'>
             <div className='title'>
@@ -46,7 +30,10 @@ const PaymentInfor = () => {
                             icon={<CircleUnchecked />}
                             checkedIcon={<CircleCheckedFilled />}
                             checked={checked === item.id}
-                            onChange={() => setChecked(item.id)}
+                            onChange={() => {
+                                setChecked(item.id)
+                                setPayment(item.name)
+                            }}
                         />
                         <label>{item.name}</label>
                         {checked === item.id && item.id === 1 &&
@@ -59,7 +46,7 @@ const PaymentInfor = () => {
                                 </div>
                             </div>
                         }
-                        {checked === item.id && item.id ===  2 &&
+                        {checked === item.id && item.id === 2 &&
                             <div className='detailed-infor'>
                                 <div>
                                     Thanh toán bằng thẻ ATM do các ngân hàng sau phát hành và được ưu tiên xử lý đơn hàng trước (miễn phí phí thanh toán qua thẻ)
@@ -73,8 +60,6 @@ const PaymentInfor = () => {
                                 <div>
                                     Trong trường hợp đã ngân hàng đã trừ tiền vào tài khoản nhưng giao dịch vẫn chưa thành công, vui lòng liên hệ hotro@vinabook.com hoặc Hotline 1900 6401 để được hỗ trợ.
                                 </div>
-
-
                             </div>
                         }
                     </div>
