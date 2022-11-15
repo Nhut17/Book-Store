@@ -1,6 +1,7 @@
 import React from 'react'
 const ConfirmedAddressAndServices = ({ defaultAddress, payment }) => {
 
+    
     return (
         <div className='confirmed-address-and-services'>
             <div className='address'>

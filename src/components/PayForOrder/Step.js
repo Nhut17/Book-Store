@@ -26,6 +26,15 @@ function Step() {
             setStep(0)
         }
     }
+    const handleConfirmOrder = () => {
+        // dispatch(createOrder({
+        //     {[]}
+        //     ,
+        //     payment,
+
+        // }))
+        
+    }
     return (
         <div className='step-container'>
             <div className='container'>
@@ -45,7 +54,7 @@ function Step() {
             </div>
 
             <div className="button-group">
-                {step !== 2 ?
+                {step !== 1 ?
                     <>                    <button className='back'
                         onClick={handleOnClickBack}>Trở về</button>
                         <button className='next'
@@ -56,7 +65,7 @@ function Step() {
                         <button className='back'
                             onClick={handleOnClickBack}>Trở về</button>
                         <button className='next'
-                            onClick={handleOnClickNext}>Xác nhận
+                            onClick={handleConfirmOrder}>Xác nhận
                         </button></>
 
                 }

@@ -7,7 +7,9 @@ const SelectedBooks = (data) => {
             <div className="content">
                 <div className="up">
                     <span className='name'>{data.data.proName}</span>
-                    <span className='price'>{data.data.quantity}x{data.data.price} ₫</span>
+                    <span className='price'>
+                    {data.data.price.toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}₫ x {data.data.quantity}</span>
                     {/* <div className='name'>{data.name}</div>
                     <div className='price'>{data.oldPrice}x1</div> */}
                 </div>

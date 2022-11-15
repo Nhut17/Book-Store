@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const ConfirmedSummaryOrder = ({ totalPrice }) => {
-    let total = totalPrice >= 229000 ? totalPrice : totalPrice + 15000
+    let total = totalPrice >= 250000 ? totalPrice : totalPrice + 15000
 
     return (
         <div className='confirmed-summary-order'>
@@ -16,7 +16,7 @@ const ConfirmedSummaryOrder = ({ totalPrice }) => {
                         </tr>
                         <tr>
                             <td width="60%" align='left'>Phí giao hàng </td>
-                            <td width="40%" align='right'>{totalPrice >= 229000 ? 'Miễn phí' : '15.000₫'}</td>
+                            <td width="40%" align='right'>{totalPrice >= 250000 ? 'Miễn phí' : '15.000₫'}</td>
                         </tr>
                         <tr>
                             <td width="60%" align='left'>Tạm tính</td>
