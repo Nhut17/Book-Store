@@ -21,7 +21,6 @@ const ConfirmAddress = ({ selectedAddress }) => {
             <p>{selectedAddress?.phoneNumber}</p>
             <p>{selectedAddress?.deliveryTime}</p>
             <div className='down-content'>
-                <span>Phí vận chuyển: miễn phí</span>
                 <br></br>
                 <br></br>
                 <br></br>
