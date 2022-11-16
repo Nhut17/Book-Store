@@ -3,8 +3,10 @@ import axios from "axios";
 
 
 const initialState = {
-    listOrder: [],
+<<<<<<< HEAD
+    listOrder: []
     listOrderOfUser: [],
+>>>>>>> c1c3614995300b4da235c0cce9d3c769e7a1fead
 }
 
 export const getAllOrderOfUser = createAsyncThunk('order/getAllOfUser',
