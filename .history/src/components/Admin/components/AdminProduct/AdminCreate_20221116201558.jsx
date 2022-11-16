@@ -64,6 +64,7 @@ function AdminCreate(props) {
           <select {...register('category', {
             required: true,
           })}  >
+            {/* <option value="1">female</option> */}
             {listCate.map(item => (
               <option value={item.id}>{item.catName}</option>
             ))}
@@ -75,6 +76,7 @@ function AdminCreate(props) {
           <select {...register('author', {
             required: true,
           })}  >
+            {/* <option value="1">female</option> */}
             {listAuthor?.map(item => (
               <option value={item.id}>{item.autName}</option>
             ))}
