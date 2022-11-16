@@ -85,7 +85,6 @@ function Step() {
                             </Link>
                         </button>
                     </>
-
                     :
                     <>
                         <button className='back'

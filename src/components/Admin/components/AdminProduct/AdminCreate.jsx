@@ -2,21 +2,27 @@ import { Select } from "antd";
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllCategories } from "../../../../redux/reducer/categorySlice";
 
 import ListSelect from "../../SubComponents/BoxSelect/ListSelect";
+import { getAllCategories } from '../../../../redux/reducer/categorySlice'
+import { getAllAuthor } from '../../../../redux/reducer/authorSlice'
 
 function AdminCreate(props) {
   const { register, handleSubmit } = useForm({ defaultValues: {} });
 
   const listCate = useSelector(state => state.category.listCate)
-  const [cateClick,setCateClick] = useState(false)
+  const dispatch = useDispatch()
+  const listAuthor = useSelector(state => state.author.listAuthor)
+  const [cateClick, setCateClick] = useState(false)
 
+  useEffect(() => {
+    dispatch(getAllAuthor())
+  }, [])
   const createProduct = (formData) => {
     console.log(formData)
   }
 
-  const handleOnClick = (e) =>{
+  const handleOnClick = (e) => {
     console.log(e.target)
   }
 
@@ -32,52 +38,60 @@ function AdminCreate(props) {
 
         <span>Tên sản phẩm</span>
         <input {...register("name")} placeholder=""></input>
-      
 
-        
         <div className="cate">
 
-        <span>Danh mục</span>
-          <select {...register('select',{
+          <span>Danh mục</span>
+          <select {...register('select', {
             required: true,
           })}  >
-            <option value="1">female</option>
-            <option value="2">male</option>
+            {/* <option value="1">female</option> */}
+            {listCate.map(item => (
+              <option value={item.catId}>{item.catName}</option>
+            ))}
           </select>
         </div>
 
         <>
-        <span>Tác giả</span>
-        <input
-          {...register("author")}
-          placeholder=""
-          type="text"
-        ></input>
+          <span>Tác giả</span>
+          <select {...register('select', {
+            required: true,
+          })}  >
+            {/* <option value="1">female</option> */}
+            {listAuthor?.map(item => (
+              <option value={item.id}>{item.autName}</option>
+            ))}
+          </select>
+          {/* <input
+            {...register("author")}
+            placeholder=""
+            type="text"
+          ></input> */}
         </>
 
         <>
-        <span>Giá</span>
-        <input {...register("price")} placeholder="" type="number"></input>
+          <span>Giá</span>
+          <input {...register("price")} placeholder="" type="number"></input>
         </>
 
         <>
-        <span>Giảm giá</span>
-        <input {...register("promotion")} placeholder="" type="number"></input>
+          <span>Giảm giá</span>
+          <input {...register("promotion")} placeholder="" type="number"></input>
         </>
 
         <>
-        <span>Số lượng</span>
-        <input {...register("quantity")} placeholder="" type="number"></input>
+          <span>Số lượng</span>
+          <input {...register("quantity")} placeholder="" type="number"></input>
         </>
 
         <>
-        <span>Hình ảnh</span>
-        <input
-          type="file"
-          {...register("image")}
-          
+          <span>Hình ảnh</span>
+          <input
+            type="file"
+            {...register("image")}
+
           ></input>
-        </>           
+        </>
 
         <>
           <span>Nội dung bìa</span>
