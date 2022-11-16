@@ -1,11 +1,16 @@
-import React from 'react'
+import { React, useState } from 'react'
 import EachTransaction from './EachTransaction'
 const OrderDetail = ({ key, data }) => {
+    console.log(data)
+    const [evaluated, setEvaluated] = useState(
+        data.ordStatus === 'DONE' ? true : false
+    )
+    console.log(evaluated)
     return (
         <div className='order-detail' key={key}>
             <span>{data.ordDate}</span>
             {data.transactionMapper.map((item, index) => (
-                <EachTransaction key={index} orderDetail={item} />
+                <EachTransaction key={index} orderDetail={item} evaluated={evaluated} />
             ))}
             <div className='order-price'>
                 <span>Tổng tiền: {data.ordTotalPrice}</span>

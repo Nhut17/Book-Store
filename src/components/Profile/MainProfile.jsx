@@ -1,6 +1,8 @@
 import React from 'react'
 import InfoUser from './InfoUser'
 import ProfileImage from './ProfileImage'
+import { Link } from 'react-router-dom'
+
 const MainProfile = () => {
   return (
     <div className='main-profile'>
@@ -13,7 +15,10 @@ const MainProfile = () => {
       </div>
 
       <button className='save'>LƯU</button>
+      <Link to='/history'>
+        <button className='history'>Lịch sử mua hàng</button>
 
+      </Link>
     </div>
   )
 }

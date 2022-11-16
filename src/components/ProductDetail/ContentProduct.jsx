@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import ProductComment from './ProductComment'
 const ContentProduct = ({ data }) => {
     return (
         <div className='content-product'>
@@ -83,7 +83,7 @@ const ContentProduct = ({ data }) => {
                         </div>
 
                     </div>
-
+                    <ProductComment />
                 </div>
 
             </div>

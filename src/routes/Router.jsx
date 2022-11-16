@@ -11,7 +11,6 @@ import PayForOrder from '../pages/PayForOrder.jsx';
 import InfoProfile from '../pages/InfoProfile.jsx';
 import ForeignLiterature from '../pages/ForeignLiterature.jsx';
 
-import OrderList from '../pages/OrderList.jsx';
 import ChildrenBook from '../pages/ChildrenBook.jsx';
 import BlockChainBook from '../pages/BlockChainBook.jsx';
 
@@ -27,6 +26,7 @@ import AdminUser from "../components/Admin/components/AdminUser/AdminUser";
 import OrderSuccess from '../components/PayForOrder/OrderSuccesss.jsx';
 import AdminCreateCate from '../components/Admin/components/AdminCate/AdminCreateCate.jsx';
 import AdminCate from '../components/Admin/components/AdminCate/AdminCate.jsx';
+import OrderList from '../pages/OrderList.jsx';
 const Router = () => {
   return (
     <Routes>
@@ -46,9 +46,9 @@ const Router = () => {
       <Route path="/pay-for-order" element={<PayForOrder />} />
 
       <Route path="/profile" element={<InfoProfile />} />
-      <Route path="/order" element={<OrderList />} />
+      {/* <Route path="/order" element={<OrderList />} /> */}
       <Route path="/success" element={<OrderSuccess />} />
-
+      <Route path="/history" element={<OrderList />} />
 
       {/* ADMIN */}
       <Route path="/admin" element={<Admin />}>

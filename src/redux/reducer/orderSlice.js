@@ -3,10 +3,25 @@ import axios from "axios";
 
 
 const initialState = {
-
+    listOrderOfUser: [],
 }
 
-
+export const getAllOrderOfUser = createAsyncThunk('order/getAllOfUser',
+    async (data, thunkAPI) => {
+        try {
+            const token = localStorage.getItem('token');
+            console.log(token)
+            const headers = {
+                Authorization: 'Bearer ' + token
+            }
+            const res = await axios.get('http://localhost:8083/user/order/getAll', {headers})
+            console.log(res.data)
+            return res.data
+        }
+        catch (e) {
+            return thunkAPI.rejectWithValue('Error with get all categories')
+        }
+    })
 export const createOrder = createAsyncThunk('order/create',
     async (data, thunkAPI) => {
         try {
@@ -33,13 +48,17 @@ const orderSlice = createSlice({
     name: 'order',
     initialState,
     extraReducers: {
-        [createOrder.fulfilled] : (state,action) => {
+        [getAllOrderOfUser.fulfilled]: (state, action) => {
+            state.listOrderOfUser = action.payload
+        },
+        [createOrder.fulfilled]: (state, action) => {
             console.log('success')
         },
-        [createOrder.rejected] : (state,action) => {
+        [createOrder.rejected]: (state, action) => {
             console.log('rejected')
         }
     }
 })
+
 
 export default orderSlice.reducer

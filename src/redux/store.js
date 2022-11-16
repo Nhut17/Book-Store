@@ -17,6 +17,7 @@ import categorySlice from "./reducer/categorySlice";
 import addressSlice from "./reducer/addressSlice";
 import orderSlice from "./reducer/orderSlice";
 import authorSlice from "./reducer/authorSlice";
+import commentSlice from "./reducer/commentSlice";
 const persistConfig = {
   key: 'root',
   version: 1,
@@ -30,7 +31,8 @@ const rootReducer = combineReducers({
   category: categorySlice,
   address: addressSlice,
   order: orderSlice,
-  author: authorSlice
+  author: authorSlice,
+  comment: commentSlice
 })
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
