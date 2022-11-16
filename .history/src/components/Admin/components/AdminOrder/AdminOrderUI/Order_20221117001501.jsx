@@ -1,0 +1,106 @@
+import React from "react";
+import { useDispatch } from "react-redux";
+
+
+
+function Order(props) {
+  
+  let status  = 'pending'
+  let paymentResult = false
+  let paymentMethod = 'payOnline'
+  let cancelOrder = false
+
+  return (
+    
+      <div className="order-admin-list"
+        <div className="order-list-items">
+            <div className="order-items-item">
+              <span className="id-order">Mã đơn: 1</span>
+              <span className="qty">Số lượng: 10</span>
+              <span className="name">Iphone 14 promax Iphone 14 promax Iphone 14 promax Iphone 14 promax</span>
+              <span className="price">100000</span>
+            </div>
+
+        </div>
+        <div className="toatalPrice">
+          <span>Tổng tiền: 100000</span>
+        </div>
+        <div className="order-info">
+          <div className="order-info-address">
+            <b>Địa chỉ : </b> {"  "}
+            {'bichtram'},{""}
+            {'Long An'}, {'Cần Giuộc'},{"  "}
+            {'Truong Binh'}, {'300'},{" "}
+            {'0909xxxx'}
+          </div>
+        </div>
+
+        {paymentResult ? (
+          <div className="order-payment-check">
+            Paid : 10/10/2022
+          </div>
+        ) : (
+          ""
+        )}
+
+        <div className="order-bottom">
+          {status === "shipping" ? (
+            <div className="order-status">
+              <span>
+                Đã xác nhận{" "}
+                {paymentMethod === "payOnline" ? (
+                  <span>& Đã thanh toán</span>
+                ) : (
+                  ""
+                )}
+              </span>
+            </div>
+          ) : (
+            ""
+          )}
+
+          <div className="order-button">
+            {status === "pending" && cancelOrder === false ? (
+              <>
+                <button
+                  className="shipping"
+                  
+                >
+                  Xác nhận đơn hàng
+                </button>
+
+              </>
+            ) : (''
+            )}
+
+            {
+              cancelOrder === true ? (<>
+              <span> Khách yêu cầu hủy đơn </span>
+                <button
+                  className="shipping"
+                  
+                >
+                  Hủy đơn
+                </button>
+
+              </>) : ''
+            }
+
+            {/* {status === "shipping" ? (
+              <button
+                className="shipping"
+                onClick={() => handlePrintOrder(order)}
+              >
+                In đơn hàng
+              </button>
+            ) : (
+              ""
+            )} */}
+          </div>
+        </div>
+      </div
+    
+  );
+}
+
+export default Order;
