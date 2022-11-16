@@ -1,14 +1,14 @@
-.admin-product .add-product{
+.admin-cate .add-cate{
     display: flex;
 }
-.admin-product .add-product span{
+.admin-cate .add-cate span{
     font-size: 35px;
 }
-.admin-product .add-product span:hover{
+.admin-cate .add-cate span:hover{
     color: #1890ff;
     transition: .3s;
 }
-.admin-product-link{
+.admin-cate-link{
     display: flex;
     justify-content: end;
     margin-right: 6.5%;
@@ -25,14 +25,14 @@
     }
 
 }
-.admin-product span{
+.admin-cate span{
     display: flex;
     padding: 1rem;
     font-size: 20px;
     font-weight: 600;
     color: #6b6b6b;
 }
-.admin-product-list{
+.admin-cate-list{
     background: white;
     margin: 0 .5rem 0 1rem;
     color: #6b6b6b;
@@ -49,14 +49,14 @@
         }
     }
 }
-.admin-product-list table{
-    width: 100%;
+.admin-cate-list table{
+    width: 80%;
     text-align: center;
     padding: 1rem;
     border-collapse: collapse;
 }
 
-.admin-product-list table th{
+.admin-cate-list table th{
     color: #6b6b6b;
     font-size: 18px;
     font-weight: 600;
@@ -64,16 +64,13 @@
     padding: .5rem 0;
    // width: 10%;
 }
-.admin-product-list table td{
+.admin-cate-list table td{
     padding: .5rem 0;
     font-size: 16px;
 }
-.admin-product-list table td img{
-    width: 100px;
-}
 
 
-.admin-product-list tr .delete-product, .admin-product-list tr .update-product, .review-product{
+.admin-cate-list tr .delete-cate, .admin-cate-list tr .update-cate, .review-cate{
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -81,26 +78,26 @@
     padding: 0;
     text-align: center;
 }
-.admin-product-list tr .delete-product span, .admin-product-list tr .update-product span{
+.admin-cate-list tr .delete-cate span, .admin-cate-list tr .update-cate span{
     border-radius: 50%;
 }
-.admin-product-list tr .delete-product:hover span{
+.admin-cate-list tr .delete-cate:hover span{
     background: rgb(223, 28, 28);
     transition: .3s;
 }
-.admin-product-list tr .update-product:hover span{
+.admin-cate-list tr .update-cate:hover span{
     background: #1890ff;
     transition: .3s;
 }
-.admin-product-list tr .delete-product:hover span, .admin-product-list tr .update-product:hover span{
+.admin-cate-list tr .delete-cate:hover span, .admin-cate-list tr .update-cate:hover span{
     color: white;
 }
 
-.admin-product-list .pagination{
+.admin-cate-list .pagination{
     padding: 1rem 0;
     display: flex;
 }
-.admin-product-list .pagination span{
+.admin-cate-list .pagination span{
     display: block;
     padding: 0;
     font-size: 14px;
@@ -108,12 +105,12 @@
 }
 
 
-/* ----- create product */
+/* ----- create cate */
 /* .admin-create{
 
 } */
 .admin-create{
-    .admin-create-product{
+    .admin-create-cate{
         display: flex;
         flex-wrap: wrap;
         span{
@@ -142,7 +139,7 @@
     font-weight: 600;
     color: #6b6b6b;
 }
-.admin-create-product{
+.admin-create-cate{
     display: flex;
     flex-direction: column;
     background: white;
@@ -155,7 +152,7 @@
 
     }
 }
-.admin-create-product input, select, textarea{
+.admin-create-cate input, select, textarea{
     margin-bottom: 1rem;
     padding: .5rem 1rem;
     font-size: 14px;
@@ -167,7 +164,7 @@
 .select-type{
     margin-bottom: 1rem;
 }
-.admin-create-product button{
+.admin-create-cate button{
     background: white;
     color: #333;
     font-size: 16px;
@@ -181,13 +178,13 @@
     transition: all .3s;
  
 }
-.admin-create-product button:hover{
+.admin-create-cate button:hover{
     background: #1890ff;
     color: white;
     border: 1px solid transparent;
     transition: .3s;
 }
-.admin-create-product .filter-menu-firm{
+.admin-create-cate .filter-menu-firm{
     margin-top: 0;
     margin-bottom: 1rem;
 }

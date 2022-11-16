@@ -54,16 +54,6 @@ function Sidebar(props) {
             
             </p>
           </Link>
-
-          <Link to="/admin/category" className={'sidebar-list-item'}>
-            <span>
-              <ProfileOutlined></ProfileOutlined>
-            </span>
-            <p>
-              Danh mục
-            
-            </p>
-          </Link>
          
         </div>
       </div>

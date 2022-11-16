@@ -32,20 +32,39 @@ table td{
     padding: .5rem 0;
     font-size: 16px;
 }
-tr .delete-user{
+tr .delete-user {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     cursor: pointer;
     padding: 0;
+    text-align: center;
 }
-tr .delete-user span{
+tr .edit-user {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+}
+tr .edit-user  span{
     border-radius: 50%;
 }
-tr .delete-user:hover{
+tr .delete-user  span{
+    border-radius: 50%;
+}
+tr .delete-user:hover {
     background: rgb(223, 28, 28);
     transition: .3s;
 }
+tr .edit-user:hover {
+    background: rgb(218, 200, 39);
+    transition: .3s;
+}
 tr .delete-user:hover span{
+    color: white;
+}
+tr .edit-user:hover span{
     color: white;
 }

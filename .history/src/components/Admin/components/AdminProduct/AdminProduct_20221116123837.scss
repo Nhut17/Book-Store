@@ -118,20 +118,27 @@
         flex-wrap: wrap;
         span{
             display: block;
+
         }
         input{
             width: 50%;
         }
         .cate{
             position: relative;
-            width: 62%;
-            .cate-select{
-                option{
-                    padding: 10px;
-                    cursor: pointer;
-                }
+            width: 60%;
+            input{
+                cursor: pointer;
             }
-            
+            .ic{
+                position: absolute;
+                right: 10px;
+                transform: translateY(50%);
+                // bottom: 50%;
+
+            }
+            .list-select{
+                transform: translateY(-16px);
+            }
         }
     }
 }

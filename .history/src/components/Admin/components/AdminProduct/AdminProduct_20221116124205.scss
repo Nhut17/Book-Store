@@ -118,6 +118,7 @@
         flex-wrap: wrap;
         span{
             display: block;
+
         }
         input{
             width: 50%;
@@ -126,10 +127,7 @@
             position: relative;
             width: 62%;
             .cate-select{
-                option{
-                    padding: 10px;
-                    cursor: pointer;
-                }
+                padding: 10px 10px;
             }
             
         }

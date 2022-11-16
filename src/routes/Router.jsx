@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, Route, Routes  } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 
 import Home from '../pages/Home.jsx';
@@ -25,50 +25,55 @@ import AdminOrder from "../components/Admin/components/AdminOrder/AdminOrder";
 import Dashboard from "../components/Admin/pages/Dashboard";
 import AdminUser from "../components/Admin/components/AdminUser/AdminUser";
 import OrderSuccess from '../components/PayForOrder/OrderSuccesss.jsx';
+import AdminCreateCate from '../components/Admin/components/AdminCate/AdminCreateCate.jsx';
+import AdminCate from '../components/Admin/components/AdminCate/AdminCate.jsx';
 const Router = () => {
   return (
     <Routes>
 
       {/* HOME */}
-      <Route path="/"  element={<Home />} />
+      <Route path="/" element={<Home />} />
 
-      <Route path="/Sách giáo khoa/:id"  element={<TextBook />} />
-      <Route path="/Sách ngoại văn/:id"  element={<ForeignLiterature />} />
-      <Route path="/Sách thiếu nhi/:id"  element={<ChildrenBook />} />
-      <Route path="/Sách blockchain/:id"  element={<BlockChainBook />} />
-      <Route path="/Sách văn học trong nước/:id"  element={<LiteratureBook />} />
+      <Route path="/Sách giáo khoa/:id" element={<TextBook />} />
+      <Route path="/Sách ngoại văn/:id" element={<ForeignLiterature />} />
+      <Route path="/Sách thiếu nhi/:id" element={<ChildrenBook />} />
+      <Route path="/Sách blockchain/:id" element={<BlockChainBook />} />
+      <Route path="/Sách văn học trong nước/:id" element={<LiteratureBook />} />
 
-      <Route path="/product-detail/:id"  element={<ProductDetail  />} />
+      <Route path="/product-detail/:id" element={<ProductDetail />} />
 
-      <Route path="/check-out"  element={<CheckOut />} />
-      <Route path="/pay-for-order"  element={<PayForOrder />} />
+      <Route path="/check-out" element={<CheckOut />} />
+      <Route path="/pay-for-order" element={<PayForOrder />} />
 
-      <Route path="/profile"  element={<InfoProfile />} />
-      <Route path="/order"  element={<OrderList />} />
-      <Route path="/success"  element={<OrderSuccess />} />
-      
+      <Route path="/profile" element={<InfoProfile />} />
+      <Route path="/order" element={<OrderList />} />
+      <Route path="/success" element={<OrderSuccess />} />
+
 
       {/* ADMIN */}
       <Route path="/admin" element={<Admin />}>
 
-          <Route index element={<Dashboard />} />
-          {/* <Route path="categories" element={<AdminCategory />} /> */}
+        <Route index element={<Dashboard />} />
+        {/* <Route path="categories" element={<AdminCategory />} /> */}
 
-          <Route path="product" element={<AdminProduct />} />
-          <Route path="product/create" element={<AdminCreate />} />
-          <Route path="product/update/info" element={<AdminUpdate />} />
-  
-          {/* <Route path="customers" element={<AdminCustomer />} /> */}
-          <Route path="order" element={<AdminOrder />} />
-          <Route path="customer" element={<AdminUser />} />
+        <Route path="product" element={<AdminProduct />} />
+        <Route path="product/create" element={<AdminCreate />} />
+        <Route path="product/update/info" element={<AdminUpdate />} />
 
-          
-          
+        {/* <Route path="customers" element={<AdminCustomer />} /> */}
+        <Route path="order" element={<AdminOrder />} />
+        <Route path="customer" element={<AdminUser />} />
+
+        {/* <Route path="cate" element={<AdminCreateCate />} /> */}
+        <Route path="category" element={<AdminCate />} />
+        <Route path="category/create" element={<AdminCreateCate />} />
+
+
 
       </Route>
 
-       
-     
+
+
 
 
       <Route path="*" element={<Navigate to="/" />} />

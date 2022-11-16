@@ -55,12 +55,12 @@ function Sidebar(props) {
             </p>
           </Link>
 
-          <Link to="/admin/category" className={'sidebar-list-item'}>
+          <Link to="/admin/order" className={'sidebar-list-item'}>
             <span>
               <ProfileOutlined></ProfileOutlined>
             </span>
             <p>
-              Danh mục
+              Đơn hàng
             
             </p>
           </Link>

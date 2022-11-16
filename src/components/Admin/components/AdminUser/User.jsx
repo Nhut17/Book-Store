@@ -1,19 +1,23 @@
-import { DeleteOutlined } from '@material-ui/icons';
+import { DeleteOutlined, EditOutlined } from '@material-ui/icons';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import DataUser from './DataUser';
-function User({data,stt}) {
-  
-
+function User({ data, stt }) {
     return (
-    <tr>
-        <td>{'hj'}</td>
-        <td>{'hj'}</td>
-        <td>{'user.email'}</td>
-        <td>{'user.address'}</td>
-        <td>{'user.phone'}</td>
-        <td className="delete-user"><DeleteOutlined /></td>
-    </tr>
+        <tr>
+            <td >{stt}</td>
+            <td>{data.fullName}</td>
+            <td>{data.userEmail}</td>
+            <td>{data.userPhone}</td>
+            <td>{data.username}</td>
+            <td className="delete-user">
+                <DeleteOutlined />
+            </td>
+            <td className='edit-user'>
+                <EditOutlined />
+
+            </td>
+        </tr>
     );
 }
 

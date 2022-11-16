@@ -9,7 +9,7 @@ import {
   ShopOutlined,
   OrderedListOutlined,
   WechatOutlined,
-  ProfileOutlined
+  C
 } from "@ant-design/icons";
 
 
@@ -51,20 +51,17 @@ function Sidebar(props) {
             </span>
             <p>
               Đơn hàng
-            
+              {/* <div className="admin-order-new">
+                  10
+                </div> */}
             </p>
           </Link>
-
-          <Link to="/admin/category" className={'sidebar-list-item'}>
+          {/* <Link to="/admin/chat" className={location.pathname === '/admin/chat' ? 'sidebar-list-item active': 'sidebar-list-item'}>
             <span>
-              <ProfileOutlined></ProfileOutlined>
+              <WechatOutlined></WechatOutlined>
             </span>
-            <p>
-              Danh mục
-            
-            </p>
-          </Link>
-         
+            <p>Chat</p>
+          </Link> */}
         </div>
       </div>
 
