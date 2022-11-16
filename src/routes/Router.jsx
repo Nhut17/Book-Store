@@ -15,13 +15,16 @@ import OrderList from '../pages/OrderList.jsx';
 import ChildrenBook from '../pages/ChildrenBook.jsx';
 import BlockChainBook from '../pages/BlockChainBook.jsx';
 
-import Admin from '../pages/Admin.jsx';
-import DashBoard from '../components/Admin/components/DashBoard/DashBoard.jsx';
-import AdminProduct from '../components/Admin/components/AdminProduct/AdminProduct.jsx'
-import AdminOrder from '../components/Admin/components/AdminOrder/AdminOrder.jsx';
-import AdminCreate from '../components/Admin/components/AdminProduct/AdminCreate.jsx';
-import AdminUpdate from '../components/Admin/components/AdminProduct/AdminUpdate.jsx';
-
+import Admin from "../pages/Admin";
+import AdminCreate from "../components/Admin/components/AdminProduct/AdminCreate";
+import DataFilterProduct from "../components/Admin/components/AdminProduct/DataFilterProduct/DataFilterProduct";
+import AdminUpdate from "../components/Admin/components/AdminProduct/AdminUpdate";
+import ReviewProduct from "../components/Admin/components/AdminProduct/ReviewProduct/ReviewProduct";
+import AdminProduct from "../components/Admin/components/AdminProduct/AdminProduct";
+import AdminOrder from "../components/Admin/components/AdminOrder/AdminOrder";
+import Dashboard from "../components/Admin/pages/Dashboard";
+import AdminUser from "../components/Admin/components/AdminUser/AdminUser";
+import OrderSuccess from '../components/PayForOrder/OrderSuccesss.jsx';
 const Router = () => {
   return (
     <Routes>
@@ -42,20 +45,25 @@ const Router = () => {
 
       <Route path="/profile"  element={<InfoProfile />} />
       <Route path="/order"  element={<OrderList />} />
+      <Route path="/success"  element={<OrderSuccess />} />
+      
 
-
+      {/* ADMIN */}
       <Route path="/admin" element={<Admin />}>
 
-            <Route index element={<DashBoard />} />
-            {/* <Route path="categories" element={<AdminCategory />} /> */}
+          <Route index element={<Dashboard />} />
+          {/* <Route path="categories" element={<AdminCategory />} /> */}
 
-            <Route path="product" element={<AdminProduct />} />
-            <Route path="product/create" element={<AdminCreate />} />
-            <Route path="product/update" element={<AdminUpdate />} />
-              
-    
-            {/* <Route path="customers" element={<AdminCustomer />} /> */}
-            <Route path="order" element={<AdminOrder />} />
+          <Route path="product" element={<AdminProduct />} />
+          <Route path="product/create" element={<AdminCreate />} />
+          <Route path="product/update/info" element={<AdminUpdate />} />
+  
+          {/* <Route path="customers" element={<AdminCustomer />} /> */}
+          <Route path="order" element={<AdminOrder />} />
+          <Route path="customer" element={<AdminUser />} />
+
+          
+          
 
       </Route>
 
