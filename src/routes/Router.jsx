@@ -24,7 +24,7 @@ import AdminProduct from "../components/Admin/components/AdminProduct/AdminProdu
 import AdminOrder from "../components/Admin/components/AdminOrder/AdminOrder";
 import Dashboard from "../components/Admin/pages/Dashboard";
 import AdminUser from "../components/Admin/components/AdminUser/AdminUser";
-
+import OrderSuccess from '../components/PayForOrder/OrderSuccesss.jsx';
 const Router = () => {
   return (
     <Routes>
@@ -45,7 +45,8 @@ const Router = () => {
 
       <Route path="/profile"  element={<InfoProfile />} />
       <Route path="/order"  element={<OrderList />} />
-
+      <Route path="/success"  element={<OrderSuccess />} />
+      
 
       {/* ADMIN */}
       <Route path="/admin" element={<Admin />}>

@@ -64,7 +64,7 @@ const ModalAddNewAddress = ({ showAddNewAddress, setShowAddNewAddress }) => {
                         </div>
                     </div>
                     <div className='btn-group-add-address'>
-                        <button className='btn confirm' onClick={toggle()}>Xác nhận</button>
+                        <button className='btn confirm'>Xác nhận</button>
                         <button className='btn cancel'>Hủy</button>
                     </div>
                 </form>

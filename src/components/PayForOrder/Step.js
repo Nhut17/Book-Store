@@ -5,7 +5,8 @@ import ConfirmOrder from './ConfirmOrder'
 import { list_main_product } from '../data'
 import { useDispatch, useSelector } from 'react-redux'
 import { createOrder } from '../../redux/reducer/orderSlice'
-
+import { Link, useNavigate } from 'react-router-dom'
+import OrderSuccess from './OrderSuccesss'
 function Step() {
     const [step, setStep] = useState(0)
     const [page, setPage] = useState('address')
@@ -14,7 +15,7 @@ function Step() {
     const addressOrder = useSelector(state => state.address.listAddress)
 
     const dispatch = useDispatch()
-   
+
     const [payment, setPayment] = useState();
 
     const handleOnClickNext = () => {
@@ -34,33 +35,26 @@ function Step() {
 
 
     const handleConfirmOrder = () => {
-        const listCart = currentCart.map( val => {
+        const listCart = currentCart.map(val => {
             return {
                 quantity: val.quantity.toString(),
                 unit_price: (val.price * val.quantity).toString(),
                 product_id: val.productId.toString()
             }
         })
-        
+
         const data = [
-            [
-                {
-                    quantity:"1",
-                    unit_price:"94000",
-                    product_id:"4"
-                }
-            ],   
-            {   
+
+            listCart,
+            {
                 note: "Giao vào thứ 7",
-                payment: "Thanh Toan khi nhan hang",
-                shippingfee: '30000'
+                payment: payment,
+                shipping_fee: "30000"
             }
         ]
-         
+        console.log(data)
         dispatch(createOrder(data))
-        
     }
-
 
     return (
         <div className='step-container'>
@@ -82,20 +76,22 @@ function Step() {
 
             <div className="button-group">
                 {step === 1 ?
-                    <>                  
-                            <button className='back' onClick={handleOnClickBack}>Trở về</button>
+                    <>
+                        <button className='back' onClick={handleOnClickBack}>Trở về</button>
                         <button className='next'
-                            onClick={handleConfirmOrder}>Xác nhận
+                            onClick={handleConfirmOrder}>
+                            <Link to='/success' className='header'>
+                                Xác nhận
+                            </Link>
                         </button>
-                        </>
-
+                    </>
                     :
                     <>
-                    <button className='back'
-                        onClick={handleOnClickBack}>Trở về</button>
+                        <button className='back'
+                            onClick={handleOnClickBack}>Trở về</button>
                         <button className='next'
+
                             onClick={handleOnClickNext}>Tiếp tục</button></>
-                    
 
                 }
             </div>

@@ -1,7 +1,7 @@
 import { faMinus } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 const SummaryOrder = ({ count, totalPrice }) => {
-    let total = totalPrice >= 229000 ? totalPrice : totalPrice + 15000
+    let total = totalPrice >= 250000 ? totalPrice : totalPrice + 15000
     return (
         <div className='summary-order'>
             <div className='summary-tittle'>TÓM TẮT ĐƠN HÀNG</div>
@@ -14,7 +14,7 @@ const SummaryOrder = ({ count, totalPrice }) => {
                         </tr>
                         <tr>
                             <td width="60%" align='left'>Phí vận chuyển</td>
-                            <td width="40%" align='right'>{totalPrice >= 229000 ? 'Miễn phí' : '15.000₫'}</td>
+                            <td width="40%" align='right'>{totalPrice >= 250000 ? 'Miễn phí' : '15.000₫'}</td>
                         </tr>
                         <tr>
                             <td width="60%" align='left'>Tạm tính</td>
