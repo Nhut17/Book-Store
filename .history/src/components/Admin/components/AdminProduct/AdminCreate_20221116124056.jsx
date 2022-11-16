@@ -39,7 +39,7 @@ function AdminCreate(props) {
 
         <span>Danh mục</span>
           <select 
-          className="cate-select"
+          className=""
           {...register('select',{
             required: true,
           })}  >
