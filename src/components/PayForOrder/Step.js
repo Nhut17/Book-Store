@@ -47,9 +47,9 @@ function Step() {
 
             listCart,
             {
-                note: "Giao vào thứ 7",
+                // note: "Giao vào thứ 7",
                 payment: payment,
-                shipping_fee: "30000"
+                // shipping_fee: "30000"
             }
         ]
         console.log(data)
