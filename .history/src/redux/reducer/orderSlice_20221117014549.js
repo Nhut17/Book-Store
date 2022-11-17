@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { getAllProduct } from "./productSlice";
 
 
 const initialState = {
@@ -79,7 +78,6 @@ export const acceptOrder = createAsyncThunk('order/accept',
             });
 
             thunkAPI.dispatch(getAllOrder())
-            thunkAPI.dispatch(getAllProduct())
             return res.data
         }
         catch (e) {
@@ -96,7 +94,7 @@ export const cancelOrder = createAsyncThunk('order/cancel',
             const headers = {
                 Authorization: 'Bearer ' + token
             }
-            const res = await axios.post(`http://localhost:8083/admin/order/deny/${id}`,{} ,{
+            const res = await axios.post(`http://localhost:8083/admin/order/deny/${id}`, {
                 headers: headers
             });
 

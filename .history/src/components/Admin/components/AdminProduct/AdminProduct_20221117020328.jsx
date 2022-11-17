@@ -10,9 +10,9 @@ function AdminProduct(props) {
 
   const listProduct = useSelector(state => state.product.listProductAdmin)
 
-  // useEffect(() => {
+  useEffect(() => {
     
-  // },[listProduct])
+  },[listProduct])
 
   return (
     <div className="admin-product">

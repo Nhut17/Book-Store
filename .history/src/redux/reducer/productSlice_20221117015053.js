@@ -98,7 +98,7 @@ export const addImageProduct = createAsyncThunk('product/addImage',
                     'Content-Type': `multipart/form-data`,
                 }
                 console.log('start')
-                const res = await axios.post(`http://localhost:8083/product/${id}/image`,{
+                const res = await axios.post(`http://localhost:8083/product/${id}/image`,{},{
                     image
                 },{
                         headers: headers

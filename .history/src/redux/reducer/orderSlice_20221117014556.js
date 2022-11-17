@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { getAllProduct } from "./productSlice";
 
 
 const initialState = {
@@ -79,7 +78,6 @@ export const acceptOrder = createAsyncThunk('order/accept',
             });
 
             thunkAPI.dispatch(getAllOrder())
-            thunkAPI.dispatch(getAllProduct())
             return res.data
         }
         catch (e) {

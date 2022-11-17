@@ -89,7 +89,7 @@ export const addImageProduct = createAsyncThunk('product/addImage',
                 
                 console.log(image)
 
-                let dataFile = new FormData()
+            //    let dataFile = new FormData()
                 dataFile.append('image', image.files[0])
 
                 const token = localStorage.getItem('token')
@@ -98,7 +98,7 @@ export const addImageProduct = createAsyncThunk('product/addImage',
                     'Content-Type': `multipart/form-data`,
                 }
                 console.log('start')
-                const res = await axios.post(`http://localhost:8083/product/${id}/image`,{
+                const res = await axios.post(`http://localhost:8083/product/${id}/image`,{},{
                     image
                 },{
                         headers: headers
