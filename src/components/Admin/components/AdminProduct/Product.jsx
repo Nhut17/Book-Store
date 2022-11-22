@@ -26,7 +26,6 @@ function Product({data,stt}) {
       <td>{data.author}</td>
       <td>{data.proQuantity}</td>
       <td>{data.proSale}</td>
-      <td>20</td>
 
  
     

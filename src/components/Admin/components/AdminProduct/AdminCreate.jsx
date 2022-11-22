@@ -23,8 +23,8 @@ function AdminCreate(props) {
   const createProduct = (formData) => {
     const { image } = formData
 
-    const dataFile = new FormData()
-    dataFile.append('image',image.files[0])
+    // const dataFile = new FormData()
+    // dataFile.append('image',image.files[0])
 
     const data = {
       id: 16,
