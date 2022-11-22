@@ -23,7 +23,9 @@ function Order({ data }) {
       <td className="id-order">#{data.id}</td>
       <td className="product-name">product</td>
       <td className="quantity">{data.transactionMapper.length}</td>
-      <td className="total-price">{data.ordTotalPrice}</td>
+      <td className="total-price"><span className="price-old">{data.ordTotalPrice?.toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ".")} 
+                    <span className='currency'>&#8363;</span></span></td>
       <td className="date-buy">{data.ordDate}</td>
       {
         data.ordStatus === 'PENDING' &&

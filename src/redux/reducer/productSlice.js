@@ -87,8 +87,8 @@ export const addImageProduct = createAsyncThunk('product/addImage',
 
             console.log(image)
 
-            //    let dataFile = new FormData()
-            //     dataFile.append('image', image.files[0])
+                let dataFile = new FormData()
+                dataFile.append('image', image.files[0])
 
             const token = localStorage.getItem('token')
             const headers = {
@@ -103,6 +103,35 @@ export const addImageProduct = createAsyncThunk('product/addImage',
             })
 
             console.log('done')
+
+            return res.data
+
+        }
+        catch (e) {
+            return thunkAPI.rejectWithValue('Error with get product detail')
+        }
+    })
+
+
+// create new product
+export const createProduct = createAsyncThunk('product/create',
+    async (data, thunkAPI) => {
+        try {
+            
+
+            console.log(data)
+
+            const token = localStorage.getItem('token')
+            const headers = {
+                Authorization: 'Bearer ' + token,
+                'Content-Type': 'application/json'
+    
+            }
+            const res = await axios.post('http://localhost:8083/admin/product/create', {
+                data
+            }, {
+                headers: headers
+            })
 
             return res.data
 

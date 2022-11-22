@@ -1,11 +1,9 @@
 import { React, useState } from 'react'
 import EachTransaction from './EachTransaction'
 const OrderDetail = ({ key, data }) => {
-    console.log(data)
     const [evaluated, setEvaluated] = useState(
         data.ordStatus === 'DONE' ? true : false
     )
-    console.log(evaluated)
     return (
         <div className='order-detail' key={key}>
             <span>{data.ordDate}</span>

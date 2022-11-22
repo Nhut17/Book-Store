@@ -9,6 +9,7 @@ import { getProducts } from '../redux/reducer/productSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom'
+import { getCart } from '../redux/reducer/cartSlice'
 
 const Home = () => {
 
@@ -44,6 +45,9 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getProducts())
+  },[])
+  useEffect(() => {
+    dispatch(getCart())
   },[])
 
   return (
