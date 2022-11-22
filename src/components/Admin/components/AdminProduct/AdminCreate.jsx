@@ -30,7 +30,6 @@ function AdminCreate(props) {
       id: 16,
       image: image
     }
-
     dispatch(addImageProduct(data))
     console.log(image)
   }

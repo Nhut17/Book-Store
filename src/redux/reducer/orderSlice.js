@@ -15,7 +15,7 @@ export const getAllOrderOfUser = createAsyncThunk('order/getAllOfUser',
             const headers = {
                 Authorization: 'Bearer ' + token
             }
-            const res = await axios.get('http://localhost:8083/user/order/getAll', {headers})
+            const res = await axios.get('http://localhost:8083/user/order/getAll', { headers })
             console.log(res.data)
             return res.data
         }
@@ -73,11 +73,12 @@ export const acceptOrder = createAsyncThunk('order/accept',
             const headers = {
                 Authorization: 'Bearer ' + token
             }
-            const res = await axios.post(`http://localhost:8083/admin/order/accept/${id}`, {
+            const res = await axios.post(`http://localhost:8083/admin/order/accept/${id}`, '', {
                 headers: headers
             });
-
+            console.log(res)
             thunkAPI.dispatch(getAllOrder())
+            
             return res.data
         }
         catch (e) {
@@ -94,7 +95,7 @@ export const cancelOrder = createAsyncThunk('order/cancel',
             const headers = {
                 Authorization: 'Bearer ' + token
             }
-            const res = await axios.post(`http://localhost:8083/admin/order/deny/${id}`, {
+            const res = await axios.post(`http://localhost:8083/admin/order/deny/${id}`, '',{
                 headers: headers
             });
 
@@ -120,7 +121,7 @@ const orderSlice = createSlice({
         [createOrder.rejected]: (state, action) => {
             console.log('rejected')
         },
-        [getAllOrder.fulfilled]: (state,action) => {
+        [getAllOrder.fulfilled]: (state, action) => {
             state.listOrder = action.payload
         }
     }
