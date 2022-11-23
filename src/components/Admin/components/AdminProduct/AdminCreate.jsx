@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ListSelect from "../../SubComponents/BoxSelect/ListSelect";
 import { getAllCategories } from '../../../../redux/reducer/categorySlice'
 import { getAllAuthor } from '../../../../redux/reducer/authorSlice'
-import { addImageProduct } from "../../../../redux/reducer/productSlice";
+import { addImageProduct, createProduct } from "../../../../redux/reducer/productSlice";
 
 function AdminCreate(props) {
   const { register, handleSubmit } = useForm({ defaultValues: {} });
@@ -20,19 +20,47 @@ function AdminCreate(props) {
   useEffect(() => {
     dispatch(getAllAuthor())
   }, [])
-  const createProduct = (formData) => {
-    const { image } = formData
 
-    // const dataFile = new FormData()
-    // dataFile.append('image',image.files[0])
 
+  const handleCreateProduct = (formData) => {
+    
+    const {
+      proName,
+      proDescription,
+      proContent,
+      proPrice,
+      proQuantity,
+      proSale,
+      categoryId,
+      authorId,
+     } = formData
+
+
+    // const data = {
+    //   proName: proName,
+    //   proDescription: proDescription,
+    //   proContent: proContent,
+    //   proPrice: parseInt(proPrice),
+    //   proQuantity: parseInt(proQuantity),
+    //   proSale: parseInt(proSale),
+    //   proImage: 'https://www.vinabook.com/ehon-mot-sach-mogu-ban-voi-nuoc-rao-rao-p94873.html',
+    //   categoryId: parseInt(categoryId),
+    //   authorId: parseInt(authorId),
+    //   publisherId: 3
+    // }
     const data = {
-      id: 16,
-      image: image
+      proName: "Thay Đổi Cuộc Sống Với Nhân Số Học",
+      proDescription: "Cuốn sách ",
+      proContent: "Đầu năm 2020, chuỗi ",
+      proPrice: 248000,
+      proQuantity:100,
+      proSale: 15,
+      proImage: "",
+      categoryId: 2,
+      authorId: 1,
+      publisherId: 3
     }
-
-    dispatch(addImageProduct(data))
-    console.log(image)
+    dispatch(createProduct(data))
   }
 
 
@@ -51,12 +79,12 @@ function AdminCreate(props) {
       <span>Create Product</span>
       <form
         className="admin-create-product"
-        onSubmit={handleSubmit(createProduct)}
+        onSubmit={handleSubmit(handleCreateProduct)}
         encType="multipart/form-data"
       >
 
         <span>Tên sản phẩm</span>
-        <input {...register("name")} placeholder=""></input>
+        <input {...register("proName")} placeholder=""></input>
 
         <div className="cate select-group">
 
@@ -64,7 +92,7 @@ function AdminCreate(props) {
         <span>Danh mục</span>
           <select 
           className="cate-select"
-          {...register('select',{
+          {...register('categoryId',{
             required: true,
           })}  >
             {listCate.map(item => (
@@ -75,7 +103,7 @@ function AdminCreate(props) {
 
         <div className="author select-group">
           <span>Tác giả</span>
-          <select {...register('author', {
+          <select {...register('authorId', {
             required: true,
           })}  >
             {listAuthor?.map(item => (
@@ -87,17 +115,17 @@ function AdminCreate(props) {
 
         <>
           <span>Giá</span>
-          <input {...register("price")} placeholder="" type="number"></input>
+          <input {...register("proPrice")} placeholder="" type="number"></input>
         </>
 
         <>
           <span>Giảm giá</span>
-          <input {...register("promotion")} placeholder="" type="number"></input>
+          <input {...register("proSale")} placeholder="" type="number"></input>
         </>
 
         <>
           <span>Số lượng</span>
-          <input {...register("quantity")} placeholder="" type="number"></input>
+          <input {...register("proQuantity")} placeholder="" type="number"></input>
         </>
 
         <>
@@ -113,12 +141,12 @@ function AdminCreate(props) {
 
         <>
           <span>Nội dung bìa</span>
-          <textarea {...register('content')} cols="30" rows="1"></textarea>
+          <textarea {...register('proContent')} cols="30" rows="1"></textarea>
         </>
 
         <>
           <span>Chi tiết sản phẩm</span>
-          <textarea{...register('description')} cols="30" rows="10"></textarea>
+          <textarea{...register('proDescription')} cols="30" rows="10"></textarea>
         </>
 
         <button type="submit">Add Product</button>

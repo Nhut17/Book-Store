@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+
 import { getAllProduct } from "./productSlice";
 
 
@@ -11,13 +12,11 @@ const initialState = {
 export const getAllOrderOfUser = createAsyncThunk('order/getAllOfUser',
     async (data, thunkAPI) => {
         try {
-            const token = localStorage.getItem('token');
-            console.log(token)
+            const token = localStorage.getItem('token'); 
             const headers = {
                 Authorization: 'Bearer ' + token
             }
-            const res = await axios.get('http://localhost:8083/user/order/getAll', {headers})
-            console.log(res.data)
+            const res = await axios.get('http://localhost:8083/user/order/getAll', { headers })
             return res.data
         }
         catch (e) {
@@ -74,10 +73,11 @@ export const acceptOrder = createAsyncThunk('order/accept',
             const headers = {
                 Authorization: 'Bearer ' + token
             }
-            const res = await axios.post(`http://localhost:8083/admin/order/accept/${id}`,{}, {
+
+            const res = await axios.post(`http://localhost:8083/admin/order/accept/${id}`, {}, {
                 headers: headers
             });
-
+            console.log(res)
             thunkAPI.dispatch(getAllOrder())
             thunkAPI.dispatch(getAllProduct())
             return res.data
@@ -96,7 +96,8 @@ export const cancelOrder = createAsyncThunk('order/cancel',
             const headers = {
                 Authorization: 'Bearer ' + token
             }
-            const res = await axios.post(`http://localhost:8083/admin/order/deny/${id}`,{} ,{
+
+            const res = await axios.post(`http://localhost:8083/admin/order/deny/${id}`, {}, {
                 headers: headers
             });
 
@@ -122,7 +123,7 @@ const orderSlice = createSlice({
         [createOrder.rejected]: (state, action) => {
             console.log('rejected')
         },
-        [getAllOrder.fulfilled]: (state,action) => {
+        [getAllOrder.fulfilled]: (state, action) => {
             state.listOrder = action.payload
         }
     }

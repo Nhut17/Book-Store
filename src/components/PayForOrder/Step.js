@@ -35,6 +35,7 @@ function Step() {
 
 
     const handleConfirmOrder = () => {
+        console.log('create order')
         const listCart = currentCart.map(val => {
             return {
                 quantity: val.quantity.toString(),
@@ -42,14 +43,11 @@ function Step() {
                 product_id: val.productId.toString()
             }
         })
-
         const data = [
 
             listCart,
             {
-                // note: "Giao vào thứ 7",
                 payment: payment,
-                // shipping_fee: "30000"
             }
         ]
         console.log(data)

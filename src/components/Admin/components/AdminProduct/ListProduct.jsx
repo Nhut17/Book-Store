@@ -18,7 +18,6 @@ function ListProduct({listProduct}) {
                     <th>Tác giả</th>
                     <th>Số lượng</th>
                     <th>Giảm giá</th>
-                    <th>Hàng tồn</th>
 
                 </tr>
                 {

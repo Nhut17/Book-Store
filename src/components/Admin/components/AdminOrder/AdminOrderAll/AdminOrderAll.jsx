@@ -9,8 +9,7 @@ function AdminOrderAll(props) {
 
   return (
     <>
-      
-
+    
       <ListOrder />
     </>
   );
