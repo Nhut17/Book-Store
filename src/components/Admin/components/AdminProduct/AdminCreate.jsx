@@ -7,15 +7,22 @@ import ListSelect from "../../SubComponents/BoxSelect/ListSelect";
 import { getAllCategories } from '../../../../redux/reducer/categorySlice'
 import { getAllAuthor } from '../../../../redux/reducer/authorSlice'
 import { addImageProduct, createProduct } from "../../../../redux/reducer/productSlice";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 function AdminCreate(props) {
   const { register, handleSubmit } = useForm({ defaultValues: {} });
 
   const listCate = useSelector(state => state.category.listCate)
   const dispatch = useDispatch()
   const listAuthor = useSelector(state => state.author.listAuthor)
+<<<<<<< HEAD
   const [selectImg, setSelectImg] = useState(null)
   const [defaultImg, setDefaultImg] = useState('')
+=======
+  const [selectImg,setSelectImg] = useState(null)
+  const navigate = useNavigate()
+>>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
 
   useEffect(() => {
     dispatch(getAllAuthor())
@@ -37,6 +44,7 @@ function AdminCreate(props) {
     //   authorId,
     // } = formData
 
+<<<<<<< HEAD
 
     // const data = {
     //   proName: proName,
@@ -76,6 +84,38 @@ function AdminCreate(props) {
     console.log('data', data)
 
     dispatch(addImageProduct(data))
+=======
+    const data = {
+      proName: proName,
+      proDescription: proDescription,
+      proContent: proContent,
+      proPrice: parseInt(proPrice),
+      proQuantity:parseInt(proQuantity),
+      proSale: parseInt(proSale),
+      proImage: selectImg,
+      categoryId: parseInt(categoryId),
+      authorId: parseInt(authorId),
+      publisherId: 3
+    }
+    dispatch(createProduct(data))
+
+    toast("Thêm sản phẩm thành công!", 
+      {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    });
+
+    setTimeout(() => {
+      navigate('/admin/product')
+    },2000)
+    
+>>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
   }
 
 
@@ -91,6 +131,7 @@ function AdminCreate(props) {
 
   return (
     <div className="admin-create">
+      <ToastContainer />
       <span>Create Product</span>
       <form
         className="admin-create-product"
@@ -147,8 +188,15 @@ function AdminCreate(props) {
           <span>Hình ảnh</span>
           <input
             type="file"
+<<<<<<< HEAD
             onChange={selectFile}
             {...register("proImage")}
+=======
+            accept="image/*"
+            onChange={(e) => setSelectImg(e.target.files[0])}
+            // {...register("image")}
+
+>>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
           ></input>
         </>
 
