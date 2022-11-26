@@ -83,22 +83,17 @@ export const deleteProduct = createAsyncThunk('product/delete',
 export const addImageProduct = createAsyncThunk('product/addImage',
     async (data, thunkAPI) => {
         try {
-            const { id, image } = data
-
-            console.log(image)
-
-                let dataFile = new FormData()
-                dataFile.append('image', image.files[0])
-
+            let file = new FormData(data)
+            // file.append('image', data)
+            console.log(file)
             const token = localStorage.getItem('token')
             const headers = {
                 Authorization: 'Bearer ' + token,
-                enctype: `multipart/form-data`,
+                "Content-Type": "multipart/form-data",
             }
             console.log('start')
-            const res = await axios.post(`http://localhost:8083/product/${id}/image`, {
-                image
-            }, {
+            const res = await axios.post(`http://localhost:8083/product/22/image`,
+                file, {
                 headers: headers
             })
 
@@ -117,7 +112,7 @@ export const addImageProduct = createAsyncThunk('product/addImage',
 export const createProduct = createAsyncThunk('product/create',
     async (data, thunkAPI) => {
         try {
-            
+
 
             console.log(data)
 
@@ -125,14 +120,14 @@ export const createProduct = createAsyncThunk('product/create',
             const headers = {
                 Authorization: 'Bearer ' + token,
                 'Content-Type': 'application/json'
-    
-            }
-            const res = await axios.post('http://localhost:8083/admin/product/create', {
-                data
-            }, {
-                headers: headers
-            })
 
+            }
+            const res = await axios.post('http://localhost:8083/admin/product/create',
+                data
+                , {
+                    headers: headers
+                })
+            console.log('done')
             return res.data
 
         }
@@ -193,6 +188,12 @@ const productReducer = createSlice(
             },
             [getAllProduct.fulfilled]: (state, action) => {
                 state.listProductAdmin = action.payload
+            },
+            [addImageProduct.fulfilled]: (state, action) => {
+                console.log('success')
+            },
+            [addImageProduct.rejected]: (state, action) => {
+                console.log('rejected')
             }
         }
     }

@@ -14,8 +14,8 @@ function AdminCreate(props) {
   const listCate = useSelector(state => state.category.listCate)
   const dispatch = useDispatch()
   const listAuthor = useSelector(state => state.author.listAuthor)
-  const [selectImg,setSelectImg] = useState(null)
-  const [defaultImg,setDefaultImg] = useState('')
+  const [selectImg, setSelectImg] = useState(null)
+  const [defaultImg, setDefaultImg] = useState('')
 
   useEffect(() => {
     dispatch(getAllAuthor())
@@ -23,17 +23,19 @@ function AdminCreate(props) {
 
 
   const handleCreateProduct = (formData) => {
-    
-    const {
-      proName,
-      proDescription,
-      proContent,
-      proPrice,
-      proQuantity,
-      proSale,
-      categoryId,
-      authorId,
-     } = formData
+
+    const { proImage } = formData
+
+    // const {
+    //   proName,
+    //   proDescription,
+    //   proContent,
+    //   proPrice,
+    //   proQuantity,
+    //   proSale,
+    //   categoryId,
+    //   authorId,
+    // } = formData
 
 
     // const data = {
@@ -43,24 +45,37 @@ function AdminCreate(props) {
     //   proPrice: parseInt(proPrice),
     //   proQuantity: parseInt(proQuantity),
     //   proSale: parseInt(proSale),
-    //   proImage: 'https://www.vinabook.com/ehon-mot-sach-mogu-ban-voi-nuoc-rao-rao-p94873.html',
+    //   proImage: '',
     //   categoryId: parseInt(categoryId),
     //   authorId: parseInt(authorId),
     //   publisherId: 3
     // }
-    const data = {
-      proName: "Thay Đổi Cuộc Sống Với Nhân Số Học",
-      proDescription: "Cuốn sách ",
-      proContent: "Đầu năm 2020, chuỗi ",
-      proPrice: 248000,
-      proQuantity:100,
-      proSale: 15,
-      proImage: "",
-      categoryId: 2,
-      authorId: 1,
-      publisherId: 3
-    }
-    dispatch(createProduct(data))
+    // const data = {
+    //   id:21,
+    //   proName: "Thay Đổi Cuộc Sống Với Nhân Số Học",
+    //   proDescription: "Cuốn sách ",
+    //   proContent: "Đầu năm 2020, chuỗi ",
+    //   proPrice: 248000,
+    //   proQuantity:100,
+    //   proSale: 15,
+    //   proImage: "",
+    //   categoryId: 2,
+    //   authorId: 1,
+    //   publisherId: 3
+    // }
+    console.log(proImage[0]);
+    // var file    = document.querySelector('input[type=file]').files[0];
+    // let data = new FormData()
+    // data.append("image", proImage[0].name);
+    // data.append('abc', 'abc')
+    // data.append('image', proImage[0].name)
+    let data = proImage[0]
+
+    // let data = new FormData()
+    // data.append('image', proImage[0].name)
+    console.log('data', data)
+
+    dispatch(addImageProduct(data))
   }
 
 
@@ -69,7 +84,7 @@ function AdminCreate(props) {
   }
 
   const selectFile = (e) => {
-     
+
   }
 
 
@@ -89,12 +104,12 @@ function AdminCreate(props) {
         <div className="cate select-group">
 
 
-        <span>Danh mục</span>
-          <select 
-          className="cate-select"
-          {...register('categoryId',{
-            required: true,
-          })}  >
+          <span>Danh mục</span>
+          <select
+            className="cate-select"
+            {...register('categoryId', {
+              required: true,
+            })}  >
             {listCate.map(item => (
               <option value={item.id}>{item.catName}</option>
             ))}
@@ -132,10 +147,8 @@ function AdminCreate(props) {
           <span>Hình ảnh</span>
           <input
             type="file"
-            accept="image/*"
             onChange={selectFile}
-            {...register("image")}
-
+            {...register("proImage")}
           ></input>
         </>
 

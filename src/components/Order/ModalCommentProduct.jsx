@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Modal } from 'react-responsive-modal';
 import { useForm } from 'react-hook-form';
 import { data } from 'jquery';
 import { createComment } from '../../redux/reducer/commentSlice'
 import { useDispatch, useSelector } from 'react-redux'
-
+import { Rating } from 'react-simple-star-rating'
 const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) => {
 
-
+    const [rating, setRating] = useState(0)
+    const [disableMove, setDisableMove] = useState(false)
+    // const handleRating = (rate) => {
+    //     setRating(rate)
+    //     // Some logic
+    // }
+    const handleRating = (rate: number) => {
+        setRating(rate)
+        setDisableMove(true)
+    }
+    const onPointerMove = (value: number, index: number) => {
+        { disableMove === false && setRating(value) }
+        console.log(value, index)
+    }
+    const onPointerEnter = () => console.log('Enter')
+    const onPointerLeave = () => console.log('Leave')
     const toggle = () => {
         setOpenModalComment(false)
     }
@@ -16,11 +31,11 @@ const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) =>
         handleSubmit
     } = useForm()
     const dispatch = useDispatch()
-
+    const totalPrice = data.tranUnitPrice * data.tranQuantity
     const onHandleSubmit = (formData) => {
         const dataForm = {
             comContent: formData.comment,
-            comRating: 5,
+            comRating: rating,
             productId: data.productId
         }
         console.log(data)
@@ -28,6 +43,7 @@ const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) =>
         toggle()
         // dispatch(addAddresses(formData))
     }
+
     return (
         <div className='modal-comment-product'>
             <Modal
@@ -39,14 +55,51 @@ const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) =>
                     modal: 'custom-modal-add-new-address',
                 }}>
                 <form onSubmit={handleSubmit(onHandleSubmit)}>
+
                     <div className='add-new-address'>
-                        <span className='delivery-address'>Nhận xét sản phẩm</span>
+                        <span className='rating-product'>Nhận xét sản phẩm</span>
+                        <div className='product-infor'>
+                            <div className="img" style={{ backgroundImage: `url(${data.productImage})` }}>
+                                <span>{data.tranQuantity}</span>
+                            </div>
+                            <div className="up">
+                                <div className='product-name'>{data.productName}</div>
+                                <div className='product-price'>{totalPrice?.toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}<span className='currency'>&#8363;</span></div>
+                            </div>
+                        </div>
+                        <div className='rating'>
+                            <span className='title-rating'>
+                                {rating === 0 && 'Vui lòng đánh giá'}
+                                {rating === 1 && 'Rất không hài lòng'}
+                                {rating === 2 && 'Không hài lòng'}
+                                {rating === 3 && 'Bình thường'}
+                                {rating === 4 && 'Hài lòng'}
+                                {rating === 5 && 'Rất hài lòng'}
+                            </span>
+                            <Rating
+                                // onClick={handleRating}
+                                ratingValue={rating}
+                                size={50}
+                                label
+                                transition
+                                onClick={handleRating}
+                                onPointerEnter={disableMove === false && onPointerEnter}
+                                onPointerLeave={disableMove === false && onPointerLeave}
+                                onPointerMove={disableMove === false && onPointerMove}
+                                // onPointerMove={handleHoverRating}
+                                fillColor='#0a6f3c'
+                                emptyColor='gray'
+                                className='foo' // Will remove the inline style if applied
+                            />
+                            {/* Use rating value */}
+                            {/* {rating} */}
+                        </div>
                         <div className="input-group">
                             <div className='input-common'>
-                                <label>Bình luận của bạn về sản phẩm</label>
-                                <textarea
+                                <textarea className='comment-content'
                                     type="text"
-                                    placeholder='Bình luận của bạn'
+                                    placeholder='Hãy chia sẽ cảm nhận của bạn về sản phẩm nhé'
                                     {...register('comment')} ></textarea>
                             </div>
                         </div>

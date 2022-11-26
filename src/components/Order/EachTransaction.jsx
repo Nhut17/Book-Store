@@ -8,6 +8,7 @@ const EachTransaction = ({ key, orderDetail, evaluated }) => {
     const handleComment = () => {
         setOpenModalComment(true)
     }
+    const totalPrice=orderDetail.tranUnitPrice * orderDetail.tranQuantity
     return (
         <div className='each-transaction' key={key}>
             <div className="img" style={{ backgroundImage: `url(${orderDetail.productImage})` }}>
@@ -16,7 +17,8 @@ const EachTransaction = ({ key, orderDetail, evaluated }) => {
             <div className="content">
                 <div className="up">
                     <span className='product-name'>{orderDetail.productName}</span>
-                    <span className='product-price'>{orderDetail.tranUnitPrice * orderDetail.tranQuantity}</span>
+                    <span className='product-price'>{totalPrice?.toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}<span className='currency'>&#8363;</span></span>
                 </div>
                 <div className='down'>
                     <span className='product-author'>{orderDetail.productAuthor}</span>

@@ -8,6 +8,7 @@ import {
   FileTextOutlined,
   UsergroupDeleteOutlined,
   SkinOutlined,
+  BookOutlined
 } from "@ant-design/icons";
 import "./DashBoard.scss";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,6 +16,7 @@ import { getAllUser } from "../../../../redux/reducer/userSlice";
 import { getAllCategories } from "../../../../redux/reducer/categorySlice";
 import { getAllProduct } from "../../../../redux/reducer/productSlice";
 import { getAllOrder } from "../../../../redux/reducer/orderSlice";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function DashBoard() {
 
@@ -28,45 +30,46 @@ export default function DashBoard() {
 
   useEffect(() => {
     dispatch(getAllUser())
-  },[listUser])
+  }, [listUser])
 
   useEffect(() => {
     dispatch(getAllCategories())
-}, [listCate])
+  }, [listCate])
 
-useEffect(() => {
-  dispatch(getAllProduct())
-},[listProduct])
+  useEffect(() => {
+    dispatch(getAllProduct())
+  }, [listProduct])
 
-useEffect(() => {
-  dispatch(getAllOrder())
-},[listOrder])
+  useEffect(() => {
+    dispatch(getAllOrder())
+  }, [listOrder])
 
   return (
     <section id="dashboard">
       <div className="dashboard">
         <div className="dashboard-top">
-          
-         
+
+
         </div>
 
         <div className="dashboard-middle">
           <div className="dashboard-middle-statistic">
-            <div className="dashboard-middle-statistic-content" >
-              <li style={{background : '#990000'}}>
-                <div className="dashboard-middle-statistic-icon">
-                  <UsergroupDeleteOutlined />
-                </div>
-                <div className="dashboard-middle-statistic-title">
-                  <span className="total">{listUser.length}</span>
-                  <span className="title">Người dùng</span>
-                </div>
-              </li>
-            </div>
+              <div className="dashboard-middle-statistic-content" >
+                <li style={{ background: '#990000' }}>
+                  <div className="dashboard-middle-statistic-icon">
+                    <UsergroupDeleteOutlined />
+                  </div>
+                  <div className="dashboard-middle-statistic-title">
+                    <span className="total">{listUser.length}</span>
+                    <span className="title">Người dùng</span>
+                  </div>
+                </li>
+              </div>
+
             <div className="dashboard-middle-statistic-content">
-              <li style={{background : '#2B7A0B'}}>
+              <li style={{ background: '#2B7A0B' }}>
                 <div className="dashboard-middle-statistic-icon">
-                <DollarCircleOutlined/>
+                  <DollarCircleOutlined />
 
                 </div>
                 <div className="dashboard-middle-statistic-title">
@@ -77,9 +80,9 @@ useEffect(() => {
             </div>
 
             <div className="dashboard-middle-statistic-content">
-              <li style={{background : '#000957'}}>
+              <li style={{ background: '#000957' }}>
                 <div className="dashboard-middle-statistic-icon">
-                  <SkinOutlined />
+                  <BookOutlined />
                 </div>
                 <div className="dashboard-middle-statistic-title">
                   <span className="total">{listCate.length}</span>
@@ -88,7 +91,7 @@ useEffect(() => {
               </li>
             </div>
             <div className="dashboard-middle-statistic-content">
-              <li style={{background : '#D4AC2B'}}>
+              <li style={{ background: '#D4AC2B' }}>
                 <div className="dashboard-middle-statistic-icon">
                   <ShoppingCartOutlined />
                 </div>
@@ -98,13 +101,13 @@ useEffect(() => {
                 </div>
               </li>
             </div>
-            
+
           </div>
           {/* <ChartDashBoard></ChartDashBoard> */}
         </div>
 
-       
+
       </div>
-    </section>
+    </section >
   );
 }
