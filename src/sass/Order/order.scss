@@ -277,7 +277,7 @@
     width: 100%;
     .title-rating{
         float: left;
-        font-size: 2.7rem;
+        font-size: 2.0rem;
         color: #0a6f3c;
         font-weight: 500;
         // min-width: 100px;
@@ -297,4 +297,29 @@
     font-size: 30px;
     margin-bottom: 5px;
     color: #0a6f3c;
+}
+.btn-group-add-comment{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        .btn{
+            width: 200px;
+            height: 70px;
+            margin: 20px;
+            border-radius: 4px;
+            font-size: 1.7rem;
+        }
+        .confirm{
+            &:hover{
+                cursor: pointer;
+                background-color: #0a6f3c;
+            }
+        }
+        .cancel{
+            &:hover{
+                cursor: pointer;
+                background-color: #e9ec30;
+            }
+        }
+    
 }

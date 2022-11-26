@@ -56,7 +56,7 @@ const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) =>
                 }}>
                 <form onSubmit={handleSubmit(onHandleSubmit)}>
 
-                    <div className='add-new-address'>
+                    <div className='add-new-rating'>
                         <span className='rating-product'>Nhận xét sản phẩm</span>
                         <div className='product-infor'>
                             <div className="img" style={{ backgroundImage: `url(${data.productImage})` }}>
@@ -75,7 +75,7 @@ const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) =>
                                 {rating === 2 && 'Không hài lòng'}
                                 {rating === 3 && 'Bình thường'}
                                 {rating === 4 && 'Hài lòng'}
-                                {rating === 5 && 'Rất hài lòng'}
+                                {rating === 5 && 'Cực kỳ hài lòng'}
                             </span>
                             <Rating
                                 // onClick={handleRating}
@@ -88,7 +88,7 @@ const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) =>
                                 onPointerLeave={disableMove === false && onPointerLeave}
                                 onPointerMove={disableMove === false && onPointerMove}
                                 // onPointerMove={handleHoverRating}
-                                fillColor='#0a6f3c'
+                                fillColor='orange'
                                 emptyColor='gray'
                                 className='foo' // Will remove the inline style if applied
                             />
@@ -104,7 +104,7 @@ const ModalCommentProduct = ({ openModalComment, setOpenModalComment, data }) =>
                             </div>
                         </div>
                     </div>
-                    <div className='btn-group-add-address'>
+                    <div className='btn-group-add-comment'>
                         <button className='btn confirm'>Xác nhận</button>
                         <button className='btn cancel'>Hủy</button>
                     </div>
