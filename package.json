@@ -41,6 +41,7 @@
     "normalize.css": "^8.0.1",
     "npm": "^6.14.12",
     "react": "^18.2.0",
+    "react-animated-slider": "^2.0.0",
     "react-apexcharts": "^1.4.0",
     "react-bootstrap": "^2.5.0",
     "react-chartjs-2": "^4.3.1",
