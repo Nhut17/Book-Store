@@ -57,6 +57,7 @@ export const getAllOrder = createAsyncThunk('order/getAll',
             const res = await axios.get('http://localhost:8083/admin/orders/getAll', {
                 headers: headers
             });
+            console.log(res.data)
             return res.data
         }
         catch (e) {

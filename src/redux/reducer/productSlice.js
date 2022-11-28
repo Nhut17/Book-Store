@@ -83,18 +83,18 @@ export const deleteProduct = createAsyncThunk('product/delete',
 export const addImageProduct = createAsyncThunk('product/addImage',
     async (data, thunkAPI) => {
         try {
-                const { id , proImage} = data
+            const { id, proImage } = data
 
-                let dataFile = new FormData()
-                dataFile.append('image', proImage)
+            let dataFile = new FormData()
+            dataFile.append('image', proImage)
 
             const token = localStorage.getItem('token')
             const headers = {
                 Authorization: 'Bearer ' + token,
                 "Content-Type": `multipart/form-data`,
             }
-            
-           
+
+
             const res = await axios.post(`http://localhost:8083/product/${id}/image`, dataFile, {
                 headers: headers
             })
@@ -113,9 +113,9 @@ export const addImageProduct = createAsyncThunk('product/addImage',
 export const createProduct = createAsyncThunk('product/create',
     async (data, thunkAPI) => {
         try {
-            
+
             const { proImage} = data
-           
+
 
             const product = {
                 ...data,
@@ -126,7 +126,7 @@ export const createProduct = createAsyncThunk('product/create',
             const headers = {
                 Authorization: 'Bearer ' + token,
                 'Content-Type': 'application/json'
-    
+
             }
             const res = await axios.post('http://localhost:8083/admin/product/create', product, {
                 headers: headers
@@ -137,9 +137,9 @@ export const createProduct = createAsyncThunk('product/create',
                 id,
                 proImage
             }
-    
+
             thunkAPI.dispatch(addImageProduct(imgData))
-           
+
 
             return res.data
 
@@ -201,6 +201,12 @@ const productReducer = createSlice(
             },
             [getAllProduct.fulfilled]: (state, action) => {
                 state.listProductAdmin = action.payload
+            },
+            [addImageProduct.fulfilled]: (state, action) => {
+                console.log('success')
+            },
+            [addImageProduct.rejected]: (state, action) => {
+                console.log('rejected')
             }
         }
     }

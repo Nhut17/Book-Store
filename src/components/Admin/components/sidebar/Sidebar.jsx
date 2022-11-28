@@ -10,7 +10,8 @@ import {
   OrderedListOutlined,
   WechatOutlined,
   ProfileOutlined,
-  LogoutOutlined
+  LogoutOutlined,
+  BookOutlined
 
 } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
@@ -20,23 +21,23 @@ import logo from '../../../../assets/images/Home/logo.png'
 
 
 function Sidebar(props) {
- 
+
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const handleLogout = () =>{
+  const handleLogout = () => {
     dispatch(logoutAdmin())
     localStorage.clear()
     navigate('/')
     navigate(0)
   }
-  
+
 
   return (
     <>
       <div className="sidebar">
         <div className="sidebar-top">
-          <img src={logo} style={{paddingLeft: 20}} />
+          <img src={logo} style={{ paddingLeft: 20 }} />
           {/* <h4 style={{color: '#0a6f3c'}}>VNBOOK</h4> */}
         </div>
         <div className="sidebar-list">
@@ -66,36 +67,36 @@ function Sidebar(props) {
             </span>
             <p>
               Đơn hàng
-            
+
             </p>
           </Link>
 
           <Link to="/admin/category" className={'sidebar-list-item'}>
             <span>
-              <ProfileOutlined></ProfileOutlined>
+              <BookOutlined></BookOutlined>
             </span>
             <p>
               Danh mục
-            
-            </p>  
+
+            </p>
           </Link>
 
-          
+
           <div className="sidebar-list-item" onClick={handleLogout}>
             <span >
-            <LogoutOutlined />
+              <LogoutOutlined />
             </span>
             <p>
-             Đăng xuất
-            
-            </p>  
+              Đăng xuất
+
+            </p>
           </div>
-        
-         
+
+
         </div>
       </div>
 
-      
+
     </>
   );
 }

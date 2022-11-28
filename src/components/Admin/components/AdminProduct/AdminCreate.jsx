@@ -16,6 +16,7 @@ function AdminCreate(props) {
   const listCate = useSelector(state => state.category.listCate)
   const dispatch = useDispatch()
   const listAuthor = useSelector(state => state.author.listAuthor)
+
   const [selectImg,setSelectImg] = useState(null)
   const navigate = useNavigate()
 
@@ -25,7 +26,19 @@ function AdminCreate(props) {
 
 
   const handleCreateProduct = (formData) => {
-    
+
+    const { proImage } = formData
+
+    // const {
+    //   proName,
+    //   proDescription,
+    //   proContent,
+    //   proPrice,
+    //   proQuantity,
+    //   proSale,
+    //   categoryId,
+    //   authorId,
+    // } = formData
     const {
       proName,
       proDescription,
@@ -66,7 +79,6 @@ function AdminCreate(props) {
     setTimeout(() => {
       navigate('/admin/product')
     },2000)
-    
   }
 
 
@@ -75,7 +87,7 @@ function AdminCreate(props) {
   }
 
   const selectFile = (e) => {
-     
+
   }
 
 
@@ -96,12 +108,12 @@ function AdminCreate(props) {
         <div className="cate select-group">
 
 
-        <span>Danh mục</span>
-          <select 
-          className="cate-select"
-          {...register('categoryId',{
-            required: true,
-          })}  >
+          <span>Danh mục</span>
+          <select
+            className="cate-select"
+            {...register('categoryId', {
+              required: true,
+            })}  >
             {listCate.map(item => (
               <option value={item.id}>{item.catName}</option>
             ))}
@@ -142,7 +154,6 @@ function AdminCreate(props) {
             accept="image/*"
             onChange={(e) => setSelectImg(e.target.files[0])}
             // {...register("image")}
-
           ></input>
         </>
 

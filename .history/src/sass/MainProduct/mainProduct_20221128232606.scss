@@ -1,0 +1,78 @@
+@import '../variables.scss';
+.main-box-product{
+    .title{
+        padding: 10px 0;
+    }
+        .main-product{
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            // margin: 20px 20px;
+            transition: all 0.4s;
+            &:hover{
+                color: $primary-color;
+                .price-new{
+                    color: $primary-color;
+                }
+            }
+            .img{
+                width: 150px;
+                height: 200px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }   
+            }
+            .name{
+                // width: 100px;
+                height: 50px;
+                padding-top: 20px;
+                overflow: hidden;
+                font-size: 17px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            &:hover{
+                text-decoration: underline;
+            }
+            }
+            .author{
+                font-size: 13px;
+                opacity: 0.7;
+                padding: 10px 0;
+            }
+            .price-old{
+                font-size: 18px;
+                text-decoration: line-through;
+            }
+            .price-new{
+                font-size: 20px;
+                color: $price-color;
+            }
+        }
+
+    
+    .see-more{
+        position: relative;
+        left: 90%;
+        font-size: 13px;
+        &:hover{
+            span{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+        .ic{
+            opacity: 0.3;
+            
+        }
+        span{
+            color: $see-more-color;
+            padding-left: 10px;
+        }
+
+        
+    }
+    
+   
+}

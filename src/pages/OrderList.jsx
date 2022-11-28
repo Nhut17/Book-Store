@@ -14,11 +14,14 @@ const OrderList = () => {
     return (
         <div className='order-list'>
             <span className='title'>Đơn hàng của tôi</span>
-            {
-                listOrderOfUser?.map((item, index) => (
-                    <OrderDetail key={index} data={item} />
-                ))
-            }
+            <div className='my-order-list'>
+                {
+                    listOrderOfUser?.map((item, index) => (
+                        <OrderDetail key={index} data={item} />
+                    ))
+                }
+            </div>
+
         </div>
     )
 }
