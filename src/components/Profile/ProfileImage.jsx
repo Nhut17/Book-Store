@@ -1,22 +1,13 @@
 import { React, useState } from 'react'
-const ProfileImage = () => {
-  const [uploadImage, setUploadImage] = useState('')
-  const handleOnChangeImage = (event) => {
-    let data = event.target.files;
-    let file = data[0];
-    if (file) {
-        let objectUrl = URL.createObjectURL(file);
-        setUploadImage(objectUrl)
-    }
-  }
+const ProfileImage = ({ userImage, setUploadImage }) => {
   return (
     <div className='profile-image'>
       <div className='preview-img-container'>
         <input id='preview-img' type='file' hidden
-          onChange={(event) => handleOnChangeImage(event)} />
+          onChange={(e) => setUploadImage(e.target.files[0])} />
         <label className='label-image' htmlFor='preview-img'>Tải ảnh<i className='fas fa-upload'></i></label>
         <div className='preview-image'
-          style={{ backgroundImage: `url(${uploadImage})` }}
+          style={{ backgroundImage: `url(${userImage})` }}
         >
         </div>
       </div>

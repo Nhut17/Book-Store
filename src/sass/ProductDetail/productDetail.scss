@@ -456,6 +456,7 @@
     width: 100%;
     .comment-item{
         width: 100%;
+        min-height: 300px;
         border: 1px solid #ccc;
         margin-bottom: 10px;
         padding: 10px 15px 10px 15px;
@@ -481,8 +482,8 @@
                 }
                 .user-detail{
                     width: 70%;
-                    margin-top: 15px;
-                    margin-left: 15px;
+                    // margin-top: 15px;
+                    // margin-left: 15px;
                     .comment-username{
                         width: 70%;
                         font-size: 30px;

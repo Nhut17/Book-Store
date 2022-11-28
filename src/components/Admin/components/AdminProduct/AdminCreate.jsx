@@ -16,13 +16,9 @@ function AdminCreate(props) {
   const listCate = useSelector(state => state.category.listCate)
   const dispatch = useDispatch()
   const listAuthor = useSelector(state => state.author.listAuthor)
-<<<<<<< HEAD
-  const [selectImg, setSelectImg] = useState(null)
-  const [defaultImg, setDefaultImg] = useState('')
-=======
+
   const [selectImg,setSelectImg] = useState(null)
   const navigate = useNavigate()
->>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
 
   useEffect(() => {
     dispatch(getAllAuthor())
@@ -43,48 +39,17 @@ function AdminCreate(props) {
     //   categoryId,
     //   authorId,
     // } = formData
+    const {
+      proName,
+      proDescription,
+      proContent,
+      proPrice,
+      proQuantity,
+      proSale,
+      categoryId,
+      authorId,
+     } = formData
 
-<<<<<<< HEAD
-
-    // const data = {
-    //   proName: proName,
-    //   proDescription: proDescription,
-    //   proContent: proContent,
-    //   proPrice: parseInt(proPrice),
-    //   proQuantity: parseInt(proQuantity),
-    //   proSale: parseInt(proSale),
-    //   proImage: '',
-    //   categoryId: parseInt(categoryId),
-    //   authorId: parseInt(authorId),
-    //   publisherId: 3
-    // }
-    // const data = {
-    //   id:21,
-    //   proName: "Thay Đổi Cuộc Sống Với Nhân Số Học",
-    //   proDescription: "Cuốn sách ",
-    //   proContent: "Đầu năm 2020, chuỗi ",
-    //   proPrice: 248000,
-    //   proQuantity:100,
-    //   proSale: 15,
-    //   proImage: "",
-    //   categoryId: 2,
-    //   authorId: 1,
-    //   publisherId: 3
-    // }
-    console.log(proImage[0]);
-    // var file    = document.querySelector('input[type=file]').files[0];
-    // let data = new FormData()
-    // data.append("image", proImage[0].name);
-    // data.append('abc', 'abc')
-    // data.append('image', proImage[0].name)
-    let data = proImage[0]
-
-    // let data = new FormData()
-    // data.append('image', proImage[0].name)
-    console.log('data', data)
-
-    dispatch(addImageProduct(data))
-=======
     const data = {
       proName: proName,
       proDescription: proDescription,
@@ -114,8 +79,6 @@ function AdminCreate(props) {
     setTimeout(() => {
       navigate('/admin/product')
     },2000)
-    
->>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
   }
 
 
@@ -188,15 +151,9 @@ function AdminCreate(props) {
           <span>Hình ảnh</span>
           <input
             type="file"
-<<<<<<< HEAD
-            onChange={selectFile}
-            {...register("proImage")}
-=======
             accept="image/*"
             onChange={(e) => setSelectImg(e.target.files[0])}
             // {...register("image")}
-
->>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
           ></input>
         </>
 

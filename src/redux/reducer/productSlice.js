@@ -83,33 +83,19 @@ export const deleteProduct = createAsyncThunk('product/delete',
 export const addImageProduct = createAsyncThunk('product/addImage',
     async (data, thunkAPI) => {
         try {
-<<<<<<< HEAD
-            let file = new FormData(data)
-            // file.append('image', data)
-            console.log(file)
-            const token = localStorage.getItem('token')
-            const headers = {
-                Authorization: 'Bearer ' + token,
-                "Content-Type": "multipart/form-data",
-            }
-            console.log('start')
-            const res = await axios.post(`http://localhost:8083/product/22/image`,
-                file, {
-=======
-                const { id , proImage} = data
+            const { id, proImage } = data
 
-                let dataFile = new FormData()
-                dataFile.append('image', proImage)
+            let dataFile = new FormData()
+            dataFile.append('image', proImage)
 
             const token = localStorage.getItem('token')
             const headers = {
                 Authorization: 'Bearer ' + token,
                 "Content-Type": `multipart/form-data`,
             }
-            
-           
+
+
             const res = await axios.post(`http://localhost:8083/product/${id}/image`, dataFile, {
->>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
                 headers: headers
             })
 
@@ -127,13 +113,9 @@ export const addImageProduct = createAsyncThunk('product/addImage',
 export const createProduct = createAsyncThunk('product/create',
     async (data, thunkAPI) => {
         try {
-<<<<<<< HEAD
 
-=======
-            
             const { proImage} = data
-           
->>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
+
 
             const product = {
                 ...data,
@@ -144,17 +126,7 @@ export const createProduct = createAsyncThunk('product/create',
             const headers = {
                 Authorization: 'Bearer ' + token,
                 'Content-Type': 'application/json'
-<<<<<<< HEAD
 
-            }
-            const res = await axios.post('http://localhost:8083/admin/product/create',
-                data
-                , {
-                    headers: headers
-                })
-            console.log('done')
-=======
-    
             }
             const res = await axios.post('http://localhost:8083/admin/product/create', product, {
                 headers: headers
@@ -165,11 +137,10 @@ export const createProduct = createAsyncThunk('product/create',
                 id,
                 proImage
             }
-    
-            thunkAPI.dispatch(addImageProduct(imgData))
-           
 
->>>>>>> 3a1ef34a8a4074234dd48ae4d039e6bd37a4b897
+            thunkAPI.dispatch(addImageProduct(imgData))
+
+
             return res.data
 
         }

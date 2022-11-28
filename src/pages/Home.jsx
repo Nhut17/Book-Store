@@ -22,7 +22,7 @@ const Home = () => {
   useEffect(() => {
     if(success)
     {
-      toast(`Chào mừng ${user.name}`, 
+      toast(`Chào mừng ${user?.name}`, 
       {
       position: "top-right",
       autoClose: 1000,
@@ -38,7 +38,7 @@ const Home = () => {
 
   useEffect(() => {
     if(user){
-        if(user.roles.charAt(0).authority === 'ADMIN')
+        if(user?.roles.charAt(0).authority === 'ADMIN')
         {
           navigate('/admin')
         }
