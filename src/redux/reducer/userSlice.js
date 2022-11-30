@@ -10,7 +10,9 @@ const initialState = {
     message: '',
     successRegister: true,
     listUser: [],
-    currentUser: null
+    currentUser: null,
+    successLogin: true,
+    successSendOTP: false,
 }
 const loginAPI = 'http://localhost:8083/login'
 const registerAPI = 'http://localhost:8083/register'
@@ -25,7 +27,10 @@ export const loginUser = createAsyncThunk('user/login', async (data, thunkAPI) =
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with login api')
+        if(!e.respone){
+            throw e
+        }
+        return thunkAPI.rejectWithValue(e.errorMessage)
     }
 })
 
@@ -131,6 +136,8 @@ export const deleteUser = createAsyncThunk('user/delete', async (id, thunkAPI) =
         return e.message
     }
 })
+
+
 // Get All User
 export const getAllUser = createAsyncThunk('user/getAllUser', async (data, thunkAPI) => {
     try {
@@ -149,7 +156,29 @@ export const getAllUser = createAsyncThunk('user/getAllUser', async (data, thunk
     }
 })
 
+// Get Delete User
+export const sendOTP = createAsyncThunk('user/sendOTP', async (email, thunkAPI) => {
+    try {
+        const token = localStorage.getItem('token')
+        const headers = {
+            Authorization: 'Bearer ' + token,
+        }
+        const data = {
+            email: email
+        }
 
+        console.log(data)
+        const res = await axios.get('http://localhost:8083/recoveryPassword/getOtp',data, {
+            headers: headers
+        })
+        console.log('done')
+
+        return res.data
+    }
+    catch (e) {
+        return e.message
+    }
+})
 
 const userSlice = createSlice({
     name: 'user',
@@ -157,6 +186,13 @@ const userSlice = createSlice({
     reducers: {
         logoutAdmin: (state, action) => {
             state.user = null
+        },
+        resetSuccess: (state, action) => {
+            state.successLogin = true
+            state.successRegister = true
+        },
+        resetSuccessSendOTP: (state, action) => {
+            state.successSendOTP = false
         }
     },
     extraReducers: {
@@ -167,10 +203,12 @@ const userSlice = createSlice({
             state.loading = false;
             state.success = true;
             state.user = action.payload;
+            state.successLogin = true;
         },
         [loginUser.rejected]: (state, action) => {
-            // state.message = 'failed';
-            state.success = false;
+            state.message = 'Tài khoản hoặc password không đúng';
+            state.successLogin = false;
+            state.success = false
             state.error = true;
             state.loading = false;
         },
@@ -195,9 +233,15 @@ const userSlice = createSlice({
         [changeUserAvatar.rejected]: (state, action) => {
             console.log('fail update image')
         },
+        [sendOTP.fulfilled]: (state, action) => {
+            state.successSendOTP = true
+        },
+        [sendOTP.rejected]: (state, action) => {
+            state.successSendOTP = false
+        },
     }
 })
 
-export const { logoutAdmin } = userSlice.actions
+export const { logoutAdmin, resetSuccess, resetSuccessSendOTP } = userSlice.actions
 
 export default userSlice.reducer
