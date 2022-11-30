@@ -14,7 +14,7 @@ const initialState = {
     successLogin: true,
     successSendOTP: false,
     successChangePassword: false,
-    successChangePasswordCurrent: false,
+    successChangePasswordCurrent: true,
     fail: false,
 }
 const loginAPI = 'http://localhost:8083/login'
@@ -211,8 +211,7 @@ const userSlice = createSlice({
             state.fail = false
         },
         resetSuccessChangePasswordCurrent: (state, action) => {
-            state.successChangePasswordCurrent = false
-            state.fail = false
+            state.successChangePasswordCurrent = true
         },
     },
     extraReducers: {
@@ -265,7 +264,6 @@ const userSlice = createSlice({
         },
         [changePassword.rejected]: (state, action) => {
             state.successChangePassword = false
-            state.fail = true
             state.message = 'Email hoặc OTP sai. Xin vui lòng nhập lại'
         },
         [changePasswordCurrent.fulfilled]: (state, action) => {
@@ -274,7 +272,6 @@ const userSlice = createSlice({
         },
         [changePasswordCurrent.rejected]: (state, action) => {
             state.successChangePasswordCurrent = false
-            state.fail = true
             state.message = 'Sai mật khẩu cũ'
         },
     }

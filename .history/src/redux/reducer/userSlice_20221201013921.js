@@ -14,7 +14,7 @@ const initialState = {
     successLogin: true,
     successSendOTP: false,
     successChangePassword: false,
-    successChangePasswordCurrent: false,
+    successChangePasswordCurrent: true,
     fail: false,
 }
 const loginAPI = 'http://localhost:8083/login'

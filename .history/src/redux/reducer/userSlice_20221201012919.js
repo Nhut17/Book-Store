@@ -15,7 +15,6 @@ const initialState = {
     successSendOTP: false,
     successChangePassword: false,
     successChangePasswordCurrent: false,
-    fail: false,
 }
 const loginAPI = 'http://localhost:8083/login'
 const registerAPI = 'http://localhost:8083/register'
@@ -92,7 +91,7 @@ export const getUser = createAsyncThunk('user/getUser', async (data, thunkAPI) =
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 
@@ -114,7 +113,7 @@ export const deleteUser = createAsyncThunk('user/delete', async (id, thunkAPI) =
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 // Get All User
@@ -149,7 +148,7 @@ export const sendOTP = createAsyncThunk('user/sendOTP', async (email, thunkAPI) 
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 
@@ -165,7 +164,7 @@ export const changePassword = createAsyncThunk('user/changePassword', async (dat
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 
@@ -187,7 +186,7 @@ export const changePasswordCurrent = createAsyncThunk('user/changePasswordCurren
         return res.data
     }
     catch (e) {
-         return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 
@@ -208,11 +207,9 @@ const userSlice = createSlice({
         },
         resetSuccessChangePassword: (state, action) => {
             state.successChangePassword = false
-            state.fail = false
         },
         resetSuccessChangePasswordCurrent: (state, action) => {
             state.successChangePasswordCurrent = false
-            state.fail = false
         },
     },
     extraReducers: {
@@ -261,21 +258,16 @@ const userSlice = createSlice({
         },
         [changePassword.fulfilled]: (state, action) => {
             state.successChangePassword = true
-            
         },
         [changePassword.rejected]: (state, action) => {
             state.successChangePassword = false
-            state.fail = true
-            state.message = 'Email hoặc OTP sai. Xin vui lòng nhập lại'
         },
         [changePasswordCurrent.fulfilled]: (state, action) => {
             state.successChangePasswordCurrent = true
-
         },
         [changePasswordCurrent.rejected]: (state, action) => {
             state.successChangePasswordCurrent = false
-            state.fail = true
-            state.message = 'Sai mật khẩu cũ'
+            state.message = action.payload
         },
     }
 })

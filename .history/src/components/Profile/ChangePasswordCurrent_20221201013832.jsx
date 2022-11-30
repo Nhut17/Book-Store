@@ -23,8 +23,6 @@ const ChangePasswordCurrent = () => {
         dispatch(changePasswordCurrent(formData))
     }
 
-    console.log(successChangePasswordCurrent)
-
     useEffect(() => {
 
         if(successChangePasswordCurrent)
@@ -40,11 +38,11 @@ const ChangePasswordCurrent = () => {
               progress: undefined,
               theme: "light",
             });
-           setTimeout(() => {
+           const back = setTimeout(() => {
                 navigate('/')
             },2000)
 
-          
+            clearTimeout(back)
             
         }
         dispatch(resetSuccessChangePasswordCurrent())
@@ -110,7 +108,7 @@ const ChangePasswordCurrent = () => {
 
         <button>LƯU</button>
         {
-            fail === true  && <span className='err-msg' style={{
+            successChangePasswordCurrent === false  && <span className='err-msg' style={{
                 paddingLeft: 0
             }}>{message}</span>
         }

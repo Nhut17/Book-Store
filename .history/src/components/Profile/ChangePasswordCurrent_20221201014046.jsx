@@ -40,11 +40,11 @@ const ChangePasswordCurrent = () => {
               progress: undefined,
               theme: "light",
             });
-           setTimeout(() => {
+           const back = setTimeout(() => {
                 navigate('/')
             },2000)
 
-          
+            clearTimeout(back)
             
         }
         dispatch(resetSuccessChangePasswordCurrent())
