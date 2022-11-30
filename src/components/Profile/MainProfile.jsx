@@ -24,8 +24,8 @@ const MainProfile = () => {
   //   formState: { errors }
   // } = useForm()
   const [userDoB, setUserDoB] = useState(currentUser?.userDob)
-  const [uploadImage, setUploadImage] = useState(currentUser.avatar)
-  const [previewImage, setPreviewImage] = useState(currentUser.avatar)
+  const [uploadImage, setUploadImage] = useState(currentUser?.avatar)
+  const [previewImage, setPreviewImage] = useState(currentUser?.avatar)
   const handleOnChangeImage = (event) => {
     let data = event.target.files;
     let file = data[0];
@@ -57,9 +57,9 @@ const MainProfile = () => {
       <div className='group-infor'>
         <div className='profile-image'>
           <div className='preview-img-container'>
-              <input className='preview-img' type='file'
+            <input className='preview-img' type='file'
               style={{ backgroundImage: `url(${previewImage})` }}
-                onChange={(event) => handleOnChangeImage(event)} />
+              onChange={(event) => handleOnChangeImage(event)} />
           </div>
         </div>
         <form onSubmit={handleSubmit(handleOnSubmit)}>

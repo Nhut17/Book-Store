@@ -85,7 +85,8 @@ const HeaderMain = ({fixed}) => {
   return (
     <div className={clx({
       'header-main' : true,
-      'fixed' : fixed
+      'fixed' : fixed,
+      'zIndex': '100'
     })} >
       <div className="container">
         <div className="logo">

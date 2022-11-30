@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import CommentItem from './CommentItem';
 const CommentBasedRating = ({ selectedRate }) => {
-    const {listCommentByIdBasedRating , listCommentById} = useSelector(state => state.comment)
+    const { listCommentByIdBasedRating, listCommentById } = useSelector(state => state.comment)
 
     const dispatch = useDispatch()
     const { id } = useParams()
     const data = {
-        productId: parseInt(id),
-        rating: 1
+        productId: 3,
+        rating: 5
     }
 
     useEffect(() => {

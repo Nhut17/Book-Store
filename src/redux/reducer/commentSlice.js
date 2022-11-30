@@ -47,17 +47,11 @@ export const getCommentByIdBasedRating = createAsyncThunk('order/getCommentById'
     async (data, thunkAPI) => {
         try {
             console.log('data', data)
-            const token = localStorage.getItem('token');
             const headers = {
-                "Content-Type": "application/json"
+                "content-type": "application/json",
             }
-            const res = await axios.get(`http://localhost:8083/comment/product/rating`, 
-            {
-                "productId": 3,
-                "rating": 5    
-            })
+            const res = await axios.get(`http://localhost:8083/comment/product/rating`, data, { headers: headers })
 
-            console.log('respon', res.data)
 
             return res.data
         }
@@ -76,7 +70,7 @@ const commentSlice = createSlice({
             state.listCommentByIdBasedRating = action.payload
         },
         [getCommentByIdBasedRating.rejected]: (state, action) => {
-            
+
         },
         [createComment.fulfilled]: (state, action) => {
             console.log('success')

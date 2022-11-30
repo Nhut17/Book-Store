@@ -10,7 +10,7 @@ const AdminNavBar = ({children}) => {
         <div className="nav-bar-content" style={{background: 'whitesmoke'}}>
           <div className="dashboard-top-content">
               <li className="dashboard-top-content-avatar">
-                <img src="https://res.cloudinary.com/dx8xengfd/image/upload/v1666243178/avatars/avatar-gau-cute_1_bkhh1v.jpg"></img>
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/admin-2075685-1746858.png"></img>
                 <span>Admin</span>
               </li>
               <li className="dashboard-top-content-bell">
