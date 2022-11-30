@@ -10,7 +10,7 @@ const ChangPassword = () => {
     
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { successChangePassword, message,fail } = useSelector(state => state.user)
+    const { successChangePassword, message } = useSelector(state => state.user)
 
 
     const { 
@@ -130,7 +130,7 @@ const ChangPassword = () => {
 
                     <button>LƯU</button>
                     {
-                        fail === true  && <span className='err-msg' style={{
+                        successChangePassword === false  && <span className='err-msg' style={{
                             paddingLeft: 0
                         }}>{message}</span>
                     }

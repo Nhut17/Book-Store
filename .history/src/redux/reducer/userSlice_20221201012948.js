@@ -15,7 +15,6 @@ const initialState = {
     successSendOTP: false,
     successChangePassword: false,
     successChangePasswordCurrent: false,
-    fail: false,
 }
 const loginAPI = 'http://localhost:8083/login'
 const registerAPI = 'http://localhost:8083/register'
@@ -26,11 +25,10 @@ export const loginUser = createAsyncThunk('user/login', async (data, thunkAPI) =
         const res = await axios.post(loginAPI, data)
         localStorage.setItem('token', res.data.token)
         thunkAPI.dispatch(getCart())
-        thunkAPI.dispatch(getUser())
         return res.data
     }
     catch (e) {
-        if (!e.respone) {
+        if(!e.respone){
             throw e
         }
         return thunkAPI.rejectWithValue(e.errorMessage)
@@ -62,26 +60,6 @@ export const changeUserAvatar = createAsyncThunk('user/changeAvatar',
             return thunkAPI.rejectWithValue('Error with get product detail')
         }
     })
-
-
-export const changeUserProfile = createAsyncThunk('user/changeProfile',
-    async (data, thunkAPI) => {
-        try {
-            const token = localStorage.getItem('token')
-            const headers = {
-                Authorization: 'Bearer ' + token,
-            }
-            const res = await axios.post(`http://localhost:8083/user/profile/change`, data, {
-                headers: headers
-            })
-            thunkAPI.dispatch(getUser())
-            return res.data
-
-        }
-        catch (e) {
-            return thunkAPI.rejectWithValue('Error with get product detail')
-        }
-    })
 // Get api register
 export const registerUser = createAsyncThunk('user/register',
     async (data, thunkAPI) => {
@@ -100,24 +78,22 @@ export const registerUser = createAsyncThunk('user/register',
 
 
 // Get current api user
-export const getUser = createAsyncThunk('user/getUser',
-    async (data, thunkAPI) => {
-        try {
-            const token = localStorage.getItem('token')
-            const headers = {
-                Authorization: 'Bearer ' + token,
-            }
-            const res = await axios.get(`http://localhost:8083/user/profile`, {
-                headers: headers,
-            })
-            // console.log('check res',res)
-            return res.data
+export const getUser = createAsyncThunk('user/getUser', async (data, thunkAPI) => {
+    try {
+        const token = localStorage.getItem('token')
+        const headers = {
+            Authorization: 'Bearer ' + token,
         }
-        catch (e) {
-            return thunkAPI.rejectWithValue('Error with api register')
-        }
-    })
-
+        const res = await axios.get(`http://localhost:8083/user/profile`, {
+            headers: headers,
+        })
+        // console.log('check res',res)
+        return res.data
+    }
+    catch (e) {
+        return e.message
+    }
+})
 
 
 
@@ -137,11 +113,9 @@ export const deleteUser = createAsyncThunk('user/delete', async (id, thunkAPI) =
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
-
-
 // Get All User
 export const getAllUser = createAsyncThunk('user/getAllUser', async (data, thunkAPI) => {
     try {
@@ -163,38 +137,34 @@ export const getAllUser = createAsyncThunk('user/getAllUser', async (data, thunk
 // Send OTP
 export const sendOTP = createAsyncThunk('user/sendOTP', async (email, thunkAPI) => {
     try {
-
+       
         const data = {
             email: email
         }
 
         console.log(data)
-
-        const res = await axios.post('http://localhost:8083/recoveryPassword/getOtp', data)
-
+        const res = await axios.post('http://localhost:8083/recoveryPassword/getOtp',data)
 
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 
 // Change password
 export const changePassword = createAsyncThunk('user/changePassword', async (data, thunkAPI) => {
     try {
-
-
+      
+       
 
         console.log(data)
-
-        const res = await axios.post('http://localhost:8083/recoveryPassword/checkOtp', data)
-
+        const res = await axios.post('http://localhost:8083/recoveryPassword/checkOtp',data)
 
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 
@@ -206,17 +176,17 @@ export const changePasswordCurrent = createAsyncThunk('user/changePasswordCurren
         const headers = {
             Authorization: 'Bearer ' + token,
         }
-
+       
 
         console.log(data)
-        const res = await axios.post('http://localhost:8083/user/changepassword', data, {
+        const res = await axios.post('http://localhost:8083/user/changepassword',data, {
             headers: headers
         })
 
         return res.data
     }
     catch (e) {
-        return thunkAPI.rejectWithValue('Error with api register')
+        return e.message
     }
 })
 
@@ -234,15 +204,12 @@ const userSlice = createSlice({
         },
         resetSuccessSendOTP: (state, action) => {
             state.successSendOTP = false
-
         },
         resetSuccessChangePassword: (state, action) => {
             state.successChangePassword = false
-            state.fail = false
         },
         resetSuccessChangePasswordCurrent: (state, action) => {
             state.successChangePasswordCurrent = false
-            state.fail = false
         },
     },
     extraReducers: {
@@ -289,29 +256,22 @@ const userSlice = createSlice({
         [sendOTP.rejected]: (state, action) => {
             state.successSendOTP = false
         },
-
         [changePassword.fulfilled]: (state, action) => {
             state.successChangePassword = true
-
         },
         [changePassword.rejected]: (state, action) => {
             state.successChangePassword = false
-            state.fail = true
-            state.message = 'Email hoặc OTP sai. Xin vui lòng nhập lại'
         },
         [changePasswordCurrent.fulfilled]: (state, action) => {
             state.successChangePasswordCurrent = true
-
         },
         [changePasswordCurrent.rejected]: (state, action) => {
             state.successChangePasswordCurrent = false
-            state.fail = true
-            state.message = 'Sai mật khẩu cũ'
+            state.message = ''
         },
     }
 })
 
 export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword, resetSuccessChangePasswordCurrent } = userSlice.actions
-
 
 export default userSlice.reducer

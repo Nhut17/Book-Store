@@ -130,7 +130,7 @@ const ChangPassword = () => {
 
                     <button>LƯU</button>
                     {
-                        fail === true  && <span className='err-msg' style={{
+                        successChangePassword === true  && <span className='err-msg' style={{
                             paddingLeft: 0
                         }}>{message}</span>
                     }

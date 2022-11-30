@@ -11,7 +11,7 @@ const ChangePasswordCurrent = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { successChangePasswordCurrent } = useSelector(state => state.user)
+    const { successChangePasswordCurrent, message, fail } = useSelector(state => state.user)
 
     const {
         register,
@@ -22,6 +22,8 @@ const ChangePasswordCurrent = () => {
     const onChangePassword = (formData) => {
         dispatch(changePasswordCurrent(formData))
     }
+
+    console.log(successChangePasswordCurrent)
 
     useEffect(() => {
 
@@ -37,11 +39,11 @@ const ChangePasswordCurrent = () => {
                     progress: undefined,
                     theme: "light",
                 });
-            const back = setTimeout(() => {
+            setTimeout(() => {
                 navigate('/')
             }, 2000)
 
-            clearTimeout(back)
+
 
         }
         dispatch(resetSuccessChangePasswordCurrent())
@@ -106,11 +108,11 @@ const ChangePasswordCurrent = () => {
                     </div>
 
                     <button>LƯU</button>
-                    {/* {
-            successChangePasswordCurrent === false  && <span className='err-msg' style={{
-                paddingLeft: 0
-            }}>Mật khẩu cũ sai</span>
-        } */}
+                    {
+                        fail === true && <span className='err-msg' style={{
+                            paddingLeft: 0
+                        }}>{message}</span>
+                    }
 
                 </form>
             </div>
