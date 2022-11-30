@@ -15,8 +15,6 @@ const Layout = () => {
   const [layoutModal, setLayoutModal] = useState()
   const [showSignUp, setShowSignUp] = useState(false)
  
-  console.log(showSignUp)
-
   return (
 
     <BrowserRouter>

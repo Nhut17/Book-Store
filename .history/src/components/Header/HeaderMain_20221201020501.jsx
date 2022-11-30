@@ -9,13 +9,10 @@ import clx from 'classnames'
 import { useCallback,useRef } from 'react'
 import { useSelector } from 'react-redux'
 import SearchProduct from './SearchProduct'
-import SignUp from '../../pages/SignUp'
-
 
 const HeaderMain = ({fixed}) => {
 
   const navigate = useNavigate()
-  const [showRegister,setShowRegister] = useState()
 
   // Variables hook
   const [showCart,setShowCart] = useState(false)
@@ -24,6 +21,7 @@ const HeaderMain = ({fixed}) => {
   const [showLogin, setShowLogin, setLayoutModal, setShowSignUp] = useContext(LoginContext)
   const [search,setSearch] = useState('')
 
+  console.log()
 
   // Variables redux
   const state = useSelector(state => state.user)

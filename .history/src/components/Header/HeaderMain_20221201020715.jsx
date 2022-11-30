@@ -24,6 +24,7 @@ const HeaderMain = ({fixed}) => {
   const [showLogin, setShowLogin, setLayoutModal, setShowSignUp] = useContext(LoginContext)
   const [search,setSearch] = useState('')
 
+  console.log(setShowSignUp)
 
   // Variables redux
   const state = useSelector(state => state.user)

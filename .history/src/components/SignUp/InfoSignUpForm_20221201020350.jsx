@@ -17,14 +17,13 @@ const InfoSignUpForm = ({setShowSignUp}) => {
     const dispatch = useDispatch()
     const state = useSelector(state => state.user)
 
-    
 
-    // useEffect(() => {
-    //     if(state.successRegister)
-    //     {
-    //         setShowSignUp(false)
-    //     }
-    // },[])
+    useEffect(() => {
+        if(state.successRegister)
+        {
+            setShowSignUp(false)
+        }
+    },[])
 
     useEffect(() => {
 

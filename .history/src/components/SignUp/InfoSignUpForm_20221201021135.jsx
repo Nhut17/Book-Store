@@ -17,7 +17,7 @@ const InfoSignUpForm = ({setShowSignUp}) => {
     const dispatch = useDispatch()
     const state = useSelector(state => state.user)
 
-    
+    console.log('succ ' + state.successRegister)
 
     // useEffect(() => {
     //     if(state.successRegister)
