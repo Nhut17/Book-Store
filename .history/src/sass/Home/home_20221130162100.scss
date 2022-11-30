@@ -26,10 +26,11 @@
         align-items: center;
         cursor: pointer;
         background-color: $primary-color;
-        transition: all 0.3s;
         &:hover{
-           box-shadow: 0 0 20px 0 $primary-color;
-            
+            background-color: rgba($color: $primary-color, $alpha: 0.6);
+            .ic{
+                color: white;
+            }
         }
         .ic{
             color: white;

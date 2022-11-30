@@ -27,16 +27,9 @@ const Home = () => {
       {
         setVisible(true)
       }
-      else{
-        setVisible(false)
-      }
     }
 
     document.addEventListener('scroll', scrollTo)
-
-    return () => {
-      document.removeEventListener('scroll', scrollTo)
-    }
   },[])
 
 
@@ -76,10 +69,10 @@ const Home = () => {
   return (
     <div className='home'>
     {
-      visible &&
-      <ScrollToTop />
+      visible
     }
 
+      <ScrollToTop />
 
       <ToastContainer />
       <div className="main-top">

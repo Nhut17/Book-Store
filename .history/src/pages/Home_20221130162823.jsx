@@ -27,15 +27,12 @@ const Home = () => {
       {
         setVisible(true)
       }
-      else{
-        setVisible(false)
-      }
     }
 
     document.addEventListener('scroll', scrollTo)
 
     return () => {
-      document.removeEventListener('scroll', scrollTo)
+      
     }
   },[])
 

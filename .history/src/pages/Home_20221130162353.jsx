@@ -14,7 +14,7 @@ import ScrollToTop from '../components/Home/ScrollToTop'
 
 const Home = () => {
 
-  const [visible,setVisible] = useState(false)
+  const [visible,setVisible] = useState(true)
   const dispatch = useDispatch()
   const listProduct = useSelector(state => state.product.listProduct)
   const { user, success } = useSelector(state => state.user)
@@ -25,18 +25,11 @@ const Home = () => {
     const scrollTo = () => {
       if(window.scrollY > 200)
       {
-        setVisible(true)
-      }
-      else{
         setVisible(false)
       }
     }
 
     document.addEventListener('scroll', scrollTo)
-
-    return () => {
-      document.removeEventListener('scroll', scrollTo)
-    }
   },[])
 
 
@@ -75,11 +68,8 @@ const Home = () => {
 
   return (
     <div className='home'>
-    {
-      visible &&
-      <ScrollToTop />
-    }
 
+      <ScrollToTop />
 
       <ToastContainer />
       <div className="main-top">

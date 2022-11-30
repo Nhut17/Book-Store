@@ -28,7 +28,7 @@ const Home = () => {
         setVisible(true)
       }
       else{
-        setVisible(false)
+        set
       }
     }
 

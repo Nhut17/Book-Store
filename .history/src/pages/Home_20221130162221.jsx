@@ -20,25 +20,7 @@ const Home = () => {
   const { user, success } = useSelector(state => state.user)
   const navigate = useNavigate()
 
-  useEffect(() =>{
-
-    const scrollTo = () => {
-      if(window.scrollY > 200)
-      {
-        setVisible(true)
-      }
-      else{
-        setVisible(false)
-      }
-    }
-
-    document.addEventListener('scroll', scrollTo)
-
-    return () => {
-      document.removeEventListener('scroll', scrollTo)
-    }
-  },[])
-
+  console.log(success)
 
   useEffect(() => {
     if (success) {
@@ -75,11 +57,8 @@ const Home = () => {
 
   return (
     <div className='home'>
-    {
-      visible &&
-      <ScrollToTop />
-    }
 
+      <ScrollToTop />
 
       <ToastContainer />
       <div className="main-top">

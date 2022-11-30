@@ -10,35 +10,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom'
 import { getCart } from '../redux/reducer/cartSlice'
-import ScrollToTop from '../components/Home/ScrollToTop'
+import Scroll
 
 const Home = () => {
 
-  const [visible,setVisible] = useState(false)
   const dispatch = useDispatch()
   const listProduct = useSelector(state => state.product.listProduct)
   const { user, success } = useSelector(state => state.user)
   const navigate = useNavigate()
 
-  useEffect(() =>{
-
-    const scrollTo = () => {
-      if(window.scrollY > 200)
-      {
-        setVisible(true)
-      }
-      else{
-        setVisible(false)
-      }
-    }
-
-    document.addEventListener('scroll', scrollTo)
-
-    return () => {
-      document.removeEventListener('scroll', scrollTo)
-    }
-  },[])
-
+  console.log(success)
 
   useEffect(() => {
     if (success) {
@@ -75,10 +56,6 @@ const Home = () => {
 
   return (
     <div className='home'>
-    {
-      visible &&
-      <ScrollToTop />
-    }
 
 
       <ToastContainer />

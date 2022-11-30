@@ -22,21 +22,9 @@ const Home = () => {
 
   useEffect(() =>{
 
-    const scrollTo = () => {
-      if(window.scrollY > 200)
-      {
-        setVisible(true)
-      }
-      else{
-        setVisible(false)
-      }
-    }
+
 
     document.addEventListener('scroll', scrollTo)
-
-    return () => {
-      document.removeEventListener('scroll', scrollTo)
-    }
   },[])
 
 
@@ -75,11 +63,8 @@ const Home = () => {
 
   return (
     <div className='home'>
-    {
-      visible &&
-      <ScrollToTop />
-    }
 
+      <ScrollToTop />
 
       <ToastContainer />
       <div className="main-top">

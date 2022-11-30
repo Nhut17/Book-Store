@@ -15,25 +15,17 @@
     background-color: #F3F3F3;
     .scroll-to-top{
         position: fixed;
-        bottom: 30px;
-        right: 30px;
+        top: 0;
+        right: 0;
         width: 50px;
         height: 50px;
-        border: 1px solid $primary-color;
+        border: 1px solid black;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
-        background-color: $primary-color;
-        transition: all 0.3s;
-        &:hover{
-           box-shadow: 0 0 20px 0 $primary-color;
-            
-        }
         .ic{
-            color: white;
-            font-size: 30px;
+            fs
         }
     }
     .main-top{

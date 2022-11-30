@@ -14,31 +14,12 @@ import ScrollToTop from '../components/Home/ScrollToTop'
 
 const Home = () => {
 
-  const [visible,setVisible] = useState(false)
   const dispatch = useDispatch()
   const listProduct = useSelector(state => state.product.listProduct)
   const { user, success } = useSelector(state => state.user)
   const navigate = useNavigate()
 
-  useEffect(() =>{
-
-    const scrollTo = () => {
-      if(window.scrollY > 200)
-      {
-        setVisible(true)
-      }
-      else{
-        setVisible(false)
-      }
-    }
-
-    document.addEventListener('scroll', scrollTo)
-
-    return () => {
-      document.removeEventListener('scroll', scrollTo)
-    }
-  },[])
-
+  console.log(success)
 
   useEffect(() => {
     if (success) {
@@ -75,11 +56,14 @@ const Home = () => {
 
   return (
     <div className='home'>
-    {
-      visible &&
-      <ScrollToTop />
-    }
 
+      <ScrollToTop />
+
+      <div className='content'>
+        <h1 className='title'>
+          Welcome to Chào Mừng
+        </h1>
+        <p className='subtitle'>
 
       <ToastContainer />
       <div className="main-top">
