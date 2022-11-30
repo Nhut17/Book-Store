@@ -8,7 +8,7 @@ import LiteratureBook from '../pages/LiteratureBook.jsx';
 import ProductDetail from '../components/ProductDetail/ProductDetail.jsx';
 import CheckOut from '../pages/CheckOut.jsx';
 import PayForOrder from '../pages/PayForOrder.jsx';
-import InfoProfile from '../pages/InfoProfile.jsx';
+import Chang from '../pages/InfoProfile.jsx';
 import ForeignLiterature from '../pages/ForeignLiterature.jsx';
 
 import ChildrenBook from '../pages/ChildrenBook.jsx';
@@ -29,11 +29,8 @@ import AdminCate from '../components/Admin/components/AdminCate/AdminCate.jsx';
 import OrderList from '../pages/OrderList.jsx';
 import CategoriesMainProduct from '../pages/CategoriesMainProduct.jsx';
 import GmailOTP from '../components/Profile/GmailOTP.jsx';
-
 import ChangPassword from '../components/Profile/ChangePassword.jsx';
-
 import ChangePasswordCurrent from '../components/Profile/ChangePasswordCurrent.jsx';
-
 const Router = () => {
   return (
     <Routes>
@@ -51,12 +48,9 @@ const Router = () => {
       <Route path="/pay-for-order" element={<PayForOrder />} />
 
       <Route path="/profile" element={<InfoProfile />} />
-
-      <Route path="/profile/change-password-current" element={<ChangePasswordCurrent />} />
-
+      <Route path="/profile/changePasswordCurrent" element={<Chang />} />
       <Route path="/sendEmailOTP" element={<GmailOTP />} />
       <Route path="/changePassword" element={<ChangPassword />} />
-
 
       {/* <Route path="/order" element={<OrderList />} /> */}
       <Route path="/success" element={<OrderSuccess />} />

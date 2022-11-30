@@ -7,31 +7,21 @@ import InfoUser from './InfoUser'
 import ProfileImage from './ProfileImage'
 import { Link } from 'react-router-dom'
 import { useDispatch } from "react-redux";
-import { getUser, changeUserAvatar, changeUserProfile } from "../../redux/reducer/userSlice";
+import { getUser, changeUserAvatar } from "../../redux/reducer/userSlice";
 import { useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
 
 const MainProfile = () => {
   const dispatch = useDispatch()
   const currentUser = useSelector(state => state.user.currentUser)
-  console.log('currentUser', currentUser)
+
   const { register, handleSubmit } = useForm({ defaultValues: {} });
 
   useEffect(() => {
     dispatch(getUser())
   }, [])
-  const genderArr = [
-    {
-      id: 1,
-      gender: 'male',
-    },
-    {
-      id: 2,
-      gender: 'female',
-    }
-  ]
+  
   const [userDoB, setUserDoB] = useState(currentUser?.userDob)
-  const [genderCheck, setGenderCheck] = useState(currentUser?.userGender)
   const [uploadImage, setUploadImage] = useState(currentUser?.avatar)
   const [previewImage, setPreviewImage] = useState(currentUser?.avatar)
   const handleOnChangeImage = (event) => {
@@ -43,18 +33,8 @@ const MainProfile = () => {
     }
   }
   const handleOnSubmit = (formData) => {
-    // formData.append('userGender', genderCheck)
-    const form = {
-      fullname: formData.fullname,
-      userAddress: formData.userAddress,
-      userGender: genderCheck,
-      userDob: formData.userDob,
-      userPhone: formData.userPhone
-    }
-    console.log('formData', form)
-
+    console.log('formData', formData)
     dispatch(changeUserAvatar(uploadImage))
-    dispatch(changeUserProfile(form))
     toast("Thay đổi thông tin thành công!",
       {
         position: "top-right",
@@ -75,9 +55,9 @@ const MainProfile = () => {
       <div className='group-infor'>
         <div className='profile-image'>
           <div className='preview-img-container'>
-            <input className='preview-img' type='file'
+              <input className='preview-img' type='file'
               style={{ backgroundImage: `url(${previewImage})` }}
-              onChange={(event) => handleOnChangeImage(event)} />
+                onChange={(event) => handleOnChangeImage(event)} />
           </div>
         </div>
         <form onSubmit={handleSubmit(handleOnSubmit)}>
@@ -87,25 +67,25 @@ const MainProfile = () => {
               <input
                 type="text"
                 placeholder='Họ và tên'
-                defaultValue={currentUser?.fullName}
+                value={currentUser?.fullName}
                 {...register('fullname')}></input>
             </div>
-            {/* <div className='input-common input-email'>
+            <div className='input-common input-email'>
               <label>Email</label>
               <input type="text" placeholder='Email'
-                defaultValue={currentUser?.userEmail}
+                value={currentUser?.userEmail}
                 {...register('userEmail')}></input>
-            </div> */}
+            </div>
             <div className='input-common input-password'>
               <label>Địa chỉ</label>
               <input type="text" placeholder='Địa chỉ'
-                defaultValue={currentUser?.userAddress}
+                value={currentUser?.userAddress}
                 {...register('userAddress')}></input>
             </div>
             <div className='input-common input-re-password'>
               <label>Số điện thoại</label>
               <input type="text" placeholder='Số điện thoại'
-                defaultValue={currentUser?.userPhone}
+                value={currentUser?.userPhone}
                 {...register('userPhone')}></input>
             </div>
             <div className="input-common input-dob">
@@ -115,29 +95,29 @@ const MainProfile = () => {
                 onChange={(event) => setUserDoB(event.target.value)}
                 {...register('userDob')} />
             </div>
-          </div >
+          </div>
           <div className="gender mg">
             <label>Giới tính</label>
-            <div className="radio-group"
-            >
-              {genderArr.map(gender => (
-                <div key={gender.id} className='male'
-                >
-                  <input type="radio"
-                    onChange={() => setGenderCheck(gender.gender)}
-                    checked={genderCheck === gender.gender}
-                  />
-                  <label >{gender.gender === 'male' ? 'Nam' : 'Nữ'}</label>
-                </div>
-              ))}
-            </div>
+            <div className="radio-group">
+              <div className="male">
+                <input type="radio"
+                  checked={currentUser?.userGender == 'male' ? true : false}
+                />
 
+                <label >Nam</label>
+              </div>
+              <div className="female">
+                <input type="radio"
+                  checked={currentUser?.userGender == 'female' ? true : false} />
+                <label >Nữ</label>
+              </div>
+            </div>
           </div>
           <button
             type="submit" className='save'>LƯU</button>
-        </form >
+        </form>
 
-      </div >
+      </div>
 
 
       <Link to='/history' >
