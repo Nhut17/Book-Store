@@ -12,16 +12,16 @@ const ModalAddNewAddress = ({ showAddNewAddress, setShowAddNewAddress }) => {
         setShowAddNewAddress(false)
     }
 
-    const { 
+    const {
         register,
         handleSubmit
-     } = useForm()
+    } = useForm()
 
-     const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-     const onHandleSubmit = (formData) => {
-           dispatch(addAddresses(formData))
-     }
+    const onHandleSubmit = (formData) => {
+        dispatch(addAddresses(formData))
+    }
 
     return (
         <div className='Modal-Add-New-Address'>
@@ -39,28 +39,29 @@ const ModalAddNewAddress = ({ showAddNewAddress, setShowAddNewAddress }) => {
                         <div className="input-group">
                             <div className='input-common'>
                                 <label>Họ và tên</label>
-                                <input 
-                                   type="text" 
-                                   placeholder='Họ và tên'
-                                   {...register('name')} ></input>
+                                <input
+                                    type="text"
+                                    placeholder='Họ và tên'
+                                    {...register('name')} ></input>
                             </div>
                             <div className='input-common'>
-                                <label>Địa chỉ cụ thể</label>
-                                <input 
-                                   type="text" 
-                                   placeholder='Địa chỉ cụ thể'
-                                   {...register('address')} ></input>
+                                <label>Địa chỉ cụ thể</label>``
+                                <input
+                                    type="text"
+                                    placeholder='Địa chỉ cụ thể'
+                                    {...register('address')} ></input>
                             </div>
                             <div className='input-common'>
                                 <label>Điện thoại</label>
-                                <input 
-                                   type="text" 
-                                   placeholder='Điện thoại'
-                                   {...register('phoneNumber')} ></input>
+                                <input
+                                    type="text"
+                                    placeholder='Điện thoại'
+                                    {...register('phoneNumber')} ></input>
                             </div>
                             <div className='input-common'>
                                 <label>Thông tin lưu ý</label>
-                                <input type="text" placeholder='Thông tin lưu ý' ></input>
+                                <input type="text" placeholder='Thông tin lưu ý'
+                                    {...register('note')}></input>
                             </div>
                         </div>
                     </div>

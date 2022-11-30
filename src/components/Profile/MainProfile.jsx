@@ -143,9 +143,11 @@ const MainProfile = () => {
       <Link to='/history' >
         <button className='history'>Lịch sử mua hàng</button>
       </Link>
+
       <Link to='/profile/sendEmailOTP' reloadDocument>
-        <button className="re-password">Thay đổi mật khẩu</button>
-      </Link>
+      <button className="re-password">Thay đổi mật khẩu</button>
+        </Link>
+
     </div>
   )
 }

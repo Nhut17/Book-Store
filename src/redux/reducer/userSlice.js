@@ -13,6 +13,7 @@ const initialState = {
     currentUser: null,
     successLogin: true,
     successSendOTP: false,
+    successChangePassword: false,
 }
 const loginAPI = 'http://localhost:8083/login'
 const registerAPI = 'http://localhost:8083/register'
@@ -156,7 +157,7 @@ export const getAllUser = createAsyncThunk('user/getAllUser', async (data, thunk
     }
 })
 
-// Get Delete User
+// Send OTP
 export const sendOTP = createAsyncThunk('user/sendOTP', async (email, thunkAPI) => {
     try {
         const token = localStorage.getItem('token')
@@ -168,7 +169,31 @@ export const sendOTP = createAsyncThunk('user/sendOTP', async (email, thunkAPI) 
         }
 
         console.log(data)
-        const res = await axios.get('http://localhost:8083/recoveryPassword/getOtp',data, {
+
+        const res = await axios.post('http://localhost:8083/recoveryPassword/getOtp',data, {
+            headers: headers
+        })
+        console.log('done')
+
+        return res.data
+    }
+    catch (e) {
+        return e.message
+    }
+})
+
+// Change password
+export const changePassword = createAsyncThunk('user/changePassword', async (data, thunkAPI) => {
+    try {
+        const token = localStorage.getItem('token')
+        const headers = {
+            Authorization: 'Bearer ' + token,
+        }
+       
+
+        console.log(data)
+        const res = await axios.post('http://localhost:8083/recoveryPassword/checkOtp',data, {
+
             headers: headers
         })
         console.log('done')
@@ -193,7 +218,11 @@ const userSlice = createSlice({
         },
         resetSuccessSendOTP: (state, action) => {
             state.successSendOTP = false
-        }
+
+        },
+        resetSuccessChangePassword: (state, action) => {
+            state.successChangePassword = false
+        },
     },
     extraReducers: {
         [loginUser.pending]: (state, action) => {
@@ -239,9 +268,17 @@ const userSlice = createSlice({
         [sendOTP.rejected]: (state, action) => {
             state.successSendOTP = false
         },
+
+        [changePassword.fulfilled]: (state, action) => {
+            state.successChangePassword = true
+        },
+        [changePassword.rejected]: (state, action) => {
+            state.successChangePassword = false
+        },
     }
 })
 
-export const { logoutAdmin, resetSuccess, resetSuccessSendOTP } = userSlice.actions
+export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword } = userSlice.actions
+
 
 export default userSlice.reducer

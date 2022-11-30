@@ -29,7 +29,9 @@ import AdminCate from '../components/Admin/components/AdminCate/AdminCate.jsx';
 import OrderList from '../pages/OrderList.jsx';
 import CategoriesMainProduct from '../pages/CategoriesMainProduct.jsx';
 import GmailOTP from '../components/Profile/GmailOTP.jsx';
-import ChangPassword from '../components/Profile/ChangPassword.jsx';
+
+import ChangPassword from '../components/Profile/ChangePassword.jsx';
+
 
 const Router = () => {
   return (
@@ -48,8 +50,9 @@ const Router = () => {
       <Route path="/pay-for-order" element={<PayForOrder />} />
 
       <Route path="/profile" element={<InfoProfile />} />
-      <Route path="/profile/sendEmailOTP" element={<GmailOTP />} />
-      <Route path="/profile/sendEmailOTP/changePassword" element={<ChangPassword />} />
+
+      <Route path="/sendEmailOTP" element={<GmailOTP />} />
+      <Route path="/changePassword" element={<ChangPassword />} />
 
 
       {/* <Route path="/order" element={<OrderList />} /> */}

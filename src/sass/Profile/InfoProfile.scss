@@ -210,11 +210,15 @@
 }
 
 
+
 .send-mail-otp{
     height: 750px;
     .container{
        
         form{
+
+            top: 50px;
+
             margin-bottom: 30px;
             width:100%;
             height:400px;
@@ -287,17 +291,84 @@
 
 
 .change-password{
-    height: 750px;
+    height: 650px;
     .container{
         form{
+            top: 50px;
             margin-bottom: 30px;
             width:100%;
-            height:400px;
+            height:auto;
+
             background:#fff;
             border: 1px solid #cdcdcd;
             border-radius: 3px;
             position: relative;
             padding: 20px;
+
+            .err-msg{
+                display: block;
+                padding-left: 160px;
+                padding-top: 10px;
+                color: #F97C7C;
+                font-size: 17px;
+            }
+            p{
+                text-align: center;
+                width: 100%;
+                padding-top: 20px;
+                padding-bottom: 30px;
+            
+                    font-size: 30px;
+                    color: #379237;
+                    font-weight: bold;
+            }
+            input{
+                border: 1px solid gray;
+                outline: none;
+                padding: 10px 15px;
+                width: 400px;
+                border-radius: 8px;
+            }
+            .input-group{
+                margin: 20px 0;
+                span{
+                    margin-right: 10px;
+                }
+               
+            }
+            .email{
+                input{
+                    margin-left: 100px;
+                }
+            }
+            .otp{
+                input{
+                    margin-left: 90px;
+                }
+            }
+            .re-password{
+                input{
+                    margin-left: 10px;
+                }
+            }
+
+            button{
+                // position: absolute;
+                padding: 12px 70px;
+                width: 200px;
+                // transform: translateY(150px);
+                background-color: $secondary-color;
+                color: white ;  
+                border-radius: 8px;
+                margin-right: 20px;
+                font-size: 20px;
+                transition: all 0.3s;
+                &:hover{
+                    background-color: $primary-color;
+
+                }
+            }
+
         }
     }
 }

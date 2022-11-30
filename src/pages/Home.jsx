@@ -57,10 +57,21 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
+
+    if(user == null){
+      navigate('/')
+    }
+    if (user) {
       if (user?.roles[0]?.authority === 'ADMIN') {
         navigate('/admin')
       }
-      
+      if (user?.roles[0]?.authority === 'USER') {
+        navigate('/')
+      }
+    }
+
+    
+
   }, [])
 
 
