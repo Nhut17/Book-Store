@@ -34,15 +34,15 @@ const ListBanner = () => {
       title1: '',
       title2: '',
       description: '',
-      description1: '',
-      button: '',
-      image: 'https://bookbuy.vn/Res/Images/Album/e6c10e39-49be-4d0b-a55c-664684635f8e.jpg?w=880&scale=both&h=320&mode=crop'
+      description1: 'Từ ngày 1-12 đến hết ngày 24-12 ',
+     
+      image: 'https://cdn0.fahasa.com/media/magentothem/banner7/Black_friday_Cyber_monday_mainbanner_Slide_840x320.jpg'
     },
   ]
   
   const setting = {
-    infinite: true,
-    autoplay: 2000,
+    // infinite: true,
+    autoplay: 2,
   }
 
  
@@ -76,10 +76,8 @@ const ListBanner = () => {
                         {item.description1}
                     </span>
                 </p>
-               {
-                item.button.length > 0 &&
+               
                 <button>{item.button}</button>
-               }
               </div>
 
           </div>

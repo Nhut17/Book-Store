@@ -36,13 +36,13 @@ const ListBanner = () => {
       description: '',
       description1: '',
       button: '',
-      image: 'https://bookbuy.vn/Res/Images/Album/e6c10e39-49be-4d0b-a55c-664684635f8e.jpg?w=880&scale=both&h=320&mode=crop'
+      image: 'https://cdn0.fahasa.com/media/magentothem/banner7/Mega_sale_LDP_Icanconnect_Mainbanner.jpg'
     },
   ]
   
   const setting = {
-    infinite: true,
-    autoplay: 2000,
+    // infinite: true,
+    autoplay: 3,
   }
 
  

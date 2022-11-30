@@ -42,7 +42,7 @@ const ListBanner = () => {
   
   const setting = {
     infinite: true,
-    autoplay: 2000,
+    autoplay: 1,
   }
 
  

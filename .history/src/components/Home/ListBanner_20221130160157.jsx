@@ -29,20 +29,20 @@ const ListBanner = () => {
       image: 'https://wpbingosite.com/wordpress/bookio/wp-content/webp-express/webp-images/uploads/2021/08/slider1-2.jpg.webp'
     },
     {
-      title: '',
+      title: 'Happy Chrismas',
       title0: '',
       title1: '',
       title2: '',
-      description: '',
-      description1: '',
-      button: '',
-      image: 'https://bookbuy.vn/Res/Images/Album/e6c10e39-49be-4d0b-a55c-664684635f8e.jpg?w=880&scale=both&h=320&mode=crop'
+      description: 'Đón giáng sinh cùng Vinabook với hàng chục deal hấp dẫn',
+      description1: 'Từ ngày 1-12 đến hết ngày 24-12 ',
+      button: 'Xem ngay',
+      image: 'https://wpbingosite.com/wordpress/bookio/wp-content/webp-express/webp-images/uploads/2021/08/slider1-2.jpg.webp'
     },
   ]
   
   const setting = {
-    infinite: true,
-    autoplay: 2000,
+    // infinite: true,
+    autoplay: 2,
   }
 
  
@@ -76,10 +76,8 @@ const ListBanner = () => {
                         {item.description1}
                     </span>
                 </p>
-               {
-                item.button.length > 0 &&
+               
                 <button>{item.button}</button>
-               }
               </div>
 
           </div>
