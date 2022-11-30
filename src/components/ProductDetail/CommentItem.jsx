@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 
 const CommentItem = ({ data }) => {
-    console.log(data)
     const image = 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'
     return (
         <div className='comment-item'>

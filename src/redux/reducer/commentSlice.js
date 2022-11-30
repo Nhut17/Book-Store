@@ -3,7 +3,8 @@ import axios from "axios";
 
 
 const initialState = {
-    listCommentById: []
+    listCommentById: [],
+    listCommentByIdBasedRating: []
 }
 
 export const createComment = createAsyncThunk('comment/create',
@@ -42,13 +43,40 @@ export const getCommentById = createAsyncThunk('order/getCommentById',
             return thunkAPI.rejectWithValue('Error with get all categories')
         }
     })
+export const getCommentByIdBasedRating = createAsyncThunk('order/getCommentById',
+    async (data, thunkAPI) => {
+        try {
+            console.log('data', data)
+            const token = localStorage.getItem('token');
+            const headers = {
+                "Content-Type": "application/json"
+            }
+            const res = await axios.get(`http://localhost:8083/comment/product/rating`, 
+            {
+                "productId": 3,
+                "rating": 5    
+            })
 
+            console.log('respon', res.data)
+
+            return res.data
+        }
+        catch (e) {
+            return thunkAPI.rejectWithValue('Error with get all categories')
+        }
+    })
 const commentSlice = createSlice({
     name: 'comment',
     initialState,
     extraReducers: {
         [getCommentById.fulfilled]: (state, action) => {
             state.listCommentById = action.payload
+        },
+        [getCommentByIdBasedRating.fulfilled]: (state, action) => {
+            state.listCommentByIdBasedRating = action.payload
+        },
+        [getCommentByIdBasedRating.rejected]: (state, action) => {
+            
         },
         [createComment.fulfilled]: (state, action) => {
             console.log('success')
