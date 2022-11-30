@@ -10,6 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom'
 import { getCart } from '../redux/reducer/cartSlice'
+import { getUser } from '../redux/reducer/userSlice'
 
 const Home = () => {
 
@@ -17,9 +18,6 @@ const Home = () => {
   const listProduct = useSelector(state => state.product.listProduct)
   const { user, success } = useSelector(state => state.user)
   const navigate = useNavigate()
-
-
-
   useEffect(() => {
     if (success) {
       toast(`Chào mừng ${user?.name}`,
@@ -38,6 +36,7 @@ const Home = () => {
 
   useEffect(() => {
     if (user) {
+      dispatch(getUser())
       if (user?.roles[0]?.authority === 'ADMIN') {
         navigate('/admin')
       }
@@ -45,7 +44,9 @@ const Home = () => {
   }, [])
 
 
-
+  // useEffect(() => {
+  //   dispatch(getUser())
+  // }, [])
   useEffect(() => {
     dispatch(getProducts())
   }, [])

@@ -21,6 +21,7 @@ export const loginUser = createAsyncThunk('user/login', async (data, thunkAPI) =
         const res = await axios.post(loginAPI, data)
         localStorage.setItem('token', res.data.token)
         thunkAPI.dispatch(getCart())
+        thunkAPI.dispatch(getUser())
         return res.data
     }
     catch (e) {
@@ -53,6 +54,26 @@ export const changeUserAvatar = createAsyncThunk('user/changeAvatar',
             return thunkAPI.rejectWithValue('Error with get product detail')
         }
     })
+
+
+export const changeUserProfile = createAsyncThunk('user/changeProfile',
+    async (data, thunkAPI) => {
+        try {
+            const token = localStorage.getItem('token')
+            const headers = {
+                Authorization: 'Bearer ' + token,
+            }
+            const res = await axios.post(`http://localhost:8083/user/profile/change`, data, {
+                headers: headers
+            })
+            thunkAPI.dispatch(getUser())
+            return res.data
+
+        }
+        catch (e) {
+            return thunkAPI.rejectWithValue('Error with get product detail')
+        }
+    })
 // Get api register
 export const registerUser = createAsyncThunk('user/register',
     async (data, thunkAPI) => {
@@ -71,22 +92,23 @@ export const registerUser = createAsyncThunk('user/register',
 
 
 // Get current api user
-export const getUser = createAsyncThunk('user/getUser', async (data, thunkAPI) => {
-    try {
-        const token = localStorage.getItem('token')
-        const headers = {
-            Authorization: 'Bearer ' + token,
+export const getUser = createAsyncThunk('user/getUser',
+    async (data, thunkAPI) => {
+        try {
+            const token = localStorage.getItem('token')
+            const headers = {
+                Authorization: 'Bearer ' + token,
+            }
+            const res = await axios.get(`http://localhost:8083/user/profile`, {
+                headers: headers,
+            })
+            // console.log('check res',res)
+            return res.data
         }
-        const res = await axios.get(`http://localhost:8083/user/profile`, {
-            headers: headers,
-        })
-        // console.log('check res',res)
-        return res.data
-    }
-    catch (e) {
-        return e.message
-    }
-})
+        catch (e) {
+            return e.message
+        }
+    })
 
 
 

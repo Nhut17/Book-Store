@@ -7,21 +7,31 @@ import InfoUser from './InfoUser'
 import ProfileImage from './ProfileImage'
 import { Link } from 'react-router-dom'
 import { useDispatch } from "react-redux";
-import { getUser, changeUserAvatar } from "../../redux/reducer/userSlice";
+import { getUser, changeUserAvatar, changeUserProfile } from "../../redux/reducer/userSlice";
 import { useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
 
 const MainProfile = () => {
   const dispatch = useDispatch()
   const currentUser = useSelector(state => state.user.currentUser)
-
+  console.log('currentUser', currentUser)
   const { register, handleSubmit } = useForm({ defaultValues: {} });
 
   useEffect(() => {
     dispatch(getUser())
   }, [])
-  
+  const genderArr = [
+    {
+      id: 1,
+      gender: 'male',
+    },
+    {
+      id: 2,
+      gender: 'female',
+    }
+  ]
   const [userDoB, setUserDoB] = useState(currentUser?.userDob)
+  const [genderCheck, setGenderCheck] = useState(currentUser?.userGender)
   const [uploadImage, setUploadImage] = useState(currentUser?.avatar)
   const [previewImage, setPreviewImage] = useState(currentUser?.avatar)
   const handleOnChangeImage = (event) => {
@@ -33,8 +43,18 @@ const MainProfile = () => {
     }
   }
   const handleOnSubmit = (formData) => {
-    console.log('formData', formData)
+    // formData.append('userGender', genderCheck)
+    const form = {
+      fullname: formData.fullname,
+      userAddress: formData.userAddress,
+      userGender: genderCheck,
+      userDob: formData.userDob,
+      userPhone: formData.userPhone
+    }
+    console.log('formData', form)
+
     dispatch(changeUserAvatar(uploadImage))
+    dispatch(changeUserProfile(form))
     toast("Thay đổi thông tin thành công!",
       {
         position: "top-right",
@@ -67,25 +87,25 @@ const MainProfile = () => {
               <input
                 type="text"
                 placeholder='Họ và tên'
-                value={currentUser?.fullName}
+                defaultValue={currentUser?.fullName}
                 {...register('fullname')}></input>
             </div>
-            <div className='input-common input-email'>
+            {/* <div className='input-common input-email'>
               <label>Email</label>
               <input type="text" placeholder='Email'
-                value={currentUser?.userEmail}
+                defaultValue={currentUser?.userEmail}
                 {...register('userEmail')}></input>
-            </div>
+            </div> */}
             <div className='input-common input-password'>
               <label>Địa chỉ</label>
               <input type="text" placeholder='Địa chỉ'
-                value={currentUser?.userAddress}
+                defaultValue={currentUser?.userAddress}
                 {...register('userAddress')}></input>
             </div>
             <div className='input-common input-re-password'>
               <label>Số điện thoại</label>
               <input type="text" placeholder='Số điện thoại'
-                value={currentUser?.userPhone}
+                defaultValue={currentUser?.userPhone}
                 {...register('userPhone')}></input>
             </div>
             <div className="input-common input-dob">
@@ -95,35 +115,35 @@ const MainProfile = () => {
                 onChange={(event) => setUserDoB(event.target.value)}
                 {...register('userDob')} />
             </div>
-          </div>
+          </div >
           <div className="gender mg">
             <label>Giới tính</label>
-            <div className="radio-group">
-              <div className="male">
-                <input type="radio"
-                  checked={currentUser?.userGender == 'male' ? true : false}
-                />
-
-                <label >Nam</label>
-              </div>
-              <div className="female">
-                <input type="radio"
-                  checked={currentUser?.userGender == 'female' ? true : false} />
-                <label >Nữ</label>
-              </div>
+            <div className="radio-group"
+            >
+              {genderArr.map(gender => (
+                <div key={gender.id} className='male'
+                >
+                  <input type="radio"
+                    onChange={() => setGenderCheck(gender.gender)}
+                    checked={genderCheck === gender.gender}
+                  />
+                  <label >{gender.gender === 'male' ? 'Nam' : 'Nữ'}</label>
+                </div>
+              ))}
             </div>
+
           </div>
           <button
             type="submit" className='save'>LƯU</button>
-        </form>
+        </form >
 
-      </div>
+      </div >
 
 
       <Link to='/history' >
         <button className='history'>Lịch sử mua hàng</button>
       </Link>
-    </div>
+    </div >
   )
 }
 

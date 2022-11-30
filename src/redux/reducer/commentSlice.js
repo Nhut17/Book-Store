@@ -27,7 +27,7 @@ export const createComment = createAsyncThunk('comment/create',
             return thunkAPI.rejectWithValue('Error API ')
         }
     })
-export const getCommentById = createAsyncThunk('order/getCommentById',
+export const getCommentById = createAsyncThunk('comment/getCommentById',
     async (id, thunkAPI) => {
         try {
             const token = localStorage.getItem('token');
@@ -43,15 +43,15 @@ export const getCommentById = createAsyncThunk('order/getCommentById',
             return thunkAPI.rejectWithValue('Error with get all categories')
         }
     })
-export const getCommentByIdBasedRating = createAsyncThunk('order/getCommentById',
+export const getCommentByIdBasedRating = createAsyncThunk('comment/getCommentByIdBasedRating',
     async (data, thunkAPI) => {
         try {
             console.log('data', data)
             const headers = {
-                "content-type": "application/json",
+                "Content-Type": "application/json",
             }
-            const res = await axios.get(`http://localhost:8083/comment/product/rating`, data, { headers: headers })
-
+            const res = await axios.post(`http://localhost:8083/comment/product/rating`, data, { headers: headers })
+            
 
             return res.data
         }

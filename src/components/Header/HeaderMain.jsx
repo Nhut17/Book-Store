@@ -6,20 +6,20 @@ import CartShopping from '../CartShopping/CartShopping'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import clx from 'classnames'
-import { useCallback,useRef } from 'react'
+import { useCallback, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import SearchProduct from './SearchProduct'
 
-const HeaderMain = ({fixed}) => {
+const HeaderMain = ({ fixed }) => {
 
   const navigate = useNavigate()
 
   // Variables hook
-  const [showCart,setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState(false)
   const cartRef = useRef()
   const icRef = useRef()
   const [showLogin, setShowLogin, setLayoutModal, setShowSignUp] = useContext(LoginContext)
-  const [search,setSearch] = useState('')
+  const [search, setSearch] = useState('')
 
   // Variables redux
   const state = useSelector(state => state.user)
@@ -33,13 +33,13 @@ const HeaderMain = ({fixed}) => {
   })
 
   // handle logout
- const handleLogout = () => {
- 
-  localStorage.clear()
-  navigate('/')
-  navigate(0)
-  
- }
+  const handleLogout = () => {
+
+    localStorage.clear()
+    navigate('/')
+    navigate(0)
+
+  }
 
   // handle sign up
   const handleSignUp = () => {
@@ -51,8 +51,7 @@ const HeaderMain = ({fixed}) => {
   useEffect(() => {
     const handleMouseDown = (e) => {
 
-      if(!cartRef.current?.contains(e.target) && !icRef.current.contains(e.target))
-      {
+      if (!cartRef.current?.contains(e.target) && !icRef.current.contains(e.target)) {
         setShowCart(false)
       }
     }
@@ -74,18 +73,18 @@ const HeaderMain = ({fixed}) => {
   const handleSearchProduct = (e) => {
     setSearch(e.target.value)
   }
-  
+
 
   // Search Product
   const searchProducts = (data) => {
 
-      return data.filter(val => val.proName?.toLowerCase().includes(search.toLowerCase()))
+    return data.filter(val => val.proName?.toLowerCase().includes(search.toLowerCase()))
   }
 
   return (
     <div className={clx({
-      'header-main' : true,
-      'fixed' : fixed,
+      'header-main': true,
+      'fixed': fixed,
       'zIndex': '100'
     })} >
       <div className="container">
@@ -97,36 +96,37 @@ const HeaderMain = ({fixed}) => {
 
         <div className="input-group-search">
           <form>
-          <i className="fa-solid fa-magnifying-glass ic-search"></i>
-          <input type="text" 
-                placeholder='Tìm tựa sách tác giả'
-                value={search}
-                onChange={handleSearchProduct}
-                 />
-          <button>Tìm sách</button>
+            <i className="fa-solid fa-magnifying-glass ic-search"></i>
+            <input type="text"
+              placeholder='Tìm tựa sách tác giả'
+              value={search}
+              onChange={handleSearchProduct}
+            />
+            <button>Tìm sách</button>
           </form>
           {
-            search.length > 0 &&  <SearchProduct listProduct={searchProducts(listProduct)} />
+            search.length > 0 && <SearchProduct listProduct={searchProducts(listProduct)} />
           }
         </div>
 
         <ul className="top-cart">
           <li className='border-cart'>
-            <i className="fa-solid fa-cart-shopping cart" ref={icRef}onClick={handleShowCart}>
-            <span className='quantity-item'>{quantityItemCart}</span>
+            <i className="fa-solid fa-cart-shopping cart" ref={icRef} onClick={handleShowCart}>
+              <span className='quantity-item'>{quantityItemCart}</span>
             </i>
             {
               showCart &&
               <CartShopping cartRef={cartRef} />
             }
-        
+
 
           </li>
 
           <li className='sign'>
             {
               state.user ? (
-                <Link to='/profile'>
+                <Link to='/profile' reloadDocument>
+
                   <span className='sign-in' >{state.user?.name}</span>
                 </Link>
               ) : (

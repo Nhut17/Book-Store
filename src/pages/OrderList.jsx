@@ -17,7 +17,7 @@ const OrderList = () => {
             <div className='my-order-list'>
                 {
                     listOrderOfUser?.map((item, index) => (
-                        <OrderDetail key={index} data={item} />
+                        <OrderDetail  data={item} />
                     ))
                 }
             </div>

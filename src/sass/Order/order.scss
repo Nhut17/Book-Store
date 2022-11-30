@@ -1,7 +1,6 @@
 @import '../variables.scss';
 
 .order-list{
-
     width: 100%;
     max-width: 1800px;
     margin: auto;
@@ -64,6 +63,13 @@
         }
         .summary-status-pending{
             color: #ffa800;
+            font-size: 17px;
+            font-weight: 500;
+            float: left;
+            // padding-left: 100px;
+        }
+        .summary-status-delivering{
+            color: rgb(41, 146, 238);
             font-size: 17px;
             font-weight: 500;
             float: left;
@@ -198,6 +204,19 @@
             }
         }
 
+    }
+    .cancel-order{
+        width: 97%;
+        height: 70px;
+        button{
+            width: 200px;
+            height: 60px;
+            border-radius: 5px;
+            float: right;
+            &:hover{
+                background-color: rgb(233, 41, 41);
+            }
+        }
     }
 
 }
