@@ -208,8 +208,8 @@ const userSlice = createSlice({
         resetSuccessChangePassword: (state, action) => {
             state.successChangePassword = false
         },
-        resetSuccessChangePasswordCurrent: (state, action) => {
-            state.successChangePasswordCurrent = false
+        resetSuccessChangePassword: (state, action) => {
+            state.successChangePassword = false
         },
     },
     extraReducers: {
@@ -262,15 +262,9 @@ const userSlice = createSlice({
         [changePassword.rejected]: (state, action) => {
             state.successChangePassword = false
         },
-        [changePasswordCurrent.fulfilled]: (state, action) => {
-            state.successChangePasswordCurrent = true
-        },
-        [changePasswordCurrent.rejected]: (state, action) => {
-            state.successChangePasswordCurrent = false
-        },
     }
 })
 
-export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword, resetSuccessChangePasswordCurrent } = userSlice.actions
+export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword } = userSlice.actions
 
 export default userSlice.reducer

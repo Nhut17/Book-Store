@@ -124,7 +124,7 @@ const MainProfile = () => {
         <button className='history'>Lịch sử mua hàng</button>
       </Link>
 
-      <Link to='/profile/change-password-current' reloadDocument>
+      <Link to='/change' reloadDocument>
       <button className="re-password">Thay đổi mật khẩu</button>
         </Link>
 

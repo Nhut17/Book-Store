@@ -262,11 +262,11 @@ const userSlice = createSlice({
         [changePassword.rejected]: (state, action) => {
             state.successChangePassword = false
         },
-        [changePasswordCurrent.fulfilled]: (state, action) => {
-            state.successChangePasswordCurrent = true
+        [changePassword.fulfilled]: (state, action) => {
+            state.successChangePassword = true
         },
-        [changePasswordCurrent.rejected]: (state, action) => {
-            state.successChangePasswordCurrent = false
+        [changePassword.rejected]: (state, action) => {
+            state.successChangePassword = false
         },
     }
 })

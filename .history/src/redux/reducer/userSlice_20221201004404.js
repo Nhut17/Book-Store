@@ -14,7 +14,6 @@ const initialState = {
     successLogin: true,
     successSendOTP: false,
     successChangePassword: false,
-    successChangePasswordCurrent: false,
 }
 const loginAPI = 'http://localhost:8083/login'
 const registerAPI = 'http://localhost:8083/register'
@@ -137,13 +136,19 @@ export const getAllUser = createAsyncThunk('user/getAllUser', async (data, thunk
 // Send OTP
 export const sendOTP = createAsyncThunk('user/sendOTP', async (email, thunkAPI) => {
     try {
-       
+        const token = localStorage.getItem('token')
+        const headers = {
+            Authorization: 'Bearer ' + token,
+        }
         const data = {
             email: email
         }
 
         console.log(data)
-        const res = await axios.post('http://localhost:8083/recoveryPassword/getOtp',data)
+        const res = await axios.post('http://localhost:8083/recoveryPassword/getOtp',data, {
+            headers: headers
+        })
+        console.log('done')
 
         return res.data
     }
@@ -155,11 +160,17 @@ export const sendOTP = createAsyncThunk('user/sendOTP', async (email, thunkAPI) 
 // Change password
 export const changePassword = createAsyncThunk('user/changePassword', async (data, thunkAPI) => {
     try {
-      
+        const token = localStorage.getItem('token')
+        const headers = {
+            Authorization: 'Bearer ' + token,
+        }
        
 
         console.log(data)
-        const res = await axios.post('http://localhost:8083/recoveryPassword/checkOtp',data)
+        const res = await axios.post('http://localhost:8083/recoveryPassword/checkOtp',data, {
+            headers: headers
+        })
+        console.log('done')
 
         return res.data
     }
@@ -167,8 +178,6 @@ export const changePassword = createAsyncThunk('user/changePassword', async (dat
         return e.message
     }
 })
-
-
 // Change password
 export const changePasswordCurrent = createAsyncThunk('user/changePasswordCurrent', async (data, thunkAPI) => {
     try {
@@ -179,9 +188,10 @@ export const changePasswordCurrent = createAsyncThunk('user/changePasswordCurren
        
 
         console.log(data)
-        const res = await axios.post('http://localhost:8083/user/changepassword',data, {
+        const res = await axios.post('http://localhost:8083/recoveryPassword/checkOtp',data, {
             headers: headers
         })
+        console.log('done')
 
         return res.data
     }
@@ -189,7 +199,6 @@ export const changePasswordCurrent = createAsyncThunk('user/changePasswordCurren
         return e.message
     }
 })
-
 
 const userSlice = createSlice({
     name: 'user',
@@ -207,9 +216,6 @@ const userSlice = createSlice({
         },
         resetSuccessChangePassword: (state, action) => {
             state.successChangePassword = false
-        },
-        resetSuccessChangePasswordCurrent: (state, action) => {
-            state.successChangePasswordCurrent = false
         },
     },
     extraReducers: {
@@ -262,15 +268,9 @@ const userSlice = createSlice({
         [changePassword.rejected]: (state, action) => {
             state.successChangePassword = false
         },
-        [changePasswordCurrent.fulfilled]: (state, action) => {
-            state.successChangePasswordCurrent = true
-        },
-        [changePasswordCurrent.rejected]: (state, action) => {
-            state.successChangePasswordCurrent = false
-        },
     }
 })
 
-export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword, resetSuccessChangePasswordCurrent } = userSlice.actions
+export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword } = userSlice.actions
 
 export default userSlice.reducer

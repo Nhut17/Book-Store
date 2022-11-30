@@ -363,7 +363,7 @@
         }
     }
 }
-.change-password-current{
+.change-password{
     height: 650px;
     .container{
         form{
@@ -407,12 +407,16 @@
                 }
                
             }
-            .password-current{
+            .email{
                 input{
-                    margin-left: 20px;
+                    margin-left: 100px;
                 }
             }
-            
+            .otp{
+                input{
+                    margin-left: 90px;
+                }
+            }
             .re-password{
                 input{
                     margin-left: 10px;

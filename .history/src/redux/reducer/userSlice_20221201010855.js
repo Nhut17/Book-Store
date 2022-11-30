@@ -14,7 +14,7 @@ const initialState = {
     successLogin: true,
     successSendOTP: false,
     successChangePassword: false,
-    successChangePasswordCurrent: false,
+    successChangePassword: false,
 }
 const loginAPI = 'http://localhost:8083/login'
 const registerAPI = 'http://localhost:8083/register'
@@ -208,9 +208,6 @@ const userSlice = createSlice({
         resetSuccessChangePassword: (state, action) => {
             state.successChangePassword = false
         },
-        resetSuccessChangePasswordCurrent: (state, action) => {
-            state.successChangePasswordCurrent = false
-        },
     },
     extraReducers: {
         [loginUser.pending]: (state, action) => {
@@ -262,15 +259,9 @@ const userSlice = createSlice({
         [changePassword.rejected]: (state, action) => {
             state.successChangePassword = false
         },
-        [changePasswordCurrent.fulfilled]: (state, action) => {
-            state.successChangePasswordCurrent = true
-        },
-        [changePasswordCurrent.rejected]: (state, action) => {
-            state.successChangePasswordCurrent = false
-        },
     }
 })
 
-export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword, resetSuccessChangePasswordCurrent } = userSlice.actions
+export const { logoutAdmin, resetSuccess, resetSuccessSendOTP, resetSuccessChangePassword } = userSlice.actions
 
 export default userSlice.reducer

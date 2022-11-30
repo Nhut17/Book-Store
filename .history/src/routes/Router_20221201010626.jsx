@@ -48,7 +48,7 @@ const Router = () => {
       <Route path="/pay-for-order" element={<PayForOrder />} />
 
       <Route path="/profile" element={<InfoProfile />} />
-      <Route path="/profile/change-password-current" element={<ChangePasswordCurrent />} />
+      <Route path="/profile/changePassword-current" element={<ChangePasswordCurrent />} />
       <Route path="/sendEmailOTP" element={<GmailOTP />} />
       <Route path="/changePassword" element={<ChangPassword />} />
 
