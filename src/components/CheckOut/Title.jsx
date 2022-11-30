@@ -11,12 +11,7 @@ const Title = () => {
         <div className='main-box-product'>
             <div className='main-box-title'>GIỎ HÀNG</div>
             <TableBooks listCart={listCart} loading={loading} />
-            <div className='button-group'>
-            <Link to='/pay-for-order'>
-                <button className='btn thanh-toan'>Thanh toán</button>
-            </Link>
-                <button className='btn quay-lai' onClick={() => navigate('/')}>Quay lại</button>
-            </div>
+
         </div>
     )
 }

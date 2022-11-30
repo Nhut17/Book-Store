@@ -14,7 +14,6 @@ export const getAllCategories = createAsyncThunk('category/getAll',
     async (data, thunkAPI) => {
         try {
             const res = await axios.get('http://localhost:8083/category/getAllActive')
-
             return res.data
         }
         catch (e) {

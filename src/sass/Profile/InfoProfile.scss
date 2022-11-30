@@ -1,33 +1,35 @@
 @import '../variables.scss';
+.breadcrumb{
+    .ant-breadcrumb{
+        ol{
+            display: flex;
+            li{
+                transition: al 0.2s;
+                &:hover{
+                    a{
+                        color: $primary-color;
+                        text-decoration: underline;
+                    }
+                }
+                .ant-breadcrumb-separator{
+                    padding: 0 10px;
+                }
+                &:last-child{
+                .ant-breadcrumb-separator{
+                    display: none;
+                }
+               
+            }
+                
+            }
+        }
+    }
+}
+
 .info-profile{
     .container{
 
-        .breadcrumb{
-            .ant-breadcrumb{
-                ol{
-                    display: flex;
-                    li{
-                        transition: al 0.2s;
-
-                        .ant-breadcrumb-separator{
-                            padding: 0 10px;
-                        }
-                        &:last-child{
-                        .ant-breadcrumb-separator{
-                            display: none;
-                        }
-                        &:hover{
-                            a{
-                                color: $primary-color;
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                        
-                    }
-                }
-            }
-        }
+       
 
         .main-profile{
             margin-bottom: 30px;
@@ -73,11 +75,11 @@
                         text-align: center;
                         margin-right: 7px;
                         .input-common {
-                            width: 70%;
+                            width: 90%;
                             margin: 6px 0 10px 0;
                             line-height: 26px;
                             label{
-                                width: 200px;
+                                width: 150px;
                                 min-width: 100px;
                                 padding-right: 20px !important;
                                 float: left;
@@ -88,7 +90,7 @@
                                 border-radius: 5px;
                                 outline: none;
                                 padding: 10px 15px;
-                                width: 260px;
+                                width: 400px;
                                 // margin-top:5px ;
                             }
                         }
@@ -202,6 +204,7 @@
             }
         }
 
+        
 
     }
 }
@@ -213,7 +216,9 @@
     .container{
        
         form{
+
             top: 50px;
+
             margin-bottom: 30px;
             width:100%;
             height:400px;
@@ -284,6 +289,7 @@
     }
 }
 
+
 .change-password{
     height: 650px;
     .container{
@@ -292,11 +298,13 @@
             margin-bottom: 30px;
             width:100%;
             height:auto;
+
             background:#fff;
             border: 1px solid #cdcdcd;
             border-radius: 3px;
             position: relative;
             padding: 20px;
+
             .err-msg{
                 display: block;
                 padding-left: 160px;
@@ -360,6 +368,7 @@
 
                 }
             }
+
         }
     }
 }

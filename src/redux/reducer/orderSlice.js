@@ -12,7 +12,7 @@ const initialState = {
 export const getAllOrderOfUser = createAsyncThunk('order/getAllOfUser',
     async (data, thunkAPI) => {
         try {
-            const token = localStorage.getItem('token'); 
+            const token = localStorage.getItem('token');
             const headers = {
                 Authorization: 'Bearer ' + token
             }
@@ -110,7 +110,26 @@ export const cancelOrder = createAsyncThunk('order/cancel',
         }
     })
 
+export const cancelByUser = createAsyncThunk('order/cancelByyUser',
+    async (id, thunkAPI) => {
+        try {
 
+            const token = localStorage.getItem('token')
+            const headers = {
+                Authorization: 'Bearer ' + token
+            }
+
+            const res = await axios.post(`http://localhost:8083/user/order/deny/${id}`, {}, {
+                headers: headers
+            });
+
+            thunkAPI.dispatch(getAllOrderOfUser())
+            return res.data
+        }
+        catch (e) {
+            return thunkAPI.rejectWithValue('Error API ')
+        }
+    })
 const orderSlice = createSlice({
     name: 'order',
     initialState,

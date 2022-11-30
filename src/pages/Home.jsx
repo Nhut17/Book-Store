@@ -57,6 +57,7 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
+
     if(user == null){
       navigate('/')
     }
@@ -74,7 +75,9 @@ const Home = () => {
   }, [])
 
 
-
+  // useEffect(() => {
+  //   dispatch(getUser())
+  // }, [])
   useEffect(() => {
     dispatch(getProducts())
   }, [])

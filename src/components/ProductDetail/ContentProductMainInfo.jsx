@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 const ContentProductMainInfo = ({ data }) => {
   return (
     <div className='content-product-info'>
-      <p className="name">{data.pronName}</p>
-      <p className="author">Tác giả: <Link className='act-name' to='/'>{data.author}</Link></p>
+      <p className="name">{data.proName}</p>
+      <p className="author">Tác giả: {data.author}</p>
       <p className="publisher">Nhà xuất bản: {data.publisher}</p>
-      <p className="producer">Nhà phát hành: <Link className='act-name' to='/'>{data.publisher}</Link></p>
       <p className="description">{data.proDescription}</p>
       <p className='see-more'>Xem thêm</p>
       <div className="info-more">

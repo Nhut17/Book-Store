@@ -37,6 +37,10 @@ function Order({ data }) {
           <td><span className="status pending">{data.ordStatus}</span></td>
         }
         {
+          data.ordStatus === 'DELIVERING' &&
+          <td><span className="status delivering">{data.ordStatus}</span></td>
+        }
+        {
           data.ordStatus === 'DONE' &&
           <td><span className="status done">{data.ordStatus}</span></td>
         }
@@ -48,7 +52,7 @@ function Order({ data }) {
           style={{
 
           }} >
-          <button className={data.ordStatus === 'PENDING' ? "confirm btn" : "confirm btn disable"}
+          <button className={data.ordStatus === 'PENDING' || data.ordStatus === 'DELIVERING' ? "confirm btn" : "confirm btn disable"}
             onClick={handleConfirm} >
             {/* <i class="fas fa-check"></i> */}
             <span>Xác nhận đơn</span>

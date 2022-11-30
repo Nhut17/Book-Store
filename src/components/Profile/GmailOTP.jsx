@@ -1,10 +1,13 @@
 
+
+
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { resetSuccessSendOTP, sendOTP } from '../../redux/reducer/userSlice'
 import '../../sass/Profile/InfoProfile.scss'
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -14,6 +17,7 @@ const GmailOTP = () => {
     const { successSendOTP } = useSelector(state => state.user)
     const navigate = useNavigate()
 
+
     console.log(successSendOTP)
 
     const { 
@@ -21,6 +25,7 @@ const GmailOTP = () => {
         handleSubmit,
         formState: { errors },
     } = useForm()
+
 
    
     useEffect(() => {
@@ -33,12 +38,15 @@ const GmailOTP = () => {
             
         }
         dispatch(resetSuccessSendOTP())
+
     },[successSendOTP])
 
     const sendEmail = (formData) => {
         const { email } = formData
+
         dispatch(sendOTP(email))
         toast.success('Gửi mã OTP thành công ',
+
         {
           position: "top-right",
           autoClose: 1000,
@@ -55,6 +63,7 @@ const GmailOTP = () => {
     <div className='send-mail-otp'>
     <ToastContainer />
         
+
     <div className='container'>
             
     <form onSubmit={handleSubmit(sendEmail)}>
@@ -88,6 +97,7 @@ const GmailOTP = () => {
     </form>
     
 </div>
+
 
     </div>
   )
