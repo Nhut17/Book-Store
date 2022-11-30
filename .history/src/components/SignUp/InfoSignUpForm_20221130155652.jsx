@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import logo from '../../assets/images/Home/logo.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { registerUser, resetSuccess } from '../../redux/reducer/userSlice'
+import { registerUser } from '../../redux/reducer/userSlice'
 const InfoSignUpForm = ({setShowSignUp}) => {
 
     const { 
@@ -24,11 +24,7 @@ const InfoSignUpForm = ({setShowSignUp}) => {
         }
     },[])
 
-    useEffect(() => {
-
-        dispatch(resetSuccess())
-
-    },[])
+    useEffect(())
 
     // Post api register
     const handleOnSubmit = (formData) => {

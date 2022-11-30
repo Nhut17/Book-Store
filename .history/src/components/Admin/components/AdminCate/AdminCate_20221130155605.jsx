@@ -21,7 +21,7 @@ function AdminCate(props) {
                 <button >
                     + Add Cate
                 </button>
-                </Link>
+            </Link>
             }
                 
             </div>

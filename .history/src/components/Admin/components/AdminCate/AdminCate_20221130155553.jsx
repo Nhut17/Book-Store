@@ -16,14 +16,13 @@ function AdminCate(props) {
             <div className="admin-cate-link">
 
             {
-                listCate.length <=10 &&
-                <Link to="/admin/category/create">
-                <button >
-                    + Add Cate
-                </button>
-                </Link>
+                listCate
             }
-                
+                <Link to="/admin/category/create">
+                    <button >
+                        + Add Cate
+                    </button>
+                </Link>
             </div>
 
             {listCate &&

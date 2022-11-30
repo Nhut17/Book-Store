@@ -84,7 +84,7 @@ const InfoLoginForm = ({setShowLogin}) => {
         </div>
         <button className='btn-sign-in' >ĐĂNG NHẬP</button>
            {
-            successLogin === false && <span className='err-msg' style={{paddingTop: 0}} >{message}</span>
+                    success === false && <span className='err-msg' style={{paddingTop: 0}} >{message}</span>
             } 
         <div className="login-with">
             <span>Đăng nhập với: </span>

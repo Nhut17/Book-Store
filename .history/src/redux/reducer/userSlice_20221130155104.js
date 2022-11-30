@@ -6,7 +6,7 @@ const initialState = {
     user: null,
     error: false,
     loading: false,
-    success: false,
+    success: true,
     message: '',
     successRegister: true,
     listUser: [],
@@ -142,7 +142,6 @@ const userSlice = createSlice({
         },
         resetSuccess: (state, action) => {
             state.successLogin = true
-            state.successRegister = true
         }
     },
     extraReducers: {

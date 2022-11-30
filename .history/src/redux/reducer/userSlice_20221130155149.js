@@ -142,7 +142,6 @@ const userSlice = createSlice({
         },
         resetSuccess: (state, action) => {
             state.successLogin = true
-            state.successRegister = true
         }
     },
     extraReducers: {

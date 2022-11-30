@@ -6,12 +6,11 @@ const initialState = {
     user: null,
     error: false,
     loading: false,
-    success: false,
+    success: true,
     message: '',
     successRegister: true,
     listUser: [],
-    currentUser: null,
-    successLogin: true,
+    currentUser: null
 }
 const loginAPI = 'http://localhost:8083/login'
 const registerAPI = 'http://localhost:8083/register'
@@ -140,10 +139,12 @@ const userSlice = createSlice({
         logoutAdmin: (state, action) => {
             state.user = null
         },
-        resetSuccess: (state, action) => {
-            state.successLogin = true
-            state.successRegister = true
+        resetMessage: (state, action) => {
+            state.message = ''
         }
+    },
+    reducer: {
+        
     },
     extraReducers: {
         [loginUser.pending]: (state, action) => {
@@ -153,12 +154,10 @@ const userSlice = createSlice({
             state.loading = false;
             state.success = true;
             state.user = action.payload;
-            state.successLogin = true;
         },
         [loginUser.rejected]: (state, action) => {
             state.message = 'Tài khoản hoặc password không đúng';
-            state.successLogin = false;
-            state.success = false
+            state.success = false;
             state.error = true;
             state.loading = false;
         },
@@ -186,6 +185,6 @@ const userSlice = createSlice({
     }
 })
 
-export const { logoutAdmin, resetSuccess } = userSlice.actions
+export const { logoutAdmin, resetMessage } = userSlice.actions
 
 export default userSlice.reducer

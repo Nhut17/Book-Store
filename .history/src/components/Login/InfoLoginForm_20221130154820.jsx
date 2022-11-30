@@ -1,13 +1,13 @@
 import React , {useEffect} from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser, resetSuccess } from '../../redux/reducer/userSlice'
+import { loginUser, resetMessage } from '../../redux/reducer/userSlice'
 import { Link , useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const InfoLoginForm = ({setShowLogin}) => {
 
-    const {user,successLogin,message} = useSelector(state => state.user)
+    const {user,success,message} = useSelector(state => state.user)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -33,10 +33,10 @@ const InfoLoginForm = ({setShowLogin}) => {
            
         }
 
-     },[user])
+     },[])
 
      useEffect(() => {
-        dispatch(resetSuccess())
+        dispatch(resetMessage())
      },[])
 
      const handleOnSubmit = (data) => {
@@ -84,7 +84,7 @@ const InfoLoginForm = ({setShowLogin}) => {
         </div>
         <button className='btn-sign-in' >ĐĂNG NHẬP</button>
            {
-            successLogin === false && <span className='err-msg' style={{paddingTop: 0}} >{message}</span>
+                    success === false && <span className='err-msg' style={{paddingTop: 0}} >{message}</span>
             } 
         <div className="login-with">
             <span>Đăng nhập với: </span>

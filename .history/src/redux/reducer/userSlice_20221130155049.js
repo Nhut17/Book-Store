@@ -6,7 +6,7 @@ const initialState = {
     user: null,
     error: false,
     loading: false,
-    success: false,
+    success: true,
     message: '',
     successRegister: true,
     listUser: [],
@@ -142,7 +142,6 @@ const userSlice = createSlice({
         },
         resetSuccess: (state, action) => {
             state.successLogin = true
-            state.successRegister = true
         }
     },
     extraReducers: {
@@ -153,12 +152,10 @@ const userSlice = createSlice({
             state.loading = false;
             state.success = true;
             state.user = action.payload;
-            state.successLogin = true;
         },
         [loginUser.rejected]: (state, action) => {
             state.message = 'Tài khoản hoặc password không đúng';
             state.successLogin = false;
-            state.success = false
             state.error = true;
             state.loading = false;
         },

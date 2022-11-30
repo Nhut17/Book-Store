@@ -1,13 +1,13 @@
 import React , {useEffect} from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser, resetSuccess } from '../../redux/reducer/userSlice'
+import { loginUser } from '../../redux/reducer/userSlice'
 import { Link , useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const InfoLoginForm = ({setShowLogin}) => {
 
-    const {user,successLogin,message} = useSelector(state => state.user)
+    const {user,success} = useSelector(state => state.user)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -34,10 +34,6 @@ const InfoLoginForm = ({setShowLogin}) => {
         }
 
      },[user])
-
-     useEffect(() => {
-        dispatch(resetSuccess())
-     },[])
 
      const handleOnSubmit = (data) => {
             dispatch(loginUser(data))
@@ -79,12 +75,14 @@ const InfoLoginForm = ({setShowLogin}) => {
                     {
                         errors.password?.type === 'required' && <span className='err-msg'>Mời bạn nhập mật khẩu</span>
                     }
-                    
+                    {/* {
+                        state.message === 'failed' && <span className='err-msg'>Sai tài khoản hoặc mật khẩu</span>
+                    } */}
             </div>
         </div>
         <button className='btn-sign-in' >ĐĂNG NHẬP</button>
            {
-            successLogin === false && <span className='err-msg' style={{paddingTop: 0}} >{message}</span>
+                    success === 'failed' && <span className='err-msg'>Sai tài khoản hoặc mật khẩu</span>
             } 
         <div className="login-with">
             <span>Đăng nhập với: </span>

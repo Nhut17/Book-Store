@@ -18,7 +18,7 @@ const Home = () => {
   const { user, success } = useSelector(state => state.user)
   const navigate = useNavigate()
 
-  console.log(success)
+  console
 
   useEffect(() => {
     if (success) {
