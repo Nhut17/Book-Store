@@ -1,0 +1,364 @@
+@import '../variables.scss';
+@keyframes content-down {
+    from{
+        transform: translate(50%,50%);
+        left: 15%;
+        top:30%;
+    }
+    to{
+        transform: translate(50%,50%);
+        left: 15%;
+        top:40%;
+    }
+}
+.home{
+    background-color: #F3F3F3;
+    .main-top{
+        width: 100%;
+        height: 600px;
+        margin-bottom: 40px;
+        .list-banner{
+            width: 100%;
+            height: 100%;
+           
+        }
+
+    }
+    .container{
+
+      
+
+        .main{
+            display: flex;
+            .main-left{
+                width: 75%;
+                .box-content-book{
+
+                    .title{
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+    
+                    .box-book{
+                        margin-top: 40px;
+                        color: white;
+                        width: 100%;
+                        height: auto;
+                        padding: 40px;
+                        border-radius: 5px;
+                        &.new-book{
+                            background-color: #f26c63;
+                        }
+                        &.good-book{
+                            background-color: #0a6f3c;
+                        }
+                        &.commic-book{
+                            background-color: #cf1133;
+                        }
+                        .item{
+                            display: flex;
+                            .image{
+                                // width: 1000px;
+                                img{
+                                    // width: 100%;
+                                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                                    
+                                }
+                            }
+                            .content{
+                                position: relative;
+                                width: 80%;
+                                padding-left: 50px;
+                                .name{
+                                    font-size: 20px;
+                                }
+                                .author{
+                                    font-size: 14px;
+                                    padding-top: 10px;
+                                    position: relative;
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        width: 90px;
+                                        border: 1px solid white;
+                                        height: 0;
+                                        bottom: 0px;
+                                        transform: translateY(5px);
+                                        
+                                    }
+                                }
+                                .description{
+                                    font-size: 14px;
+                                    padding-top: 25px;
+                                    width: 100%;
+                                    line-height: 1.5;
+                                    position: relative;
+                                    &::before{
+                                        position: absolute;
+                                        content: '';
+                                        width: 99%;
+                                        border: 1px dashed white;
+                                        bottom: 0;
+                                        transform: translateY(20px);
+                                    }
+                                }
+                                .box-buy{
+                                    padding-top: 50px;
+                                    // display: flex;
+                                    .promotion{
+                                        padding: 5px 20px;
+                                        background-color: $box-promotion;
+                                        border-radius: 5px;
+                                        font-size: 15px;
+                                        font-weight: bold;
+                                    }
+                                    .price-old{
+                                        padding-left: 30px;
+                                        font-size: 14px;
+                                        text-decoration: line-through;
+                                    }
+                                    .price-new{
+                                        font-size: 17px;
+                                        padding-left: 30px;
+                                        // padding-right: 30px;
+                                    }
+                                    
+                                }
+                                button{
+                                    position: absolute;
+                                    transform: translate(0px,-30px);
+                                    // margin-left: 220px;
+                                    color: white;
+                                    padding: 10px 20px;
+                                    cursor: pointer;
+                                    background-color: $btn-color;
+                                    border-radius: 5px;
+                                    font-size: 17px;
+                                    right: 0;
+                                    transition: all 0.3s;
+                                    &:hover{
+                                        box-shadow: 0 0 20px 0 rgba($color: $btn-color, $alpha: 1.0);
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                }
+                .box-cate-product{
+                    padding-top: 50px;
+                    .title{
+                       
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 30px;
+                        .tit{
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                        .read-more{
+                            cursor: pointer;
+                            font-size: 13px;
+                            color: $primary-color;
+                            &:hover{
+                                text-decoration: underline;
+                                font-weight: 700;
+                            }
+                            .ic{
+                                color: rgb(95, 93, 93);
+                                padding-left: 5px;
+                            }
+                        }
+                    }
+
+                    .list-product{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .product{
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+
+                .feature-author{
+                    .title{
+                        
+                            font-size: 20px;
+                            font-weight: bold;
+                        
+                    }
+                    .box-author{
+                        margin-top: 50px;
+                        height: auto;
+                        background-color: white;
+                        padding: 40px;
+                        .info-author{
+                            display: flex;
+                            position: relative;
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                width: 107.5%;
+                                border: 1px dashed rgba($color: #000000, $alpha: 0.2);
+                                bottom: 0;
+                                transform: translate(-40px,40px);
+                            }
+                           
+                            .image{
+                                img{
+
+                                }
+                            }
+                            .content-author{
+                                width: 80%;
+                                position: relative;
+                                padding-left: 30px;
+                                .name{
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    color: $primary-color;
+                                    position: relative;
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                                        bottom: 0;
+                                        transform: translateY(5px);
+                                    }
+                                }
+                                .description{
+                                    font-size: 14px;
+                                    padding-top: 25px;
+                                    width: 100%;
+                                    line-height: 1.5;
+                                    position: relative;
+                                    
+                                }
+                                .read-more{
+                                    font-size: 12px;
+                                    color: $primary-color;
+                                    position: absolute;
+                                    right: 0;
+                                    transform: translate(0px,25px);
+                                    cursor: pointer;
+                                    // transition: all 0.1s;
+                                    &:hover{
+                                        text-decoration: underline;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .top-author-book{
+                            padding-top: 70px;
+                            display: flex;
+                            justify-content: space-between;
+                            .item{
+                                width: 33%;
+                                display: flex;
+                                img{
+                                    width: 25%;
+                                }
+                                a{
+                                    width: 60%;
+                                    padding-left: 10px;
+                                }
+                                .name{
+                                    // vertical-align: top
+                                    // position: absolute;
+                                    font-size: 13px;
+                                    // padding-left: 10px;
+                                    width: 75%;
+                                    flex-wrap: wrap;
+                                    
+                                    &:hover{
+                                        color: $primary-color;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+            .main-right{
+                width: 25%;
+                padding-top: 10px;
+                // margin-left: 20px;
+                .list-book-right{
+                    padding-bottom: 50px;
+                    padding-left: 50px;
+                    .title{
+                        // margin-top: 25px;
+                        font-size: 20px;
+                        font-weight: bold;
+     
+                    }
+                    ul{
+                        padding-top: 30px;
+                        li{
+                            display: flex;
+                            margin-bottom: 20px;
+                            .img{
+                                width: 50px;
+                                height: 50px;
+                                img{
+                                
+                                    width: 100%;
+                                    
+                                }
+                            }
+                            .content{
+                                // margin-left: 20px;
+                                .name{
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                }
+                                .author{
+                                    font-size: 12px;
+                                    padding-top: 5px;
+                                    padding-bottom: 10px;
+                                }
+                                .price-old{
+                                    font-size: 13px;
+                                    text-decoration: line-through;
+                                    
+                                    opacity: 0.5;
+                                }
+                                .price-new{
+                                    font-size: 15px;
+                                    padding-left: 10px;
+                                    color: $price-color;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .pay-QR{
+                    padding-left: 50px;
+                    img{
+                        padding-top: 40px;
+                    }
+                }
+
+            }
+
+        }
+
+
+
+    }
+}
+
+

@@ -36,13 +36,14 @@
                 display: flex;
                 form{
                     width: 60%;
+                    margin-left: 150px;
                     .input-group{
                         padding-top: 5px;
                         display: block;
                         text-align: center;
                         margin-right: 7px;
                         .input-common {
-                            width: 100%;
+                            width: 70%;
                             margin: 6px 0 10px 0;
                             line-height: 26px;
                             label{
@@ -94,34 +95,27 @@
                 .profile-image{
                     width: 40%;
                     text-align: center;
-                    padding-left: 150px;
+                    // padding-left: 150px;
                     // justify-items: center;
                     // padding: 50px;
                         .preview-img-container {
                             display: flex;
                             flex-direction: column;
-                            
-
-                            .label-image {
-                                padding: 5px;
-                                border-radius: 3px;
-                                background: #ddd;
-                                width: 50%;
-
+                            .preview-img{
+                                height:300px;
+                                width: 70%;
+                                // :disabled
+                                // background: transparent;
+                                border: 1px solid #ddd;
+                                border-radius: 50%;
+                                font-size: 0;
+                                background: center center;
+                                background-repeat: no-repeat;
+                                background-size: contain; 
                                 cursor: pointer;
                                 &:hover {
                                     opacity: 0.7;
                                 }
-                            }
-                        
-                            .preview-image {
-                                height: 200px;
-                                width: 50%;
-                                border: 1px solid #ddd;
-                                border-radius: 10px;
-                                background: center center;
-                                background-repeat: no-repeat;
-                                background-size: contain;
                             }
                         }
                     

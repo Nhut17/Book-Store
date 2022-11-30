@@ -44,6 +44,8 @@ export const changeUserAvatar = createAsyncThunk('user/changeAvatar',
             const res = await axios.post(`http://localhost:8083/user/profile/avatar`, dataFile, {
                 headers: headers
             })
+            thunkAPI.dispatch(getUser())
+
             return res.data
 
         }
@@ -165,10 +167,10 @@ const userSlice = createSlice({
         [getUser.fulfilled]: (state, action) => {
             state.currentUser = action.payload
         },
-        [changeUserAvatar.fulfilled]:(state, action) => {
+        [changeUserAvatar.fulfilled]: (state, action) => {
             console.log('success update image')
         },
-        [changeUserAvatar.rejected]:(state, action) => {
+        [changeUserAvatar.rejected]: (state, action) => {
             console.log('fail update image')
         },
     }

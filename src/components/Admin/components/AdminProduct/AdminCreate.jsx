@@ -17,7 +17,7 @@ function AdminCreate(props) {
   const dispatch = useDispatch()
   const listAuthor = useSelector(state => state.author.listAuthor)
 
-  const [selectImg,setSelectImg] = useState(null)
+  const [selectImg, setSelectImg] = useState(null)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -48,14 +48,14 @@ function AdminCreate(props) {
       proSale,
       categoryId,
       authorId,
-     } = formData
+    } = formData
 
     const data = {
       proName: proName,
       proDescription: proDescription,
       proContent: proContent,
       proPrice: parseInt(proPrice),
-      proQuantity:parseInt(proQuantity),
+      proQuantity: parseInt(proQuantity),
       proSale: parseInt(proSale),
       proImage: selectImg,
       categoryId: parseInt(categoryId),
@@ -64,21 +64,21 @@ function AdminCreate(props) {
     }
     dispatch(createProduct(data))
 
-    toast("Thêm sản phẩm thành công!", 
+    toast("Thêm sản phẩm thành công!",
       {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-    });
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
 
     setTimeout(() => {
       navigate('/admin/product')
-    },2000)
+    }, 2000)
   }
 
 
@@ -153,7 +153,7 @@ function AdminCreate(props) {
             type="file"
             accept="image/*"
             onChange={(e) => setSelectImg(e.target.files[0])}
-            // {...register("image")}
+          // {...register("image")}
           ></input>
         </>
 

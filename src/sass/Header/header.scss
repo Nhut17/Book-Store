@@ -1,4 +1,11 @@
 @import '../variables.scss';
+
+@keyframes dropdown-cate{
+    0% {
+        // height: ;
+    }
+}
+
 header{
     height: auto;
     .fixed{
@@ -250,26 +257,87 @@ header{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            nav{
-                height: 100%;
+            .list-category{
+                // height: 100%;
+                position: relative;
+                
                 width: 22%;
-                // background-color: $secondary-color;
-                ul{
+                &:hover{
+                    .cate-product{
+                        height: 100vh;
+                        overflow: none;
+                        transform: translateY(12px);
+                        top: 100%;
+                        
+                    }
+                    .nav-cate{
+                        .ic-angle-down{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                .nav-cate{
                     height: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     cursor: pointer;
+                    
                     li{
                         color: white;
                         .ic-nav{
                             font-size: 25px;
                         }
                         .ic-angle-down{
+                            transition: all 0.8s;
                             font-size: 25px;
+                            transform: rotate(0deg);
                         }
                     }
                 }
+
+                .cate-product{
+                    transform: translateY(12px);
+                        top: 100%;
+                        transition: all 0.7s;
+                        position: absolute;
+                        z-index: 1000;
+                        width: 100%;
+                        height: 0;
+                        overflow: hidden;
+                        ul{
+                           
+                            li{
+                               background-color: white;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 10px 10px 10px 20px;
+                                border: 1px solid rgba($color: #000000, $alpha: 0.2);
+                                border-top: transparent;
+                                cursor: pointer;
+                                transition: all 0.2s;
+                                border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.2);
+                               
+
+                                
+                                span{
+                                    font-size: 14px;
+                                }
+                                .ic{
+                                    opacity: 0.5;
+                                }
+                                &:hover{
+                                    color: $primary-color;
+                                    font-weight: bold;
+                                    .ic{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                      }
+                    }
+                
+
             }
 
             .info-contact{

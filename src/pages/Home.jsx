@@ -15,67 +15,67 @@ const Home = () => {
 
   const dispatch = useDispatch()
   const listProduct = useSelector(state => state.product.listProduct)
-  const {user , success} = useSelector(state => state.user)
-  const [successLogin,setSuccessLogin] = useState(false)
+  const { user, success } = useSelector(state => state.user)
   const navigate = useNavigate()
 
-  useEffect(() => {
-    if(success)
-    {
-      toast(`Chào mừng ${user?.name}`, 
-      {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-    });
-  }
-  },[])
+
 
   useEffect(() => {
-    if(user){
-        if(user?.roles.charAt(0).authority === 'ADMIN')
+    if (success) {
+      toast(`Chào mừng ${user?.name}`,
         {
-          navigate('/admin')
-        }
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          progress: undefined,
+          theme: "light",
+        });
+    }
+  }, [])
+
+  useEffect(() => {
+    if (user) {
+      if (user?.roles[0]?.authority === 'ADMIN') {
+        navigate('/admin')
       }
-  },[])
+    }
+  }, [])
+
 
   useEffect(() => {
     dispatch(getProducts())
-  },[])
+  }, [])
   useEffect(() => {
     dispatch(getCart())
-  },[])
+  }, [])
 
   return (
     <div className='home'>
- 
-      
-        <ToastContainer />
-        <div className="main-top">
-            
-            <ListBanner />
 
-          </div>
-        
-        <div className="container">
 
-          
+      <ToastContainer />
+      <div className="main-top">
 
-          <div className="main">
+        <ListBanner />
 
-              <MainLeft list_product={listProduct} />
+      </div>
 
-              <MainRight list_product={listProduct} />
+      <div className="container">
 
-          </div>
+
+
+        <div className="main">
+
+          <MainLeft list_product={listProduct} />
+
+          <MainRight list_product={listProduct} />
 
         </div>
+
+      </div>
     </div>
   )
 }
