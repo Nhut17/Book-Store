@@ -1,0 +1,28 @@
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import {list_cate_star_top} from '../../components/data'
+
+const CategoryStartTop = () => {
+
+  const {listCate} = useSelector(state => state.category)
+
+  return (
+    <React.Fragment>
+    <div className='category-star-top'>
+    
+    <ul>
+    {
+      listCate.map((val,index) => (
+        <Link to={`/${val.catName}/${val.id}`} key={index} reloadDocument>
+        <li>{val.catName}</li>
+        </Link>   
+        ))
+      }
+      </ul>
+      </div>
+      )
+    </React.Fragment>
+}
+
+export default CategoryStartTop

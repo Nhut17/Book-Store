@@ -10,19 +10,17 @@ import { useDispatch } from "react-redux";
 import { getUser, changeUserAvatar } from "../../redux/reducer/userSlice";
 import { useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
+
 const MainProfile = () => {
   const dispatch = useDispatch()
   const currentUser = useSelector(state => state.user.currentUser)
+
+  const { register, handleSubmit } = useForm({ defaultValues: {} });
+
   useEffect(() => {
     dispatch(getUser())
   }, [])
-  const { register, handleSubmit } = useForm({ defaultValues: {} });
-
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors }
-  // } = useForm()
+  
   const [userDoB, setUserDoB] = useState(currentUser?.userDob)
   const [uploadImage, setUploadImage] = useState(currentUser?.avatar)
   const [previewImage, setPreviewImage] = useState(currentUser?.avatar)
@@ -124,7 +122,6 @@ const MainProfile = () => {
 
       <Link to='/history' >
         <button className='history'>Lịch sử mua hàng</button>
-
       </Link>
     </div>
   )

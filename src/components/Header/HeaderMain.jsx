@@ -125,7 +125,7 @@ const HeaderMain = ({fixed}) => {
 
           <li className='sign'>
             {
-              state.success ? (
+              state.user ? (
                 <Link to='/profile'>
                   <span className='sign-in' >{state.user?.name}</span>
                 </Link>
@@ -134,7 +134,7 @@ const HeaderMain = ({fixed}) => {
               )
             }
             {
-              state.success ? (
+              state.user ? (
                 <span className='sign-up' onClick={handleLogout} >Đăng xuất</span>
 
               ) : (
