@@ -14,7 +14,8 @@ const MainProductDetail = ({data}) => {
       }
 
      
-       
+          <ProductRecommand  />
+
         
       {
         
