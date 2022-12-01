@@ -1,0 +1,104 @@
+import React, { useEffect } from 'react'
+import Slider from "react-animated-slider";
+import 'react-animated-slider/build/horizontal.css';
+import "normalize.css/normalize.css";
+import '../../sass/Home/slider-animation.scss'
+
+const ListBanner = () => {
+
+
+
+  const slider = [
+    {
+      title: 'Bestselling',
+      title0: '',
+      title1: 'Fiction',
+      title2: 'Book',
+      description: 'Hơn 120.000 lượt mua và đánh giá',
+      button: 'BUY NOW',
+      image: 'https://wpbingosite.com/wordpress/bookio/wp-content/webp-express/webp-images/uploads/2021/08/slider1-3.jpg.webp'
+    },
+    {
+      title: 'Happy Chrismas',
+      title0: '',
+      title1: '',
+      title2: '',
+      description: 'Đón giáng sinh cùng Vinabook với hàng chục deal hấp dẫn',
+      description1: 'Từ ngày 1-12 đến hết ngày 24-12 ',
+      button: 'Xem ngay',
+      image: 'https://wpbingosite.com/wordpress/bookio/wp-content/webp-express/webp-images/uploads/2021/08/slider1-2.jpg.webp'
+    },
+    {
+      title: '',
+      title0: '',
+      title1: '',
+      title2: '',
+      description: '',
+      description1: '',
+      button: '',
+      image: 'https://bookbuy.vn/Res/Images/Album/e6c10e39-49be-4d0b-a55c-664684635f8e.jpg?w=880&scale=both&h=320&mode=crop'
+    },
+    {
+      title: '',
+      title0: '',
+      title1: '',
+      title2: '',
+      description: '',
+      description1: '',
+      button: '',
+      image: 'https://bookbuy.vn/Res/Images/Album/3cdcf73f-e746-4f0c-8bf6-b33afa35d9ef.jpg?w=880&scale=both&h=320&mode=crop'
+    },
+  ]
+  
+  const setting = {
+    infinite: true,
+    autoplay: 2000,
+  }
+
+ 
+  return (
+    <div className='list-banner'>
+    <Slider className='slider-wrapper' {...setting}>
+      {
+        slider.map((item,index) => (
+          <div className='slider-content'
+                key={index}
+                style={{background: `url('${item.image}') no-repeat center center`}}>
+
+                <div className="inner">
+                <h1>{item.title} <span style={{
+                  color: '#F1592B',
+                  textDecoration: 'underline'
+                }}>{item.title0}</span> 
+                  <br />
+                    <span style={{
+                      color: '#F1592B',
+                      textDecoration: 'underline'
+                    }}>{item.title1}</span>  {item.title2}
+                </h1>
+                <p>{item.description}
+                    <br />
+                    <span style={{
+                      color: '#F1592B',
+                      fontWeight: 'bold',
+                      fontSize: '18px'
+                    }}>
+                        {item.description1}
+                    </span>
+                </p>
+               {
+                item.button.length > 0 &&
+                <button>{item.button}</button>
+               }
+              </div>
+
+          </div>
+        ))
+      }
+    </Slider>
+      
+    </div>
+  )
+}
+
+export default ListBanner
